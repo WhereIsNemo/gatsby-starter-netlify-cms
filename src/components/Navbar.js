@@ -1,41 +1,47 @@
-import React from 'react'
-import Link from 'gatsby-link'
-
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import Link from 'gatsby-link';
 
 const Navbar = () => (
-  <nav className="navbar is-transparent">
-    <div className="container">
-      <div className="navbar-brand">
-        <Link to="/" className="navbar-item">
-          <figure className="image">
-            <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-          </figure>
-        </Link>
-      </div>
-      <div className="navbar-start">
-        <Link className="navbar-item" to="/about">
-          About
-        </Link>
-        <Link className="navbar-item" to="/products">
-          Products
-        </Link>
-      </div>
-      <div className="navbar-end">
-        <a
-          className="navbar-item"
-          href="https://github.com/AustinGreen/gatsby-netlify-cms-boilerplate"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="icon">
-            <img src={github} alt="Github" />
-          </span>
-        </a>
-      </div>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <Link className="nav-link" to="/">
+            Главная
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to="/catalog">
+            Каталог
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to="/delivery">
+            Доставка и оплата
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to="/warehouse">
+            Склад самовывоза
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to="/testimonials">
+            Отзывы
+          </Link>
+        </li>
+        <li class="nav-item">
+          <Link className="nav-link" to="/contact">
+            Контакты
+          </Link>
+        </li>
+      </ul>
     </div>
   </nav>
-)
+);
 
-export default Navbar
+export default Navbar;
