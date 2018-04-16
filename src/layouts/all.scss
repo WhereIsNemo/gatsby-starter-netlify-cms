@@ -72,3 +72,14 @@ $m-retina2x: screen and (min-resolution: 120dpi), screen and (min-resolution: 1.
 html {
   font-size: $main-font-size;
 }
+
+img {
+  max-width: 100%;
+}
+
+.section {
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

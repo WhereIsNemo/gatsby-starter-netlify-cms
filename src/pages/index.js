@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Slider from '../components/Slider';
+import ProductsCompanies from '../components/ProductsCompanies';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,7 +10,7 @@ export default class IndexPage extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col col-12 col-md-3">
-            <div className="section">
+            <div className="catalog--aside">
               <div className="list-group">
                 <div className="list-group-item">Категории</div>
                 <Link className="list-group-item list-group-item-action" to="/catalog/first-category">Первая категория</Link>
@@ -22,6 +23,7 @@ export default class IndexPage extends React.Component {
             <Slider />
           </div>
         </div>
+        <ProductsCompanies />
       </div>
     )
   }
