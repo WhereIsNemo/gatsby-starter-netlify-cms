@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Slider from '../components/Slider';
 import ProductsCompanies from '../components/ProductsCompanies';
+import CatalogSlider from '../components/CatalogSlider';
 
 export default class IndexPage extends React.Component {
   render() {
@@ -24,6 +25,7 @@ export default class IndexPage extends React.Component {
           </div>
         </div>
         <ProductsCompanies />
+        <CatalogSlider />
       </div>
     )
   }

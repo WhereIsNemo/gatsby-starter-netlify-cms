@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 
 const ProductsCompanies = () => (
-  <div className={`${styles.productsCompanies} section`}>
+  <div className="section">
     <h2 className="section__title">Компании, продукцию которых мы сбываем</h2>
     <div className={styles.productsCompanies__container}>
       <div className={`${styles.productsCompanies__row} row`}>

@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.css';
+import styles from './styles.module.scss';
 
 export default class Slider extends React.Component {
   render() {
@@ -9,13 +9,13 @@ export default class Slider extends React.Component {
       <div className="swiper-container" ref="slider">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <img className={styles.img} src="http://via.placeholder.com/1400x600" />
+            <img src="http://via.placeholder.com/880x320" />
           </div>
           <div className="swiper-slide">
-            <img className={styles.img} src="http://via.placeholder.com/1500x500" />
+            <img src="http://via.placeholder.com/880x320" />
           </div>
           <div className="swiper-slide">
-            <img className={styles.img} src="http://via.placeholder.com/1300x700" />
+            <img src="http://via.placeholder.com/880x320" />
           </div>
         </div>
         <div className="swiper-pagination"></div>
@@ -27,6 +27,7 @@ export default class Slider extends React.Component {
   }
   componentDidMount() {
     new Swiper(this.refs.slider, {
+      loop: true,
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',

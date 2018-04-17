@@ -1,6 +1,6 @@
 import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import styles from './IconWithText.module.scss';
+import styles from './styles.module.scss';
 
 const IconWithText = ({ icon, topText, bottomText }) => (
   <div className={`${styles.iconWithText} icon-with-text`}>

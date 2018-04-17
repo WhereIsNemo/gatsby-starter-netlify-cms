@@ -1,12 +1,12 @@
 import React from 'react';
+import Link from 'gatsby-link';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
 import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
-import Link from 'gatsby-link';
 import Navbar from '../Navbar';
-import Logo from '../Logo/Logo';
-import IconWithText from '../IconWithText/IconWithText';
-import styles from './Header.module.scss';
+import Logo from '../Logo';
+import IconWithText from '../IconWithText';
+import styles from './styles.module.scss';
 
 const Header = () => (
   <header className="header">
