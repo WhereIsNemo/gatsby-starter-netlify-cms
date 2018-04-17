@@ -11,13 +11,15 @@ $c-black: #000;
 $c-transparent: transparent;
 
 // Fonts
+$f-open-sans: 'Open Sans', sans-serif;
+$f-roboto: 'Roboto', sans-serif;
 
 // Typography
 $main-font-size: 16px;
-$font-family-base: sans-serif;
+$font-family-base: $f-open-sans;
 $font-weight-base: 400;
 $line-height-base: 1.7778;
-$heading-font: serif;
+$heading-font: $f-roboto;
 $heading-line-height: 1.1;
 $body-color: $c-black;
 $body-bg: $c-white;
@@ -64,7 +66,7 @@ $max-height-tablet: 'max-height: #{map-get($grid-vertical-breakpoints, $breakpoi
 $m-retina2x: screen and (min-resolution: 120dpi), screen and (min-resolution: 1.25dppx);
 
 /* Vendors */
-// Bootstrap (normalize and grid)
+// Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
 /* Project common styles */

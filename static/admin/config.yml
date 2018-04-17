@@ -6,6 +6,23 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "categories"
+    label: "Categories"
+    folder: "src/pages/categories"
+    create: true
+    slug: "categories/{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+  - name: "products"
+    label: "Products"
+    folder: "src/pages/products"
+    create: true
+    slug: "catalog/{{slug}}"
+    fields:
+      - {label: "Title"}
+      - {label: "Categories", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
+
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
