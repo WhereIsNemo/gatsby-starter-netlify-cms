@@ -1,16 +1,14 @@
 $vertical-indent: 30px;
 
-.productsCompanies__container {
-  overflow: hidden;
-}
+.productsCompanies {
+  &__row {
+    margin-top: -($vertical-indent / 2);
+    margin-bottom: -($vertical-indent / 2);
+    justify-content: center;
+  }
 
-.productsCompanies__row {
-  margin-top: -($vertical-indent / 2);
-  margin-bottom: -($vertical-indent / 2);
-  justify-content: center;
-}
-
-.productsCompanies__col {
-  padding-top: $vertical-indent / 2;
-  padding-bottom: $vertical-indent / 2;
+  &__col {
+    padding-top: $vertical-indent / 2;
+    padding-bottom: $vertical-indent / 2;
+  }
 }

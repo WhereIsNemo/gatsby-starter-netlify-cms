@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 const ProductsCompanies = () => (
   <div className="section">
     <h2 className="section__title">Компании, продукцию которых мы сбываем</h2>
-    <div className={styles.productsCompanies__container}>
+    <div className="overflow-container">
       <div className={`${styles.productsCompanies__row} row`}>
         <div className={`${styles.productsCompanies__col} col col-12 col-sm-6 col-md-3`}>
           <div className="product-company">
