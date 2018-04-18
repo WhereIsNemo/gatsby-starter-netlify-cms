@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Content, { HTMLContent } from '../components/Content'
 
-export const CategoryPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const CategoryPageTemplate = ({ title }) => {
   return (
     <section className="section section--gradient">
       <div className="container">
@@ -22,10 +19,8 @@ export const CategoryPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-AboutPageTemplate.propTypes = {
+CategoryPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
 }
 
 const CategoryPage = ({ data }) => {
