@@ -23,5 +23,5 @@ collections:
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-      - {label: "Title"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Categories", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
