@@ -15,4 +15,4 @@ CategoryPagePreview.propTypes = {
   }),
 }
 
-export default AboutPagePreview
+export default CategoryPagePreview
