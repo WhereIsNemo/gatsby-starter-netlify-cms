@@ -2,9 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const ProductPageTemplate = ({ title }) => {
-  return (
-    <div>{title}</div>
-  )
+  return <div>{title}</div>
 }
 
 ProductPageTemplate.propTypes = {
@@ -14,11 +12,7 @@ ProductPageTemplate.propTypes = {
 const ProductPage = ({ data }) => {
   const { markdownRemark: post } = data
 
-  return (
-    <ProductPageTemplate
-      title={post.frontmatter.title}
-    />
-  )
+  return <ProductPageTemplate title={post.frontmatter.title} />
 }
 
 ProductPage.propTypes = {

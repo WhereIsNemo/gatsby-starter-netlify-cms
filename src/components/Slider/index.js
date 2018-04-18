@@ -1,7 +1,7 @@
-import React from 'react';
-import Swiper from 'swiper';
-import 'swiper/dist/css/swiper.css';
-import styles from './styles.module.scss';
+import React from 'react'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.css'
+import styles from './styles.module.scss'
 
 export default class Slider extends React.Component {
   render() {
@@ -18,12 +18,12 @@ export default class Slider extends React.Component {
             <img src="http://via.placeholder.com/880x320" />
           </div>
         </div>
-        <div className="swiper-pagination"></div>
+        <div className="swiper-pagination" />
 
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev" />
+        <div className="swiper-button-next" />
       </div>
-    );
+    )
   }
   componentDidMount() {
     new Swiper(this.refs.slider, {
@@ -36,6 +36,6 @@ export default class Slider extends React.Component {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-    });
+    })
   }
-};
+}

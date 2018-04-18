@@ -14,7 +14,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-css-modules`,
       options: {
         filetypes: {
-          ".scss": { syntax: `postcss-scss` },
+          '.scss': { syntax: `postcss-scss` },
         },
       },
     },

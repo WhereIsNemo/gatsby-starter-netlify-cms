@@ -1,6 +1,6 @@
-import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import styles from './styles.module.scss';
+import React from 'react'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import styles from './styles.module.scss'
 
 const IconWithText = ({ icon, topText, bottomText }) => (
   <div className={`${styles.iconWithText} icon-with-text`}>
@@ -10,6 +10,6 @@ const IconWithText = ({ icon, topText, bottomText }) => (
       <div className="icon-with-text__bottom-text">{bottomText}</div>
     </div>
   </div>
-);
+)
 
-export default IconWithText;
+export default IconWithText
