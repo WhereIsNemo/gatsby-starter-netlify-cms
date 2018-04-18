@@ -2,10 +2,24 @@
   "name": "220-plus",
   "description": "site for 220Plus",
   "version": "0.2",
+  "scripts": {
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": {
     "name": "Artyom Guryanov",
     "email": "guryanov.artyom@gmail.com"
   },
+  "keywords": [
+    "gatsby",
+    "netlifyCMS",
+    "netlify"
+  ],
+  "main": "n/a",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-brands": "^5.0.10",
@@ -17,20 +31,6 @@
     "netlify-cms": "^1.5.0",
     "react-helmet": "^5.2.0",
     "swiper": "^4.2.2"
-  },
-  "keywords": [
-    "gatsby",
-    "netlifyCMS",
-    "netlify"
-  ],
-  "main": "n/a",
-  "scripts": {
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
     "prettier": "^1.7.4",
