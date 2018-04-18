@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CategoryPageTemplate } from '../../templates/category-page';
+import { CategoryPageTemplate } from '../../templates/category-page'
 
 const CategoryPagePreview = ({ entry, widgetFor }) => (
-  <AboutPageTemplate
+  <CategoryPageTemplate
     title={entry.getIn(['data', 'title'])}
-    content={widgetFor('body')}
+    image={entry.getIn(['data', 'image'])}
   />
 )
 
-AboutPagePreview.propTypes = {
+CategoryPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
