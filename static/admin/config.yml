@@ -14,6 +14,7 @@ collections:
     folder: "src/pages/categories"
     create: true
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category-page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
   - name: "products"
@@ -21,5 +22,6 @@ collections:
     folder: "src/pages/products"
     create: true
     fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
       - {label: "Title"}
       - {label: "Categories", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
