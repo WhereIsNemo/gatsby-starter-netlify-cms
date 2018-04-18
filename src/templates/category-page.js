@@ -27,7 +27,7 @@ const CategoryPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <CategoryPagePageTemplate
+    <CategoryPageTemplate
       title={post.frontmatter.title}
     />
   )
