@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const CategoryPageTemplate = ({ title }) => {
   return (
-    {title}
+    <div>{title}</div>
   )
 }
 
