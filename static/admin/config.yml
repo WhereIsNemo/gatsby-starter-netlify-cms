@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
+
 media_folder: static/img
 public_folder: /img
 slug:
@@ -10,7 +12,7 @@ slug:
 
 collections:
   - name: "categories"
-    label: "Categories"
+    label: "Категории"
     folder: "src/pages/categories"
     create: true
     fields:
@@ -18,7 +20,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
   - name: "products"
-    label: "Products"
+    label: "Продукты"
     folder: "src/pages/products"
     create: true
     fields:
