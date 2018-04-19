@@ -7,11 +7,13 @@ import AboutCompany from '../components/AboutCompany'
 
 export default class IndexPage extends React.Component {
   render() {
+    const categories = this.props.data.allMarkdownRemark.edges;
+
     return (
       <div className="container">
         <div className="row">
           <div className="col col-12 col-md-3">
-            <CatalogAside />
+            <CatalogAside categories={categories} />
           </div>
           <div className="col col-12 col-md-9">
             <Slider />
@@ -24,3 +26,9 @@ export default class IndexPage extends React.Component {
     )
   }
 }
+
+export const CatalogAsideQuery = graphql`
+  query CatalogAsideQuery {
+    ...categories
+  }
+`

@@ -1,24 +1,38 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-const CatalogAside = () => (
-  <div className="catalog--aside">
-    <div className="list-group">
-      <div className="list-group-item">Категории</div>
-      <Link
-        className="list-group-item list-group-item-action"
-        to="/catalog/first-category"
-      >Первая категория</Link>
-      <Link
-        className="list-group-item list-group-item-action"
-        to="/catalog/second-category"
-      >Вторая категория</Link>
-      <Link
-        className="list-group-item list-group-item-action"
-        to="/catalog/third-category"
-      >Третья категория</Link>
-    </div>
-  </div>
-)
+export default ({ categories }) => {
+  const links = categories.map(({ node }) => 
+    <Link
+      className="list-group-item list-group-item-action"
+      to={node.fields.slug}
+    >{node.frontmatter.title}</Link>
+  );
 
-export default CatalogAside
+  return (
+    <div className="catalog--aside">
+      <div className="list-group">
+        <div className="list-group-item">Категории</div>
+        {links}
+      </div>
+    </div>
+  );
+};
+
+export const CatalogAsideQuery = graphql`
+  fragment categories on RootQueryType {
+    allMarkdownRemark(filter: {frontmatter: {templateKey: { eq: "category-page"}}}) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
