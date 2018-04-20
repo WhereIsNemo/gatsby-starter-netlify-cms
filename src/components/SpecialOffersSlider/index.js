@@ -5,18 +5,18 @@ import styles from './styles.module.scss'
 
 export default class Slider extends React.Component {
   render() {
+    const { specialOffers } = this.props;
+
+    const slides = specialOffers.map(({ node }) => 
+      <div className="swiper-slide">
+        <img src={node.frontmatter.image} />
+      </div>
+    );
+
     return (
       <div className="swiper-container" ref="slider">
         <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <img src="http://via.placeholder.com/880x320" />
-          </div>
-          <div className="swiper-slide">
-            <img src="http://via.placeholder.com/880x320" />
-          </div>
-          <div className="swiper-slide">
-            <img src="http://via.placeholder.com/880x320" />
-          </div>
+          {slides}
         </div>
         <div className="swiper-pagination" />
 
@@ -39,3 +39,17 @@ export default class Slider extends React.Component {
     })
   }
 }
+
+export const CatalogAsideQuery = graphql`
+  fragment specialOffersSlider on RootQueryType {
+    specialOffersSlider: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "special-offer-page"}}}) {
+      edges {
+        node {
+          frontmatter {
+            image
+          }
+        }
+      }
+    }
+  }
+`

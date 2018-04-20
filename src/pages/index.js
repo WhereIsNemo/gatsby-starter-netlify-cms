@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from '../components/Slider'
+import SpecialOffersSlider from '../components/SpecialOffersSlider'
 import ProductsCompanies from '../components/ProductsCompanies'
 import CatalogSlider from '../components/CatalogSlider'
 import CatalogAside from '../components/CatalogAside'
@@ -14,7 +14,7 @@ export default class IndexPage extends React.Component {
             <CatalogAside categories={this.props.data.asideCategories.edges} />
           </div>
           <div className="col col-12 col-md-9">
-            <Slider />
+            <SpecialOffersSlider specialOffers={this.props.data.specialOffersSlider.edges} />
           </div>
         </div>
         <ProductsCompanies />
@@ -28,5 +28,6 @@ export default class IndexPage extends React.Component {
 export const CatalogAsideQuery = graphql`
   query HomePageQuery {
     ...asideCategories
+    ...specialOffersSlider
   }
 `
