@@ -1,6 +1,6 @@
 import React from 'react'
 import SpecialOffersSlider from '../components/SpecialOffersSlider'
-import ProductsCompanies from '../components/ProductsCompanies'
+import ProductCompanies from '../components/ProductCompanies'
 import CatalogSlider from '../components/CatalogSlider'
 import CatalogAside from '../components/CatalogAside'
 import AboutCompany from '../components/AboutCompany'
@@ -17,7 +17,7 @@ export default class IndexPage extends React.Component {
             <SpecialOffersSlider specialOffers={this.props.data.specialOffersSlider.edges} />
           </div>
         </div>
-        <ProductsCompanies />
+        <ProductCompanies productCompanies={this.props.data.productCompanies.edges} />
         <CatalogSlider />
         <AboutCompany />
       </div>
@@ -29,5 +29,6 @@ export const CatalogAsideQuery = graphql`
   query HomePageQuery {
     ...asideCategories
     ...specialOffersSlider
+    ...productCompanies
   }
 `
