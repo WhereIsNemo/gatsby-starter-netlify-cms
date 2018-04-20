@@ -21,8 +21,8 @@ export default ({ categories }) => {
 };
 
 export const CatalogAsideQuery = graphql`
-  fragment categories on RootQueryType {
-    allMarkdownRemark(filter: {frontmatter: {templateKey: { eq: "category-page"}}}) {
+  fragment asideCategories on RootQueryType {
+    asideCategories: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "category-page"}}}) {
       edges {
         node {
           fields {
