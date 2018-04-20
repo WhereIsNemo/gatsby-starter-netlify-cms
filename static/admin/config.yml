@@ -17,7 +17,7 @@ collections:
       - {label: "Image", name: "image", widget: "image"}
   - name: "product-company"
     label: "Компании продуктов"
-    folder: "src/pages/company-products"
+    folder: "src/pages/product-company"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-company-page"}

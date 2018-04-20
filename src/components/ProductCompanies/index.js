@@ -2,8 +2,11 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 const ProductCompanies = ({ productCompanies }) => {
-  const previews = productCompanies.map(({ node }) =>
+  console.log(productCompanies);
+
+  const previews = productCompanies.map(({ node }, index) =>
     <div
+      key={index}
       className={`${
         styles.productsCompanies__col
         } col col-12 col-sm-6 col-md-3`}
@@ -30,7 +33,7 @@ export default ProductCompanies
 
 export const CatalogAsideQuery = graphql`
   fragment productCompanies on RootQueryType {
-    productCompanies: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "category-page"}}}) {
+    productCompanies: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "product-company-page"}}}) {
       edges {
         node {
           frontmatter {

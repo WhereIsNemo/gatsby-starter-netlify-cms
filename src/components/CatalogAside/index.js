@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 export default ({ categories }) => {
-  const links = categories.map(({ node }) => 
+  const links = categories.map(({ node }, index) => 
     <Link
+      key={index}
       className="list-group-item list-group-item-action"
       to={node.fields.slug}
     >{node.frontmatter.title}</Link>

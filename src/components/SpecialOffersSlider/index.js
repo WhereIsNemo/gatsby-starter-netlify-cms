@@ -7,8 +7,8 @@ export default class Slider extends React.Component {
   render() {
     const { specialOffers } = this.props;
 
-    const slides = specialOffers.map(({ node }) => 
-      <div className="swiper-slide">
+    const slides = specialOffers.map(({ node }, index) => 
+      <div key={index} className="swiper-slide">
         <img src={node.frontmatter.image} />
       </div>
     );
