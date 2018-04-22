@@ -2,8 +2,6 @@ import React from 'react'
 import styles from './styles.module.scss'
 
 const ProductCompanies = ({ productCompanies }) => {
-  console.log(productCompanies);
-
   const previews = productCompanies.map(({ node }, index) =>
     <div
       key={index}

@@ -18,7 +18,7 @@ export default class IndexPage extends React.Component {
           </div>
         </div>
         <ProductCompanies productCompanies={this.props.data.productCompanies.edges} />
-        <CatalogSlider />
+        <CatalogSlider sliderCategories={this.props.data.sliderCategories.edges} />
         <AboutCompany />
       </div>
     )
@@ -30,5 +30,6 @@ export const CatalogAsideQuery = graphql`
     ...asideCategories
     ...specialOffersSlider
     ...productCompanies
+    ...sliderCategories
   }
 `
