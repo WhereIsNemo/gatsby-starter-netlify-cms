@@ -42,7 +42,7 @@ collections:
   - name: "sections"
     label: "Секции"
     files:
-      - file: "src/components/AboutCompany/index.md"
+      - file: "src/pages/about-section/index.md"
         label: "О компании"
         name: "about"
         fields:
