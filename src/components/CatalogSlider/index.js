@@ -6,7 +6,6 @@ import styles from './styles.module.scss'
 
 export default class CatalogSlider extends React.Component {
   render() {
-    console.log(this.props.sliderCategories);
     const slides = this.props.sliderCategories.map(({ node }, index) =>
       <div key={index} className="swiper-slide">
         <div className="catalog-slide">

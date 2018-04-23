@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
         </div>
         <ProductCompanies productCompanies={this.props.data.productCompanies.edges} />
         <CatalogSlider sliderCategories={this.props.data.sliderCategories.edges} />
-        <AboutCompany />
+        <AboutCompany aboutSection={this.props.data.aboutSection} />
       </div>
     )
   }
