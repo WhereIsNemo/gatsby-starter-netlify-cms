@@ -23,7 +23,6 @@ export const AboutSectionQuery = graphql`
     aboutSection: markdownRemark(frontmatter: {id: {eq: "about-section"}}) {
       frontmatter {
         title
-        body
       }
     }
   }
