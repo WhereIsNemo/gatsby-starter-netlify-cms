@@ -21,6 +21,7 @@ export default AboutCompany
 export const AboutSectionQuery = graphql`
   fragment aboutSection on RootQueryType {
     aboutSection: markdownRemark(frontmatter: {id: {eq: "about-section"}}) {
+      html
       frontmatter {
         title
       }
