@@ -20,7 +20,7 @@ export default AboutCompany
 
 export const AboutSectionQuery = graphql`
   fragment aboutSection on RootQueryType {
-    aboutSection: allMarkdownRemark(filter: {frontmatter: {id: {eq: "about-section"}}}) {
+    aboutSection: markdownRemark(frontmatter: { id: { eq: "about-section" } }) {
       edges {
         node {
           frontmatter {
