@@ -12,30 +12,41 @@ collections:
     folder: "src/pages/categories"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "category-page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "category-page"}
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Изображение", name: "image", widget: "image"}
   - name: "product-company"
     label: "Компании продуктов"
     folder: "src/pages/product-company"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-company-page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "product-company-page"}
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Изображение", name: "image", widget: "image"}
   - name: "products"
     label: "Продукты"
     folder: "src/pages/products"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "product-page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
+      - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "product-page"}
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Категория", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
   - name: "special-offers"
     label: "Специальные предложения"
     folder: "src/pages/special-offers"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "special-offer-page"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Заголовок", name: "title", widget: "string"}
+      - {label: "Изображение", name: "image", widget: "image"}
+  - name: "sections"
+    label: "Секции"
+    files:
+      - file: "src/components/AboutCompany/index.md"
+        label: "О компании"
+        name: "about"
+        fields:
+          - {label: "Идентификатор", name: "id", widget: "hidden", default: "about-section"}
+          - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Текст", name: "body", widget: "markdown"}

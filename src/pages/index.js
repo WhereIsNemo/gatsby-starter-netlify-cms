@@ -31,5 +31,6 @@ export const CatalogAsideQuery = graphql`
     ...specialOffersSlider
     ...productCompanies
     ...sliderCategories
+    ...aboutSection
   }
 `
