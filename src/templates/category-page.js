@@ -7,7 +7,7 @@ export const CategoryPageTemplate = ({ title, description, asideCategories }) =>
       <div className="container">
         <div className="row">
           <div className="col col-12 col-md-3">
-            <CatalogAside categories={asideCategories.edges} />
+            <CatalogAside categories={asideCategories} />
           </div>
           <div className="col col-12 col-md-9">
             <h1>{title}</h1>
@@ -20,13 +20,14 @@ export const CategoryPageTemplate = ({ title, description, asideCategories }) =>
 }
 
 const CategoryPage = ({ data }) => {
+  console.log(data);
   const { markdownRemark: post } = data
   const { asideCategories } = data;
 
   return <CategoryPageTemplate 
     title={post.frontmatter.title} 
     description={post.frontmatter.description}
-    asideCategories={asideCategories}
+    asideCategories={asideCategories.edges}
   />
 }
 
