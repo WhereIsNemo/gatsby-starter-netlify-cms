@@ -38,7 +38,6 @@ export const categoryPageQuery = graphql`
     categoryPage: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        description
       }
     }
   } 
