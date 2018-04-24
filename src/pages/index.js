@@ -25,7 +25,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-export const CatalogAsideQuery = graphql`
+export const HomePageQuery = graphql`
   query HomePageQuery {
     ...asideCategories
     ...specialOffersSlider

@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const createProductsPaginatedPages = require(`./gatsby-actions/createProductsPaginatedPages`);
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -29,21 +30,26 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               slug
             }
             frontmatter {
+              title
               templateKey
+              image
+              categories
             }
           }
         }
       }
     }
   `).then(result => {
+    // Output errors if they are
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()))
       return Promise.reject(result.errors)
     }
 
-    const posts = result.data.allMarkdownRemark.edges
+    // Create content pages
+    const content = result.data.allMarkdownRemark.edges
 
-    posts.forEach(edge => {
+    content.forEach(edge => {
       const id = edge.node.id
 
       if (edge.node.frontmatter.templateKey) {
@@ -59,5 +65,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         })
       }
     })
+
+    // Create paginated product pages
+    const products = result.data.allMarkdownRemark.edges.filter(edge => 
+      edge.node.frontmatter.templateKey === "product-page"
+    );
+
+    createProductsPaginatedPages(createPage, products);
   })
 }
