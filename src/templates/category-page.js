@@ -1,34 +1,27 @@
 import React from 'react'
 import CatalogAside from '../components/CatalogAside'
+import ProductsGrid from '../components/ProductsGrid'
 
-export const CategoryPageTemplate = ({ title, description, asideCategories }) => {
+const CategoryPage = ({ data }) => {
+  const { markdownRemark: post } = data
+  const { asideCategories, productsGrid } = data;
+
   return (
     <div className="container">
       <div className="container">
         <div className="row">
           <div className="col col-12 col-md-3">
-            <CatalogAside categories={asideCategories} />
+            <CatalogAside categories={asideCategories.edges} />
           </div>
           <div className="col col-12 col-md-9">
-            <h1>{title}</h1>
-            <div>{description}</div>
+            <h1>{post.frontmatter.title}</h1>
+            <div>{post.frontmatter.description}</div>
+            <ProductsGrid productsGrid={productsGrid.edges} category={post.frontmatter.title} />
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-const CategoryPage = ({ data }) => {
-  console.log(data);
-  const { markdownRemark: post } = data
-  const { asideCategories } = data;
-
-  return <CategoryPageTemplate 
-    title={post.frontmatter.title} 
-    description={post.frontmatter.description}
-    asideCategories={asideCategories.edges}
-  />
 }
 
 export default CategoryPage
@@ -42,5 +35,6 @@ export const categoryPageQuery = graphql`
       }
     }
     ...asideCategories
+    ...productsGridCategories
   }
 `

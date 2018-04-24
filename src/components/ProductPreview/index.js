@@ -5,7 +5,7 @@ const ProductPreview = ({node}) => {
   return (
     <div className="productPreview">
       <h3>
-        <Link to={node.node.fields.slug}>{node.node.frontmatter.title}</Link>
+        <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
       </h3>
     </div>
   )
