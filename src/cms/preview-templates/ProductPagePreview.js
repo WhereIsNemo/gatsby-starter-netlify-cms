@@ -5,6 +5,7 @@ const ProductPagePreview = ({ entry }) => (
   <ProductPageTemplate
     title={entry.getIn(['data', 'title'])}
     image={entry.getIn(['data', 'image'])}
+    categories={entry.getIn(['data', 'categories'])}
   />
 )
 
