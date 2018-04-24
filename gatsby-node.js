@@ -30,10 +30,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               slug
             }
             frontmatter {
-              title
               templateKey
-              image
-              categories
             }
           }
         }
@@ -65,12 +62,5 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         })
       }
     })
-
-    // Create paginated product pages
-    const products = result.data.allMarkdownRemark.edges.filter(edge => 
-      edge.node.frontmatter.templateKey === "product-page"
-    );
-
-    createProductsPaginatedPages(createPage, products);
   })
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import CatalogAside from '../components/CatalogAside'
 
-export const CategoryPageTemplate = ({ title, asideCategories }) => {
+export const CategoryPageTemplate = ({ title, description, asideCategories }) => {
   return (
     <div className="container">
       <div className="container">
@@ -11,7 +11,7 @@ export const CategoryPageTemplate = ({ title, asideCategories }) => {
           </div>
           <div className="col col-12 col-md-9">
             <h1>{title}</h1>
-            <div></div>
+            <div>{description}</div>
           </div>
         </div>
       </div>
@@ -25,6 +25,7 @@ const CategoryPage = ({ data }) => {
 
   return <CategoryPageTemplate 
     title={post.frontmatter.title} 
+    description={post.frontmatter.description}
     asideCategories={asideCategories}
   />
 }
@@ -36,6 +37,7 @@ export const categoryPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
+        description
       }
     }
     ...asideCategories
