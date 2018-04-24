@@ -31,7 +31,6 @@ export const categoryPageQuery = graphql`
   query CategoryPage($id: String!) {
     ...asideCategories
     ...categoryPage
-    ...categoryProducts
   }
 
   fragment categoryPage on RootQueryType {
