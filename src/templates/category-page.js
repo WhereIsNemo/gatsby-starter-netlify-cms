@@ -19,8 +19,7 @@ export const CategoryPageTemplate = ({ title, asideCategories }) => {
   );
 }
 
-const CategoryPage = ({ data }, props) => {
-  console.log(props);
+const CategoryPage = ({ data }) => {
   const { markdownRemark: post } = data
   const { asideCategories } = data;
 

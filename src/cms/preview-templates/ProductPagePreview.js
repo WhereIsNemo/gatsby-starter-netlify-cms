@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { ProductPageTemplate } from '../../templates/product-page'
 
 const ProductPagePreview = ({ entry }) => (
@@ -8,11 +7,5 @@ const ProductPagePreview = ({ entry }) => (
     image={entry.getIn(['data', 'image'])}
   />
 )
-
-ProductPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-}
 
 export default ProductPagePreview

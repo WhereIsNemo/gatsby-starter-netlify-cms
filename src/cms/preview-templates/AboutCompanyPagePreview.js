@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { AboutCompanyPageTemplate } from '../../templates/about-company-page'
 
 const AboutCompanyPagePreview = ({ entry }) => (
@@ -8,11 +7,5 @@ const AboutCompanyPagePreview = ({ entry }) => (
     body={entry.getIn(['data', 'body'])}
   />
 )
-
-AboutCompanyPagePreview.propTypes = {
-  entry: PropTypes.shape({
-    getIn: PropTypes.func,
-  }),
-}
 
 export default AboutCompanyPagePreview
