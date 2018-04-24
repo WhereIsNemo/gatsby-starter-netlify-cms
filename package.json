@@ -33,7 +33,6 @@
     "swiper": "^4.2.2"
   },
   "devDependencies": {
-    "prettier": "^1.7.4",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify-cms": "^2.0.1",
@@ -47,6 +46,7 @@
     "gatsby-transformer-sharp": "^1.6.21",
     "lodash-webpack-plugin": "^0.11.4",
     "postcss-scss": "^1.0.5",
+    "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
     "react": "^16.2.0"
   }
