@@ -8,16 +8,14 @@ const CategoryPage = ({ data }) => {
 
   return (
     <div className="container">
-      <div className="container">
-        <div className="row">
-          <div className="col col-12 col-md-3">
-            <CatalogAside categories={asideCategories.edges} />
-          </div>
-          <div className="col col-12 col-md-9">
-            <h1>{post.frontmatter.title}</h1>
-            <div>{post.frontmatter.description}</div>
-            <ProductsGrid productsGrid={productsGrid.edges} category={post.frontmatter.title} />
-          </div>
+      <div className="row">
+        <div className="col col-12 col-md-3">
+          <CatalogAside categories={asideCategories.edges} />
+        </div>
+        <div className="col col-12 col-md-9">
+          <h1>{post.frontmatter.title}</h1>
+          <div>{post.frontmatter.description}</div>
+          <ProductsGrid productsGrid={productsGrid.edges} category={post.frontmatter.title} />
         </div>
       </div>
     </div>
