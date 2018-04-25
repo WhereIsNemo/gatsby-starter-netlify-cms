@@ -2,9 +2,10 @@ import React from 'react'
 import CatalogAside from '../components/CatalogAside'
 import ProductsGrid from '../components/ProductsGrid'
 
-const CategoryPage = ({ data }) => {
-  const { markdownRemark: post } = data
-  const { asideCategories, productsGrid } = data;
+const CategoryPage = (props) => {
+  const { markdownRemark: post } = props.data
+  const { asideCategories } = props.data;
+  const productsGrid = props.pathContext.group
 
   return (
     <div className="container">
@@ -15,7 +16,10 @@ const CategoryPage = ({ data }) => {
         <div className="col col-12 col-md-9">
           <h1>{post.frontmatter.title}</h1>
           <div>{post.frontmatter.description}</div>
-          <ProductsGrid productsGrid={productsGrid.edges} category={post.frontmatter.title} />
+          <ProductsGrid productsGrid={productsGrid} category={post.frontmatter.title} />
+          <div>first - {props.pathContext.first ? "true" : "false"}</div>
+          <div>index - {props.pathContext.index}</div>
+          <div>last - {props.pathContext.last ? "true" : "false"}</div>
         </div>
       </div>
     </div>
@@ -33,6 +37,5 @@ export const categoryPageQuery = graphql`
       }
     }
     ...asideCategories
-    ...productsGridCategories
   }
 `

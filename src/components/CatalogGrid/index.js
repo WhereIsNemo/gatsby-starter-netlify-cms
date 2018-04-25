@@ -21,7 +21,7 @@ export default class CatalogGrid extends React.Component {
 
 export const CatalogGridQuery = graphql`
   fragment catalogGridCategories on RootQueryType {
-    catalogGridCategories: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "category-page"}}}) {
+    catalogGridCategories: allMarkdownRemark(filter: {frontmatter: {contentType: {eq: "category"}}}) {
       edges {
         node {
           fields {

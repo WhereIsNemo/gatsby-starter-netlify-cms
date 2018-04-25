@@ -48,7 +48,7 @@ export default class CatalogSlider extends React.Component {
 
 export const CatalogSliderQuery = graphql`
   fragment sliderCategories on RootQueryType {
-    sliderCategories: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "category-page"}}}) {
+    sliderCategories: allMarkdownRemark(filter: {frontmatter: {contentType: {eq: "category"}}}) {
       edges {
         node {
           fields {

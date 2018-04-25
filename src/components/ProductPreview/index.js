@@ -10,7 +10,6 @@ const ProductPreview = ({node}) => {
       <h3>
         <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
       </h3>
-
     </div>
   )
 }

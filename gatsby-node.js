@@ -1,7 +1,8 @@
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const createProductsPaginatedPages = require(`./gatsby-actions/createProductsPaginatedPages`);
+const createPaginatedPages = require(`./gatsby-actions/createPaginatedPages`);
+const slugify = require('transliteration').slugify
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
@@ -12,7 +13,9 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value: slugify(value, {
+        ignore: ['/'],
+      }),
     })
   }
 }
@@ -30,7 +33,11 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               slug
             }
             frontmatter {
+              title
               templateKey
+              categories
+              contentType
+              image
             }
           }
         }
@@ -51,7 +58,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
       if (edge.node.frontmatter.templateKey) {
         createPage({
-          path: edge.node.fields.slug,
+          path: slugify(edge.node.fields.slug, {
+            ignore: ['/'],
+          }),
           component: path.resolve(
             `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
           ),
@@ -61,6 +70,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           },
         })
       }
+    })
+
+    // Create category pages with pagination
+    const categories = content.filter(edge => edge.node.frontmatter.contentType === "category");
+
+    categories.forEach(category => {
+      const categoryId = category.node.id;
+      const categoryName = category.node.frontmatter.title;
+      const categoryContent = content.filter(edge => edge.node.frontmatter.categories === categoryName);
+
+      createPaginatedPages({
+        createPage,
+        nodes: categoryContent,
+        contentType: "categories",
+        templateName: "category-page",
+        pageId: categoryId,
+        contentName: categoryName,
+      });
     })
   })
 }

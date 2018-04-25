@@ -21,22 +21,3 @@ export default class ProductsGrid extends React.Component {
     )
   }
 }
-
-export const ProductsGridQuery = graphql`
-  fragment productsGridCategories on RootQueryType {
-    productsGrid: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "product-page"}}}) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            image
-            categories
-          }
-        }
-      }
-    }
-  }
-`

@@ -30,7 +30,8 @@
     "lodash": "^4.17.5",
     "netlify-cms": "^1.5.0",
     "react-helmet": "^5.2.0",
-    "swiper": "^4.2.2"
+    "swiper": "^4.2.2",
+    "transliteration": "^1.6.2"
   },
   "devDependencies": {
     "gatsby": "^1.9.213",
