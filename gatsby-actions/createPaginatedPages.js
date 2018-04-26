@@ -8,9 +8,9 @@ module.exports = ({
   templateName,
   pageId,
   contentName,
+  paginateSize = 9,
 }) => {
   const template = path.resolve(`src/templates/${templateName}.js`);
-  const paginateSize = 9;
 
   // Split posts into arrays of length equal to number posts on each page/paginateSize
   const groupedPages = nodes
@@ -23,12 +23,12 @@ module.exports = ({
 
   // Create new indexed route for each array
   if (groupedPages.length === 0) {
-    const paginationRoute = slugify(`${contentType}/${contentName}`, {
+    const route = slugify(`${contentType}/${contentName}`, {
       ignore: ['/'],
     });
 
     return createPage({
-      path: paginationRoute,
+      path: route,
       component: template,
       context: {
         id: pageId,
@@ -37,19 +37,19 @@ module.exports = ({
   } else {
     groupedPages.forEach((group, index, groups) => {
       const pageIndex = index === 0 ? `` : index + 1;
-      const paginationRoute = slugify(`${contentType}/${contentName}`, {
+      const route = slugify(`${contentType}/${contentName}`, {
         ignore: ['/'],
       });
 
       return createPage({
-        path: `${paginationRoute}/${pageIndex}`,
+        path: `${route}/${pageIndex}`,
         component: template,
         context: {
           id: pageId,
           group,
           pagesCount: groups.length,
           index: index + 1,
-          paginationRoute,
+          route,
         },
       });
     });
