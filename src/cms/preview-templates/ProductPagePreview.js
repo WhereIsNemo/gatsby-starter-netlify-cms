@@ -1,5 +1,5 @@
-import React from 'react'
-import { ProductPageTemplate } from '../../templates/product-page'
+import React from 'react';
+import { ProductPageTemplate } from '../../templates/product-page';
 
 const ProductPagePreview = ({ entry }) => (
   <ProductPageTemplate
@@ -7,6 +7,6 @@ const ProductPagePreview = ({ entry }) => (
     image={entry.getIn(['data', 'image'])}
     categories={entry.getIn(['data', 'categories'])}
   />
-)
+);
 
-export default ProductPagePreview
+export default ProductPagePreview;

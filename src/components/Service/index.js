@@ -1,6 +1,6 @@
-import React from 'react'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import styles from './styles.module.scss'
+import React from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import styles from './styles.module.scss';
 
 const Service = ({ icon, title, description, className }) => (
   <div className={`${styles.service} ${className}`}>
@@ -10,6 +10,6 @@ const Service = ({ icon, title, description, className }) => (
     <h3 className={styles.service__title}>{title}</h3>
     <div className={styles.description}>{description}</div>
   </div>
-)
+);
 
-export default Service
+export default Service;

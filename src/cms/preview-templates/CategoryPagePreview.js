@@ -1,5 +1,5 @@
-import React from 'react'
-import { CategoryPageTemplate } from '../../templates/category-page'
+import React from 'react';
+import { CategoryPageTemplate } from '../../templates/category-page';
 
 const CategoryPagePreview = ({ entry }) => (
   <CategoryPageTemplate
@@ -7,6 +7,6 @@ const CategoryPagePreview = ({ entry }) => (
     image={entry.getIn(['data', 'image'])}
     description={entry.getIn(['data', 'text'])}
   />
-)
+);
 
-export default CategoryPagePreview
+export default CategoryPagePreview;

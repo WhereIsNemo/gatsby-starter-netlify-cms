@@ -1,9 +1,9 @@
-import React from 'react'
-import faTruck from '@fortawesome/fontawesome-free-solid/faTruck'
-import faThumbsUp from '@fortawesome/fontawesome-free-solid/faThumbsUp'
-import faComments from '@fortawesome/fontawesome-free-solid/faComments'
-import Service from '../Service'
-import styles from './styles.module.scss'
+import React from 'react';
+import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
+import faThumbsUp from '@fortawesome/fontawesome-free-solid/faThumbsUp';
+import faComments from '@fortawesome/fontawesome-free-solid/faComments';
+import Service from '../Service';
+import styles from './styles.module.scss';
 
 const Services = () => (
   <div className="section services">
@@ -36,6 +36,6 @@ const Services = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Services
+export default Services;

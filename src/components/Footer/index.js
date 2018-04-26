@@ -1,8 +1,8 @@
-import React from 'react'
-import Link from 'gatsby-link'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faVk from '@fortawesome/fontawesome-free-brands/faVk'
-import styles from './styles.module.scss'
+import React from 'react';
+import Link from 'gatsby-link';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faVk from '@fortawesome/fontawesome-free-brands/faVk';
+import styles from './styles.module.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
@@ -73,6 +73,6 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

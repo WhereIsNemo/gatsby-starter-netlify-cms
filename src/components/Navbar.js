@@ -1,5 +1,5 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,6 +50,6 @@ const Navbar = () => (
       </ul>
     </div>
   </nav>
-)
+);
 
-export default Navbar
+export default Navbar;

@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Services from '../components/Services'
-import './all.scss'
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import Services from '../components/Services';
+import './all.scss';
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -21,10 +21,10 @@ const TemplateWrapper = ({ children }) => (
     <Services />
     <Footer />
   </div>
-)
+);
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
