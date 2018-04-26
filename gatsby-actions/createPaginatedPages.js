@@ -23,13 +23,12 @@ module.exports = ({
 
   // Create new indexed route for each array
   if (groupedPages.length === 0) {
-    const pageIndex = ``;
-    const paginationRoute = `${contentType}/${contentName}/${pageIndex}`;
+    const paginationRoute = slugify(`${contentType}/${contentName}`, {
+      ignore: ['/'],
+    });
 
     return createPage({
-      path: slugify(paginationRoute, {
-        ignore: ['/'],
-      }),
+      path: paginationRoute,
       component: template,
       context: {
         id: pageId,
@@ -38,18 +37,19 @@ module.exports = ({
   } else {
     groupedPages.forEach((group, index, groups) => {
       const pageIndex = index === 0 ? `` : index + 1;
-      const paginationRoute = `${contentType}/${contentName}/${pageIndex}`;
+      const paginationRoute = slugify(`${contentType}/${contentName}`, {
+        ignore: ['/'],
+      });
 
       return createPage({
-        path: slugify(paginationRoute, {
-          ignore: ['/'],
-        }),
+        path: `${paginationRoute}/${pageIndex}`,
         component: template,
         context: {
           id: pageId,
           group,
           pagesCount: groups.length,
           index: index + 1,
+          paginationRoute,
         },
       });
     });
