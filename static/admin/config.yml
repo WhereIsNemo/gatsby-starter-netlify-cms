@@ -32,6 +32,8 @@ collections:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Категория", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
       - {label: "Изображение", name: "image", widget: "image"}
+      - {label: "Описание", name: "description", widget: "markdown"}
+      - {label: "Цена", name: "price", widget: "number"}
   - name: "special-offers"
     label: "Специальные предложения"
     folder: "src/pages/special-offers"
