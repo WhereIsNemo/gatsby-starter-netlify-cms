@@ -38,7 +38,7 @@ export default class Slider extends React.Component {
   }
 }
 
-export const CatalogAsideQuery = graphql`
+export const specialOffersSliderQuery = graphql`
   fragment specialOffersSlider on RootQueryType {
     specialOffersSlider: allMarkdownRemark(
       filter: { frontmatter: { templateKey: { eq: "special-offer-page" } } }
