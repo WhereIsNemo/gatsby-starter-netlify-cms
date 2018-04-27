@@ -1,5 +1,6 @@
 import React from 'react';
 import CatalogAside from '../components/CatalogAside';
+import { HTMLContent } from '../components/Content';
 
 export const ProductPageTemplate = ({ 
   title, 
@@ -22,7 +23,7 @@ export const ProductPageTemplate = ({
               <h1>{title}</h1>
               <div>{price}</div>
               <div>{category}</div>
-              <div>{description}</div>
+              <HTMLContent content={description} />
             </div>
           </div>
         </div>
@@ -39,7 +40,7 @@ const ProductPage = ({ data }) => {
       title={post.frontmatter.title}
       image={post.frontmatter.image}
       category={post.frontmatter.categories}
-      description={post.frontmatter.description}
+      description={post.html}
       price={post.frontmatter.price}
       asideCategories={data.asideCategories.edges}
     />
@@ -51,6 +52,7 @@ export default ProductPage;
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      html
       frontmatter {
         title
         categories
