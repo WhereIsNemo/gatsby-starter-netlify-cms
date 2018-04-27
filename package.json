@@ -4,8 +4,7 @@
   "version": "0.2.0",
   "scripts": {
     "start": "npm run develop",
-    "prebuild": "del-cli .cache/",
-    "build": "gatsby build",
+    "build": "del-cli ./.cache/ && gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js,gatsby-actions/**/*.js}\"",
