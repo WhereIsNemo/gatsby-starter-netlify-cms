@@ -6,7 +6,7 @@ const ProductPagePreview = ({ entry }) => (
     title={entry.getIn(['data', 'title'])}
     image={entry.getIn(['data', 'image'])}
     categories={entry.getIn(['data', 'categories'])}
-    description={entry.getIn(['data', 'body'])}
+    body={entry.getIn(['data', 'body'])}
     price={entry.getIn(['data', 'price'])}
   />
 );

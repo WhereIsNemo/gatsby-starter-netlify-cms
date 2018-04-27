@@ -6,7 +6,7 @@ export const ProductPageTemplate = ({
   title, 
   image, 
   category, 
-  description, 
+  body, 
   asideCategories,
   price,
 }) => {
@@ -23,7 +23,7 @@ export const ProductPageTemplate = ({
               <h1>{title}</h1>
               <div>{price}</div>
               <div>{category}</div>
-              <HTMLContent content={description} />
+              <HTMLContent content={body} />
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@ const ProductPage = ({ data }) => {
       title={post.frontmatter.title}
       image={post.frontmatter.image}
       category={post.frontmatter.categories}
-      description={post.html}
+      body={post.html}
       price={post.frontmatter.price}
       asideCategories={data.asideCategories.edges}
     />
@@ -57,7 +57,6 @@ export const productPageQuery = graphql`
         title
         categories
         image
-        description
         price
       }
     }
