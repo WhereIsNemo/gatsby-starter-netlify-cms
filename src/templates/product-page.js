@@ -55,6 +55,8 @@ export const productPageQuery = graphql`
         title
         categories
         image
+        description
+        price
       }
     }
     ...asideCategories
