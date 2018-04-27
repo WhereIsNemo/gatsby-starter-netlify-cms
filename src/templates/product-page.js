@@ -34,7 +34,6 @@ export const ProductPageTemplate = ({
 
 const ProductPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(data);
 
   return (
     <ProductPageTemplate 
