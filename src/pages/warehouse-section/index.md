@@ -1,7 +1,6 @@
 ---
 id: about-section
 contentType: section
-title: О компании
+title: Склад самовывоза
 ---
-
-some body text
+о складе самовывоза
