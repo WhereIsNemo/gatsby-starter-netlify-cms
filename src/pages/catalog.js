@@ -23,7 +23,6 @@ export default class CatalogPage extends React.Component {
 
 export const CatalogPageQuery = graphql`
   query CatalogPageQuery {
-    ...asideCategories
     ...catalogGridCategories
   }
 `;

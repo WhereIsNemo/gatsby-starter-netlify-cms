@@ -22,22 +22,3 @@ export default ({ categories }) => {
     </div>
   );
 };
-
-export const CatalogAsideQuery = graphql`
-  fragment asideCategories on RootQueryType {
-    asideCategories: allMarkdownRemark(
-      filter: { frontmatter: { contentType: { eq: "category" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
-    }
-  }
-`;

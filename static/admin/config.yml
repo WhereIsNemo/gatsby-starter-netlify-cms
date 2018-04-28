@@ -15,6 +15,8 @@ collections:
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Изображение", name: "image", widget: "image"}
       - {label: "Описание", name: "description", widget: "text"}
+    editor:
+      preview: false
   - name: "product-company"
     label: "Компании продуктов"
     folder: "src/pages/product-company"
@@ -23,6 +25,8 @@ collections:
       - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "product-company-page"}
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Изображение", name: "image", widget: "image"}
+    editor:
+      preview: false
   - name: "products"
     label: "Продукты"
     folder: "src/pages/products"
@@ -34,6 +38,8 @@ collections:
       - {label: "Изображение", name: "image", widget: "image"}
       - {label: "Цена", name: "price", widget: "number"}
       - {label: "Описание", name: "body", widget: "markdown"}
+    editor:
+     preview: false
   - name: "special-offers"
     label: "Специальные предложения"
     folder: "src/pages/special-offers"
@@ -42,6 +48,8 @@ collections:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "special-offer-page"}
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Изображение", name: "image", widget: "image"}
+    editor:
+      preview: false
   - name: "sections"
     label: "Секции"
     files:
@@ -53,3 +61,5 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
+    editor:
+      preview: false

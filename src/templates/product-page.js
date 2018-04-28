@@ -1,34 +1,31 @@
 import React from 'react';
 import CatalogAside from '../components/CatalogAside';
 import { HTMLContent } from '../components/Content';
+import DefaultLayout from '../components/Layout';
 
-export const ProductPageTemplate = ({ 
-  title, 
-  image, 
-  category, 
-  body, 
+export const ProductPageTemplate = ({
+  title,
+  image,
+  category,
+  body,
   asideCategories,
   price,
+  data,
 }) => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col col-12 col-md-3">
-          <CatalogAside categories={asideCategories} />
-        </div>
-        <div className="col col-12 col-md-9">
-          <div className="row">
-            <div className="col col-12 col-md-6"><img src={image} /></div>
-            <div className="col col-12 col-md-6">
-              <h1>{title}</h1>
-              <div>{price}</div>
-              <div>{category}</div>
-              <HTMLContent content={body} />
-            </div>
+    <DefaultLayout data={data}>
+      <React.Fragment key="mainContent">
+        <div className="row">
+          <div className="col col-12 col-md-6"><img src={image} /></div>
+          <div className="col col-12 col-md-6">
+            <h1>{title}</h1>
+            <div>{price}</div>
+            <div>{category}</div>
+            <HTMLContent content={body} />
           </div>
         </div>
-      </div>
-    </div>
+      </React.Fragment>
+    </DefaultLayout>
   );
 };
 
@@ -36,13 +33,14 @@ const ProductPage = ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <ProductPageTemplate 
+    <ProductPageTemplate
       title={post.frontmatter.title}
       image={post.frontmatter.image}
       category={post.frontmatter.categories}
       body={post.html}
       price={post.frontmatter.price}
       asideCategories={data.asideCategories.edges}
+      data={data}
     />
   );
 };
@@ -60,6 +58,6 @@ export const productPageQuery = graphql`
         price
       }
     }
-    ...asideCategories
+    ...defaultLayout
   }
 `;
