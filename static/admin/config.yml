@@ -22,9 +22,9 @@ collections:
     folder: "src/pages/product-company"
     create: true
     fields:
-      - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "product-company-page"}
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Изображение", name: "image", widget: "image"}
+      - {label: "Контент тип", name: "contentType", widget: "hidden", default: "productCompany"}
     editor:
       preview: false
   - name: "products"
@@ -45,9 +45,9 @@ collections:
     folder: "src/pages/special-offers"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "special-offer-page"}
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Изображение", name: "image", widget: "image"}
+      - {label: "Контент тип", name: "contentType", widget: "hidden", default: "specialOffer"}
     editor:
       preview: false
   - name: "sections"

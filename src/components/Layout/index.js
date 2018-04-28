@@ -21,18 +21,16 @@ const UnderMainContent = ({ children }) => (
 );
 
 export default (props) => {
-  console.log(props);
-
   const { children, data } = props;
   const content = [];
 
   const defineLayout = (child) => {
     switch (child.key) {
       case "mainContent":
-        content.push(<MainContent data={data}>{child}</MainContent>);
+        content.push(<MainContent key="mainContent" data={data}>{child}</MainContent>);
         break;
       case "underMainContent":
-        content.push(<UnderMainContent>{child}</UnderMainContent>);
+        content.push(<UnderMainContent key="underMainContent">{child}</UnderMainContent>);
         break;
     }
   }

@@ -30,7 +30,7 @@ export default ProductCompanies;
 export const productCompaniesQuery = graphql`
   fragment productCompanies on RootQueryType {
     productCompanies: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "product-company-page" } } }
+      filter: { frontmatter: { contentType: { eq: "productCompany" } } }
     ) {
       edges {
         node {
