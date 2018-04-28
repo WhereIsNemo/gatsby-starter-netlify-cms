@@ -61,7 +61,7 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/delivery/index.md"
+      - file: "src/pages/delivery-section/index.md"
         label: "Доставка и оплата"
         name: "delivery"
         fields:
@@ -69,7 +69,7 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/warehouse/index.md"
+      - file: "src/pages/warehouse-section/index.md"
         label: "Склад самовывоза"
         name: "warehouse"
         fields:
@@ -77,7 +77,7 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/testimonials/index.md"
+      - file: "src/pages/testimonials-section/index.md"
         label: "Отзывы"
         name: "testimonials"
         fields:
@@ -85,7 +85,7 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/contact/index.md"
+      - file: "src/pages/contact-section/index.md"
         label: "Контакты"
         name: "contact"
         fields:
