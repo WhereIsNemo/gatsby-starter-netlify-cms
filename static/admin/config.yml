@@ -61,5 +61,37 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
+      - file: "src/pages/delivery/index.md"
+        label: "Доставка и оплата"
+        name: "delivery"
+        fields:
+          - {label: "Идентификатор", name: "id", widget: "hidden", default: "delivery-section"}
+          - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Текст", name: "body", widget: "markdown"}
+      - file: "src/pages/warehouse/index.md"
+        label: "Склад самовывоза"
+        name: "warehouse"
+        fields:
+          - {label: "Идентификатор", name: "id", widget: "hidden", default: "warehouse-section"}
+          - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Текст", name: "body", widget: "markdown"}
+      - file: "src/pages/testimonials/index.md"
+        label: "Отзывы"
+        name: "testimonials"
+        fields:
+          - {label: "Идентификатор", name: "id", widget: "hidden", default: "testimonials-section"}
+          - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Текст", name: "body", widget: "markdown"}
+      - file: "src/pages/contact/index.md"
+        label: "Контакты"
+        name: "contact"
+        fields:
+          - {label: "Идентификатор", name: "id", widget: "hidden", default: "contact-section"}
+          - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
+          - {label: "Заголовок", name: "title", widget: "string"}
+          - {label: "Текст", name: "body", widget: "markdown"}
     editor:
       preview: false
