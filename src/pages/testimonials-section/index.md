@@ -1,7 +1,6 @@
 ---
 id: about-section
 contentType: section
-title: О компании
+title: Отзывы
 ---
-
-some body text
+текст для отзывов

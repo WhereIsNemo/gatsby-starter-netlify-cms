@@ -1,7 +1,6 @@
 ---
 id: about-section
 contentType: section
-title: О компании
+title: Контакты
 ---
-
-some body text
+о контактах

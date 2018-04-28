@@ -1,7 +1,6 @@
 ---
 id: about-section
 contentType: section
-title: О компании
+title: Доставка и оплата
 ---
-
-some body text
+о доставке и оплате
