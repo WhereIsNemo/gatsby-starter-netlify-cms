@@ -1,28 +1,21 @@
 import React from 'react';
 import CatalogAside from '../components/CatalogAside';
 import CatalogGrid from '../components/CatalogGrid';
+import DefaultLayout from '../components/Layout';
 
-export default class CatalogPage extends React.Component {
-  render() {
-    return (
-      <div className="container">
-        <div className="row">
-          <div className="col col-12 col-md-3">
-            <CatalogAside categories={this.props.data.asideCategories.edges} />
-          </div>
-          <div className="col col-12 col-md-9">
-            <CatalogGrid
-              categories={this.props.data.catalogGridCategories.edges}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+export default (props) => (
+  <DefaultLayout data={props.data}>
+    <React.Fragment key="mainContent">
+      <CatalogGrid
+        categories={props.data.catalogGridCategories.edges}
+      />
+    </React.Fragment>
+  </DefaultLayout>
+);
 
 export const CatalogPageQuery = graphql`
   query CatalogPageQuery {
+    ...defaultLayout
     ...catalogGridCategories
   }
 `;
