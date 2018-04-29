@@ -1,5 +1,4 @@
 import React from 'react';
-import CatalogAside from '../components/CatalogAside';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
 

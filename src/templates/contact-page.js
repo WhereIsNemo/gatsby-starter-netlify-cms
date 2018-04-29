@@ -1,13 +1,13 @@
 import React from 'react';
 import { HTMLContent } from '../components/Content';
 
-export const DeliveryPageTemplate = ({
+export const ContactPageTemplate = ({
   title,
   body,
 }) => {
   return (
     <div className="container">
-      <div className="delivery-section">
+      <div className="testimonials-section">
         <h1>{title}</h1>
         <HTMLContent content={body} />
       </div>
@@ -19,15 +19,15 @@ export default ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <DeliveryPageTemplate
+    <ContactPageTemplate
       title={post.frontmatter.title}
       body={post.html}
     />
   );
 };
 
-export const deliveryPageQuery = graphql`
-  query DeliveryPage($id: String!) {
+export const testimonialsPageQuery = graphql`
+  query ContactPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

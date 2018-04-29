@@ -1,5 +1,6 @@
 ---
-id: about-section
+templateKey: testimonials-page
+id: testimonials-section
 contentType: section
 title: Отзывы
 ---

@@ -50,10 +50,10 @@ collections:
       - {label: "Контент тип", name: "contentType", widget: "hidden", default: "specialOffer"}
     editor:
       preview: false
-  - name: "sections"
-    label: "Секции"
+  - name: "pages"
+    label: "Страницы"
     files:
-      - file: "src/pages/about-section/index.md"
+      - file: "src/pages/about/index.md"
         label: "О компании"
         name: "about"
         fields:
@@ -61,38 +61,42 @@ collections:
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/delivery-section/index.md"
+      - file: "src/pages/delivery/index.md"
         label: "Доставка и оплата"
         name: "delivery"
         fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "delivery-page"}
+          - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "delivery-page"}
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "delivery-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/warehouse-section/index.md"
+      - file: "src/pages/warehouse/index.md"
         label: "Склад самовывоза"
         name: "warehouse"
         fields:
+          - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "warehouse-page"}
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "warehouse-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/testimonials-section/index.md"
+      - file: "src/pages/testimonials/index.md"
         label: "Отзывы"
         name: "testimonials"
         fields:
+          - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "testimonials-page"}
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "testimonials-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
-      - file: "src/pages/contact-section/index.md"
+      - file: "src/pages/contact/index.md"
         label: "Контакты"
         name: "contact"
         fields:
+          - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "contact-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
           - {label: "Текст", name: "body", widget: "markdown"}
     editor:
       preview: false
+  

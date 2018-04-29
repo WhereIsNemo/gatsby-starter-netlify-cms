@@ -3,11 +3,11 @@ import CatalogAside from '../components/CatalogAside';
 import CatalogGrid from '../components/CatalogGrid';
 import DefaultLayout from '../components/Layout';
 
-export default (props) => (
-  <DefaultLayout data={props.data}>
+export default ({ data }) => (
+  <DefaultLayout data={data}>
     <React.Fragment key="mainContent">
       <CatalogGrid
-        categories={props.data.catalogGridCategories.edges}
+        categories={data.catalogGridCategories.edges}
       />
     </React.Fragment>
   </DefaultLayout>

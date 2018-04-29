@@ -1,5 +1,6 @@
 ---
-id: about-section
+templateKey: contact-page
+id: contact-section
 contentType: section
 title: Контакты
 ---
