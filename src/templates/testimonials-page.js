@@ -1,42 +1,24 @@
 import React from 'react';
-import $script from 'scriptjs';
 import { HTMLContent } from '../components/Content';
+import VkComments from '../components/VkComments';
 
-export class TestimonialsPageTemplate extends React.Component {
-  render() {
-    const { title, body } = this.props;
-
-    return (
-      <div className="container">
-        <div className="testimonials-section">
-          <h1>{title}</h1>
-          <HTMLContent content={body} />
-        </div>
-        <div className="comments-section">
-          <div id="vk_comments"></div>
-        </div>
-      </div>
-    );
-  }
-
-  componentDidMount() {
-    $script('//vk.com/js/api/openapi.js?154', 'vkComments');
-
-    $script.ready('vkComments', () => {
-      VK.init({apiId: 6464457, onlyWidgets: true});
-      VK.Widgets.Comments("vk_comments", { limit: 10, attach: "photo" })
-    });
-  }
-}
+export const TestimonialsPageTemplate = ({ title, body }) => (
+  <div className="container">
+    <div className="testimonials-section">
+      <h1>{title}</h1>
+      <HTMLContent content={body} />
+    </div>
+    <div className="comments-section">
+      <VkComments />
+    </div>
+  </div>
+);
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <TestimonialsPageTemplate
-      title={post.frontmatter.title}
-      body={post.html}
-    />
+    <TestimonialsPageTemplate title={post.frontmatter.title} body={post.html} />
   );
 };
 

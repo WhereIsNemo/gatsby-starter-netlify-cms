@@ -8,7 +8,9 @@ export default ({ route, currentPage, pagesCount }) => {
   const lastPage = pagesCount;
   const firstPageEl = currentPage > 1 && (
     <li className="page-item">
-      <Link className="page-link" to={`/${route}/`}>1</Link>
+      <Link className="page-link" to={`/${route}/`}>
+        1
+      </Link>
     </li>
   );
   const previousDotsEl = previousPage - firstPage > 1 && (
@@ -18,12 +20,22 @@ export default ({ route, currentPage, pagesCount }) => {
   );
   const previousPageEl = previousPage > 1 && (
     <li className="page-item">
-      <Link className="page-link" to={`/${route}/${previousPage === 1 ? `` : previousPage}`}>{previousPage}</Link>
+      <Link
+        className="page-link"
+        to={`/${route}/${previousPage === 1 ? `` : previousPage}`}
+      >
+        {previousPage}
+      </Link>
     </li>
   );
   const nextPageEl = nextPage < lastPage && (
     <li className="page-item">
-      <Link className="page-link" to={`/${route}/${nextPage === 1 ? `` : nextPage}`}>{nextPage}</Link>
+      <Link
+        className="page-link"
+        to={`/${route}/${nextPage === 1 ? `` : nextPage}`}
+      >
+        {nextPage}
+      </Link>
     </li>
   );
   const nextDotsEl = lastPage - nextPage > 1 && (
@@ -33,7 +45,9 @@ export default ({ route, currentPage, pagesCount }) => {
   );
   const lastPageEl = currentPage < lastPage && (
     <li className="page-item">
-      <Link className="page-link" to={`/${route}/${lastPage}`}>{lastPage}</Link>
+      <Link className="page-link" to={`/${route}/${lastPage}`}>
+        {lastPage}
+      </Link>
     </li>
   );
 
@@ -52,4 +66,4 @@ export default ({ route, currentPage, pagesCount }) => {
   );
 
   return paginationEl;
-}
+};

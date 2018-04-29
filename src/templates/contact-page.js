@@ -1,10 +1,7 @@
 import React from 'react';
 import { HTMLContent } from '../components/Content';
 
-export const ContactPageTemplate = ({
-  title,
-  body,
-}) => {
+export const ContactPageTemplate = ({ title, body }) => {
   return (
     <div className="container">
       <div className="testimonials-section">
@@ -19,10 +16,7 @@ export default ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <ContactPageTemplate
-      title={post.frontmatter.title}
-      body={post.html}
-    />
+    <ContactPageTemplate title={post.frontmatter.title} body={post.html} />
   );
 };
 

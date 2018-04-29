@@ -6,7 +6,7 @@ import CatalogAside from '../components/CatalogAside';
 import AboutCompany from '../components/AboutCompany';
 import DefaultLayout from '../components/Layout';
 
-export default (props) => (
+export default props => (
   <DefaultLayout data={props.data}>
     <React.Fragment key="mainContent">
       <SpecialOffersSlider
@@ -18,9 +18,7 @@ export default (props) => (
         <ProductCompanies
           productCompanies={props.data.productCompanies.edges}
         />
-        <CatalogSlider
-          sliderCategories={props.data.sliderCategories.edges}
-        />
+        <CatalogSlider sliderCategories={props.data.sliderCategories.edges} />
         <AboutCompany aboutSection={props.data.aboutSection} />
       </div>
     </React.Fragment>

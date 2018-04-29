@@ -15,7 +15,9 @@ export const ProductPageTemplate = ({
     <DefaultLayout data={data}>
       <React.Fragment key="mainContent">
         <div className="row">
-          <div className="col col-12 col-md-6"><img src={image} /></div>
+          <div className="col col-12 col-md-6">
+            <img src={image} />
+          </div>
           <div className="col col-12 col-md-6">
             <h1>{title}</h1>
             <div>{price}</div>

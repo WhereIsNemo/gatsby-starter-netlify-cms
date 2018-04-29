@@ -6,9 +6,7 @@ import DefaultLayout from '../components/Layout';
 export default ({ data }) => (
   <DefaultLayout data={data}>
     <React.Fragment key="mainContent">
-      <CatalogGrid
-        categories={data.catalogGridCategories.edges}
-      />
+      <CatalogGrid categories={data.catalogGridCategories.edges} />
     </React.Fragment>
   </DefaultLayout>
 );

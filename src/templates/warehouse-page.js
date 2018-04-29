@@ -1,10 +1,7 @@
 import React from 'react';
 import { HTMLContent } from '../components/Content';
 
-export const WarehousePageTemplate = ({
-  title,
-  body,
-}) => {
+export const WarehousePageTemplate = ({ title, body }) => {
   return (
     <div className="container">
       <div className="warehouse-section">
@@ -19,10 +16,7 @@ export default ({ data }) => {
   const { markdownRemark: post } = data;
 
   return (
-    <WarehousePageTemplate
-      title={post.frontmatter.title}
-      body={post.html}
-    />
+    <WarehousePageTemplate title={post.frontmatter.title} body={post.html} />
   );
 };
 
