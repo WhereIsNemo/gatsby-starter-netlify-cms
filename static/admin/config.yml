@@ -60,7 +60,7 @@ collections:
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "about-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Текст", name: "body", widget: "markdown"}
+          - {label: "Текст", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "heading-four", "heading-five", "heading-six", "quote", "quote-block", "bullet-list", "numbered-list"]}
       - file: "src/pages/delivery/index.md"
         label: "Доставка и оплата"
         name: "delivery"
@@ -69,7 +69,7 @@ collections:
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "delivery-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Текст", name: "body", widget: "markdown"}
+          - {label: "Текст", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "heading-four", "heading-five", "heading-six", "quote", "quote-block", "bullet-list", "numbered-list"]}
       - file: "src/pages/warehouse/index.md"
         label: "Склад самовывоза"
         name: "warehouse"
@@ -78,7 +78,7 @@ collections:
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "warehouse-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Текст", name: "body", widget: "markdown"}
+          - {label: "Текст", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "heading-four", "heading-five", "heading-six", "quote", "quote-block", "bullet-list", "numbered-list"]}
       - file: "src/pages/testimonials/index.md"
         label: "Отзывы"
         name: "testimonials"
@@ -87,7 +87,7 @@ collections:
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "testimonials-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Текст", name: "body", widget: "markdown"}
+          - {label: "Текст", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "heading-four", "heading-five", "heading-six", "quote", "quote-block", "bullet-list", "numbered-list"]}
       - file: "src/pages/contact/index.md"
         label: "Контакты"
         name: "contact"
@@ -96,7 +96,7 @@ collections:
           - {label: "Идентификатор", name: "id", widget: "hidden", default: "contact-section"}
           - {label: "Контент тип", name: "contentType", widget: "hidden", default: "section"}
           - {label: "Заголовок", name: "title", widget: "string"}
-          - {label: "Текст", name: "body", widget: "markdown"}
+          - {label: "Текст", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "heading-two", "heading-three", "heading-four", "heading-five", "heading-six", "quote", "quote-block", "bullet-list", "numbered-list"]}
     editor:
       preview: false
   
