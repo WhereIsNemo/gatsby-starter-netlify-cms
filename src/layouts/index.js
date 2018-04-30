@@ -28,6 +28,19 @@ export default class TemplateWrapper extends React.Component {
   }
 
   componentDidMount() {
+    // Google analytics
+    const $scriptjs = require('scriptjs');
+  
+    $scriptjs('https://www.googletagmanager.com/gtag/js?id=UA-118409157-1', 'googleAnalytics');
+
+    $scriptjs.ready('googleAnalytics', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-118409157-1');
+    });
+
     // Yandex metrika
     (function (d, w, c) {
       (w[c] = w[c] || []).push(function () {
