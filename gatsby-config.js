@@ -21,23 +21,38 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/static`,
+        name: 'static',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/img`,
-        name: 'images',
+        name: 'src/img',
       },
     },
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
     'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [],
+        plugins: [
+          'gatsby-plugin-sharp',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     {
