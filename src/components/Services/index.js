@@ -2,7 +2,7 @@ import React from 'react';
 import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
 import faThumbsUp from '@fortawesome/fontawesome-free-solid/faThumbsUp';
 import faComments from '@fortawesome/fontawesome-free-solid/faComments';
-import Service from '../Service';
+import InfoBlock from '../InfoBlock';
 import styles from './styles.module.scss';
 
 const Services = () => (
@@ -10,7 +10,7 @@ const Services = () => (
     <div className="container">
       <div className="row">
         <div className="col col-12 col-md-4">
-          <Service
+          <InfoBlock
             className={styles.services__service}
             icon={faTruck}
             title="Доставка в течении суток"
@@ -18,7 +18,7 @@ const Services = () => (
           />
         </div>
         <div className="col col-12 col-md-4">
-          <Service
+          <InfoBlock
             className={styles.services__service}
             icon={faThumbsUp}
             title="Гарантия на всё"
@@ -26,11 +26,11 @@ const Services = () => (
           />
         </div>
         <div className="col col-12 col-md-4">
-          <Service
+          <InfoBlock
             className={styles.services__service}
             icon={faComments}
-            title="Консультация"
-            description="с 9:00 до 22:00"
+            title="Режим работы"
+            description="Ежедневно с 9:00 до 22:00"
           />
         </div>
       </div>
