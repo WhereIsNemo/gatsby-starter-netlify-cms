@@ -1,6 +1,7 @@
 import React from 'react';
 import Swiper from 'swiper';
 import 'swiper/dist/css/swiper.css';
+import Img from "gatsby-image";
 import styles from './styles.module.scss';
 
 export default class Slider extends React.Component {
@@ -9,8 +10,8 @@ export default class Slider extends React.Component {
 
     const slides = specialOffers.map(({ node }, index) => (
       <div key={index} className="swiper-slide">
-        <img src={node.frontmatter.image} />
-        {console.log(node.children)}
+        <Img sizes={node.childrenImageSharp[0].sizes} />
+        {console.log(node)}
       </div>
     ));
 
@@ -47,9 +48,8 @@ export const specialOffersSliderQuery = graphql`
       edges {
         node {
           childrenImageSharp {
-            sizes {
-              src
-              srcSet
+            sizes(maxWidth: 880, quality: 85) {
+              ...GatsbyImageSharpSizes_withWebp
             }
           }
           frontmatter {
