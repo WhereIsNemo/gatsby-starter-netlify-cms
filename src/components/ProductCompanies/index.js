@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.scss';
+import Img from "gatsby-image";
 
 const ProductCompanies = ({ productCompanies }) => {
   const previews = productCompanies.map(({ node }, index) => (
@@ -10,7 +11,7 @@ const ProductCompanies = ({ productCompanies }) => {
       } col col-12 col-sm-6 col-md-3`}
     >
       <div className="product-company">
-        <img src={node.frontmatter.image} />
+        <Img resolutions={node.childrenImageSharp[0].resolutions} />
       </div>
     </div>
   ));
@@ -34,8 +35,10 @@ export const productCompaniesQuery = graphql`
     ) {
       edges {
         node {
-          frontmatter {
-            image
+          childrenImageSharp {
+            resolutions(width: 255, quality: 85) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
           }
         }
       }

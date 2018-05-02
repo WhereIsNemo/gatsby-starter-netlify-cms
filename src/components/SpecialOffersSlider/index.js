@@ -11,7 +11,6 @@ export default class Slider extends React.Component {
     const slides = specialOffers.map(({ node }, index) => (
       <div key={index} className="swiper-slide">
         <Img sizes={node.childrenImageSharp[0].sizes} />
-        {console.log(node)}
       </div>
     ));
 
@@ -51,9 +50,6 @@ export const specialOffersSliderQuery = graphql`
             sizes(maxWidth: 880, quality: 85) {
               ...GatsbyImageSharpSizes_withWebp
             }
-          }
-          frontmatter {
-            image
           }
         }
       }

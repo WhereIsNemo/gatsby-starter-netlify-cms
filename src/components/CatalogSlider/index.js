@@ -3,13 +3,14 @@ import Swiper from 'swiper';
 import Link from 'gatsby-link';
 import 'swiper/dist/css/swiper.css';
 import styles from './styles.module.scss';
+import Img from "gatsby-image";
 
 export default class CatalogSlider extends React.Component {
   render() {
     const slides = this.props.sliderCategories.map(({ node }, index) => (
       <div key={index} className="swiper-slide">
         <div className="catalog-slide">
-          <img src={node.frontmatter.image} />
+          <Img resolutions={node.childrenImageSharp[0].resolutions} />
           <h3 className="catalog-slider__title">
             <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
           </h3>
@@ -51,12 +52,16 @@ export const CatalogSliderQuery = graphql`
     ) {
       edges {
         node {
+          childrenImageSharp {
+            resolutions(width: 255, quality: 85) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
+          }
           fields {
             slug
           }
           frontmatter {
             title
-            image
           }
         }
       }
