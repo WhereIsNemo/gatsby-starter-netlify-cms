@@ -22,12 +22,16 @@ export const CatalogGridQuery = graphql`
     ) {
       edges {
         node {
+          childrenImageSharp {
+            resolutions(width: 255, quality: 85) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
+          }
           fields {
             slug
           }
           frontmatter {
             title
-            image
           }
         }
       }
