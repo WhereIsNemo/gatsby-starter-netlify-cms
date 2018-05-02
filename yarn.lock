@@ -2,39 +2,40 @@
 # yarn lockfile v1
 
 
-"@fortawesome/fontawesome-common-types@^0.1.3", "@fortawesome/fontawesome-common-types@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.4.tgz#1fbc66f0223646f23c5550c2c12e341078e2c262"
+"@fortawesome/fontawesome-common-types@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.1.5.tgz#d44485071f94ffac7f66ff6117b290eb7c908d58"
 
-"@fortawesome/fontawesome-free-brands@^5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-brands/-/fontawesome-free-brands-5.0.10.tgz#37f007a2f548682c8bfb7086b7e03dc65758580a"
+"@fortawesome/fontawesome-free-brands@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-brands/-/fontawesome-free-brands-5.0.11.tgz#1e2eda34f2c6208facabe44a90a49972b37307e9"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.4"
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
 
-"@fortawesome/fontawesome-free-regular@^5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-regular/-/fontawesome-free-regular-5.0.10.tgz#f81dfeaa24896bfac8fb50c58c6c02f87a2a0c80"
+"@fortawesome/fontawesome-free-regular@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-regular/-/fontawesome-free-regular-5.0.11.tgz#6dc3899c5d29d09ae3f59010d17c72fa1292a997"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.4"
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
 
-"@fortawesome/fontawesome-free-solid@^5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-5.0.10.tgz#b54c87d3ce4ffd0546b60d12e898e87b59776c30"
+"@fortawesome/fontawesome-free-solid@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-solid/-/fontawesome-free-solid-5.0.11.tgz#e6959def67f073b32c6ff419da0c99795f130248"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.4"
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
 
-"@fortawesome/fontawesome@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome/-/fontawesome-1.1.5.tgz#c7cfafdd3364245626293cc670357f9fb8487170"
+"@fortawesome/fontawesome@^1.1.6":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome/-/fontawesome-1.1.6.tgz#edee6108aa3485c6f0fb3a16e6a222086b2abb42"
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.1.3"
+    "@fortawesome/fontawesome-common-types" "^0.1.5"
 
-"@fortawesome/react-fontawesome@^0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.18.tgz#4e0eb1cf9797715a67bb7705ae084fa0a410f185"
+"@fortawesome/react-fontawesome@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.19.tgz#9c90c1aac0984687fffbea44aa4ad817c6f4356e"
   dependencies:
     humps "^2.0.1"
+    prop-types "^15.5.7"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -73,8 +74,8 @@
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
 
 "@types/node@*":
-  version "8.10.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.11.tgz#971ea8cb91adbe0b74e3fbd867dec192d5893a5f"
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.0.2.tgz#180046ebbc37de8b64777765c2486ebecb59448e"
 
 "@types/node@^7.0.11":
   version "7.0.62"
@@ -1779,12 +1780,12 @@ caniuse-api@^1.5.2, caniuse-api@^1.5.3:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000832"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000832.tgz#afe34c9f7c62139fd1c607db2ab7308bbb6a5158"
+  version "1.0.30000833"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000833.tgz#2bd7be72a401658d2cbcb8f4d7600deebeb1c676"
 
 caniuse-lite@^1.0.30000792:
-  version "1.0.30000832"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000832.tgz#22a277f1d623774cc9aea2f7c1a65cb1603c63b8"
+  version "1.0.30000833"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000833.tgz#98e84fcdb4399c6fa0b0fd41490d3217ac7802b4"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -3003,8 +3004,8 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30:
-  version "1.3.44"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.44.tgz#ef6b150a60d523082388cadad88085ecd2fd4684"
+  version "1.3.45"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.45.tgz#458ac1b1c5c760ce8811a16d2bfbd97ec30bafb8"
 
 elliptic@^6.0.0:
   version "6.4.0"
@@ -6801,8 +6802,8 @@ next-tick@1, next-tick@^1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
 nlcst-to-string@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-2.0.1.tgz#f90f3cf905c137dc8edd8727fbcde73e73c2a1d9"
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nlcst-to-string/-/nlcst-to-string-2.0.2.tgz#7125af4d4d369850c697192a658f01f36af9937b"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -8523,12 +8524,6 @@ react-modal@^3.1.5:
 react-onclickoutside@^6.5.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
-
-react-paginate@^5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/react-paginate/-/react-paginate-5.2.2.tgz#c407d325e3073e39e49739ab5095a829000a1c46"
-  dependencies:
-    prop-types "^15.6.1"
 
 react-portal@^3.1.0:
   version "3.2.0"
@@ -10327,9 +10322,9 @@ svgo@^0.7.0, svgo@^0.7.2:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
-swiper@^4.2.2:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.2.5.tgz#46c0be7c69658212140054de8e6eb04f1261cfca"
+swiper@^4.2.6:
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.2.6.tgz#9ee50527e3de7a49e2e56a58f8f6fa94a0358bf5"
   dependencies:
     dom7 "^2.0.5"
     ssr-window "^1.0.0"
@@ -10741,15 +10736,14 @@ unherit@^1.0.4:
     xtend "^4.0.1"
 
 unified@^6.0.0, unified@^6.1.4, unified@^6.1.5:
-  version "6.1.6"
-  resolved "https://registry.yarnpkg.com/unified/-/unified-6.1.6.tgz#5ea7f807a0898f1f8acdeefe5f25faa010cc42b1"
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
   dependencies:
     bail "^1.0.0"
     extend "^3.0.0"
     is-plain-obj "^1.1.0"
     trough "^1.0.0"
     vfile "^2.0.0"
-    x-is-function "^1.0.4"
     x-is-string "^0.1.0"
 
 union-value@^1.0.0:
@@ -10795,8 +10789,8 @@ unist-builder@^1.0.1, unist-builder@^1.0.2:
     object-assign "^4.1.0"
 
 unist-util-generated@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.1.tgz#99f16c78959ac854dee7c615c291924c8bf4de7f"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.2.tgz#8b993f9239d8e560be6ee6e91c3f7b7208e5ce25"
 
 unist-util-is@^2.0.0, unist-util-is@^2.1.0, unist-util-is@^2.1.1:
   version "2.1.2"
@@ -10809,8 +10803,8 @@ unist-util-modify-children@^1.0.0:
     array-iterate "^1.0.0"
 
 unist-util-position@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.0.0.tgz#e6e1e03eeeb81c5e1afe553e8d4adfbd7c0d8f82"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.0.1.tgz#8e220c24658239bf7ddafada5725ed0ea1ebbc26"
 
 unist-util-remove-position@^1.0.0, unist-util-remove-position@^1.1.1:
   version "1.1.2"
@@ -10831,16 +10825,16 @@ unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
 
 unist-util-visit-children@^1.0.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.1.tgz#eba63b371116231181068837118b6e6e10ec8844"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.2.tgz#bd78b53db9644b9c339ac502854f15471f964f5b"
 
 unist-util-visit-parents@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-1.1.1.tgz#7d3f56b5b039a3c6e2d16e51cc093f10e4755342"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-1.1.2.tgz#f6e3afee8bdbf961c0e6f028ea3c0480028c3d06"
 
 unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.0.tgz#41ca7c82981fd1ce6c762aac397fc24e35711444"
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.1.tgz#c019ac9337a62486be58531bc27e7499ae7d55c7"
   dependencies:
     unist-util-is "^2.1.1"
 
@@ -11390,10 +11384,6 @@ ws@~3.3.1:
 x-is-array@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/x-is-array/-/x-is-array-0.1.0.tgz#de520171d47b3f416f5587d629b89d26b12dc29d"
-
-x-is-function@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/x-is-function/-/x-is-function-1.0.4.tgz#5d294dc3d268cbdd062580e0c5df77a391d1fa1e"
 
 x-is-string@^0.1.0:
   version "0.1.0"
