@@ -45,7 +45,16 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-transformer-sharp',
           'gatsby-plugin-sharp',
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              // Set the name option to the same
+              // name you set for gatsby-source-filesystem
+              name: 'static', // default
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
