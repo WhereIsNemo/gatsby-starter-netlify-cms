@@ -33,6 +33,7 @@ collections:
     create: true
     fields:
       - {label: "Идентификатор шаблона", name: "templateKey", widget: "hidden", default: "product-page"}
+      - {label: "Контент тип", name: "contentType", widget: "hidden", default: "product"}
       - {label: "Заголовок", name: "title", widget: "string"}
       - {label: "Категория", name: "categories", widget: "relation", collection: "categories", searchFields: ["title"], valueField: "title"}
       - {label: "Изображение", name: "image", widget: "image"}

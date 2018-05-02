@@ -64,6 +64,44 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           }
         }
       }
+      categories: allMarkdownRemark(
+        filter: { frontmatter: { contentType: { eq: "category" } } }
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+            }
+          }
+        }
+      }
+      productsPreviews: allMarkdownRemark(
+        filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+      ) {
+        edges {
+          node {
+            childrenImageSharp {
+              resolutions(width: 255, quality: 85) {
+                base64
+                width
+                height
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+              }
+            }
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              categories
+            }
+          }
+        }
+      }
     }
   `).then(result => {
       // Output errors if they are
@@ -95,15 +133,16 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       });
 
       // Create category pages with pagination
-      const categories = content.filter(
-        edge => edge.node.frontmatter.contentType === 'category'
-      );
+      const {
+        categories,
+        productsPreviews,
+      } = result.data;
 
-      categories.forEach(category => {
+      categories.edges.forEach(category => {
         const categoryId = category.node.id;
         const categoryName = category.node.frontmatter.title;
-        const categoryContent = content.filter(
-          edge => edge.node.frontmatter.categories === categoryName
+        const categoryContent = productsPreviews.edges.filter(edge =>
+          edge.node.frontmatter.categories === categoryName
         );
 
         createPaginatedPages({

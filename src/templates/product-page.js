@@ -1,10 +1,11 @@
 import React from 'react';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
+import Img from "gatsby-image";
 
 export const ProductPageTemplate = ({
   title,
-  image,
+  childrenImageSharp,
   category,
   body,
   asideCategories,
@@ -16,7 +17,7 @@ export const ProductPageTemplate = ({
       <React.Fragment key="mainContent">
         <div className="row">
           <div className="col col-12 col-md-6">
-            <img src={image} />
+          <Img resolutions={childrenImageSharp[0].resolutions} />
           </div>
           <div className="col col-12 col-md-6">
             <h1>{title}</h1>
@@ -36,7 +37,7 @@ const ProductPage = ({ data }) => {
   return (
     <ProductPageTemplate
       title={post.frontmatter.title}
-      image={post.frontmatter.image}
+      childrenImageSharp={post.childrenImageSharp}
       category={post.frontmatter.categories}
       body={post.html}
       price={post.frontmatter.price}
@@ -51,6 +52,11 @@ export default ProductPage;
 export const productPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
+      childrenImageSharp {
+        resolutions(width: 400, quality: 85) {
+          ...GatsbyImageSharpResolutions_withWebp
+        }
+      }
       html
       frontmatter {
         title

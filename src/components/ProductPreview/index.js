@@ -1,12 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from "gatsby-image";
 
 const ProductPreview = ({ node }) => {
   return (
     <div className="productPreview">
       <div>
         <Link to={node.fields.slug}>
-          <img src={node.frontmatter.image} />
+          <Img resolutions={node.childrenImageSharp[0].resolutions} />
         </Link>
       </div>
       <h3>

@@ -2,11 +2,10 @@ import React from 'react';
 import Link from 'gatsby-link';
 import ProductPreview from '../ProductPreview';
 
-export default class ProductsGrid extends React.Component {
-  render() {
-    const products = this.props.productsGrid
+export default (props) => {
+  const products = props.productsGrid
       .filter(({ node }) => {
-        return node.frontmatter.categories === this.props.category;
+        return node.frontmatter.categories === props.category;
       })
       .map(({ node }, index) => (
         <div key={index} className="col col-12 col-md-4">
@@ -15,5 +14,4 @@ export default class ProductsGrid extends React.Component {
       ));
 
     return <div className="row">{products}</div>;
-  }
-}
+};
