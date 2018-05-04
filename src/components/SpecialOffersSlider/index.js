@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from "gatsby-image";
-import Glide from '@glidejs/glide'
+import Glide, { Controls, Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import styles from './styles.module.scss';
@@ -43,8 +43,10 @@ export default class Slider extends React.Component {
   componentDidMount() {
     new Glide(this.refs.slider, {
       autoplay: 7000,
-      animationDuration: 2000,
-    }).mount();
+      animationDuration: 1500,
+      swipeThreshold: false,
+      keyboard: false,
+    }).mount({ Controls, Autoplay });
   }
 }
 

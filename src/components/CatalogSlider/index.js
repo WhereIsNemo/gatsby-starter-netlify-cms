@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Glide from '@glidejs/glide'
+import Glide, { Controls, Autoplay, Breakpoints, Anchors } from '@glidejs/glide/dist/glide.modular.esm';
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import "@glidejs/glide/dist/css/glide.theme.min.css";
 import Img from "gatsby-image";
@@ -46,12 +46,14 @@ export default class CatalogSlider extends React.Component {
   }
   componentDidMount() {
     new Glide(this.refs.slider, {
+      swipeThreshold: false,
+      keyboard: false,
       perView: 4,
       gap: 30,
       focusAt: "center",
       autoplay: 4500,
       animationDuration: 1000,
-    }).mount();
+    }).mount({ Controls, Autoplay, Breakpoints });
   }
 }
 

@@ -4,6 +4,24 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const createPaginatedPages = require(`./gatsby/createPaginatedPages`);
 const slugify = require('transliteration').slugify;
 
+const generateBabelConfig = require("gatsby/dist/utils/babel-config");
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  const program = {
+    directory: __dirname,
+    browserslist: ["> 0.5%", "last 2 versions", "IE >= 11"],
+  };
+
+  return generateBabelConfig(program, stage).then(babelConfig => {
+    config.removeLoader("js").loader("js", {
+      test: /\.jsx?$/,
+      exclude: /node_modules\/(?!@glidejs)/,
+      loader: "babel",
+      query: babelConfig,
+    });
+  });
+};
+
 exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
   const { createNodeField, createParentChildLink } = boundActionCreators;
 
