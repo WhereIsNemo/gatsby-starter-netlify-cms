@@ -6,6 +6,7 @@ import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import Navbar from '../Navbar';
 import Logo from '../Logo';
 import IconWithText from '../IconWithText';
+import OrderCallbackForm from '../OrderCallbackForm';
 import styles from './styles.module.scss';
 
 const Header = () => (
@@ -30,6 +31,7 @@ const Header = () => (
               topText={<a href="tel:+7-000-00-00">+7-000-00-00</a>}
               bottomText="Заказать обратный звонок"
             />
+            <OrderCallbackForm />
           </div>
         </div>
       </div>
