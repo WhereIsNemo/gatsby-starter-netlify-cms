@@ -1,7 +1,14 @@
 import React from 'react';
 import axios from 'axios';
+import styles from './styles.module.scss';
 
 export default class OrderCallbackForm extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.formSubmitBtn = React.createRef();
+  }
+
   handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -9,9 +16,6 @@ export default class OrderCallbackForm extends React.Component {
     const formDataObject = {};
     
     formData.forEach((value, key) => formDataObject[key] = value);
-
-    console.log('formDataObject');
-    console.log(formDataObject);
 
     const axiosAWS = axios.create({
       baseURL: 'https://ypxjjkrpa9.execute-api.us-east-1.amazonaws.com/220PlusSMS',
@@ -21,25 +25,35 @@ export default class OrderCallbackForm extends React.Component {
       }
     });
 
-    // axiosAWS.post('/sendCallbackSMS', {
-    //   phoneNumber: formDataObject.phoneNumber,
-    // })
-    // .then(function (response) {
-    //   console.log('response');
-    //   console.log(response);
-    // })
-    // .catch(function (error) {
-    //   console.log('error');
-    //   console.log(error);
-    // });
+    axiosAWS.post('/sendCallbackSMS', {
+      phoneNumber: formDataObject.phoneNumber,
+    })
+    .then(function (response) {
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit}>
-        <input name="phoneNumber" type="text" />
-        <input type="submit" />
+      <form className={styles.form} onSubmit={this.handleFormSubmit}>
+        <div className="form-group">
+          <label htmlFor="callbackSmsPhoneNumber">Ваш телефонный номер:</label>
+          <input id="callbackSmsPhoneNumber" className="form-control" name="phoneNumber" type="text" />
+        </div>
+        <button ref={this.formSubmitBtn} type="submit" className="btn btn-primary">Заказать</button>
       </form>
     );
+  }
+
+  componentDidMount() {
+    const $scriptjs = require('scriptjs');
+
+    $scriptjs('https://www.google.com/recaptcha/api.js', 'orderCallbackRecaptcha');
+
+    $scriptjs.ready('orderCallbackRecaptcha', () => {
+      this.formSubmitBtn.current.insertAdjacentHTML('beforebegin', '<div class="g-recaptcha" data-sitekey="6LdqK1cUAAAAAHRs1kA5qafNv7KlXle3Vq5v5TLO"></div>')
+    })
   }
 }

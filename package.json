@@ -33,9 +33,13 @@
     "gatsby-remark-relative-images": "^0.0.6",
     "lodash": "^4.17.5",
     "netlify-cms": "^1.5.0",
+    "popper.js": "^1.14.3",
     "react-helmet": "^5.2.0",
+    "react-popper": "^1.0.0-beta.6",
+    "react-tippy": "^1.2.2",
     "scriptjs": "^2.5.8",
     "swiper": "^4.2.6",
+    "tooltip.js": "^1.2.0",
     "transliteration": "^1.6.2"
   },
   "devDependencies": {
