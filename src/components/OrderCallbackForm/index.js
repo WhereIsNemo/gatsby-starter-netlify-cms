@@ -3,12 +3,6 @@ import axios from 'axios';
 import styles from './styles.module.scss';
 
 export default class OrderCallbackForm extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.formSubmitBtn = React.createRef();
-  }
-
   handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -25,8 +19,11 @@ export default class OrderCallbackForm extends React.Component {
       }
     });
 
+    console.log(formDataObject);
+
     axiosAWS.post('/sendCallbackSMS', {
       phoneNumber: formDataObject.phoneNumber,
+      "g-recaptcha-response": formDataObject["g-recaptcha-response"],
     })
     .then(function (response) {
     })
@@ -40,9 +37,22 @@ export default class OrderCallbackForm extends React.Component {
       <form className={styles.form} onSubmit={this.handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="callbackSmsPhoneNumber">Ваш телефонный номер:</label>
-          <input id="callbackSmsPhoneNumber" className="form-control" name="phoneNumber" type="text" />
+          <input 
+            id="callbackSmsPhoneNumber" 
+            className="form-control" 
+            name="phoneNumber" 
+            type="tel" 
+            required 
+          />
         </div>
-        <button ref={this.formSubmitBtn} type="submit" className="btn btn-primary">Заказать</button>
+        <div 
+          className="g-recaptcha"
+          data-sitekey="6LdqK1cUAAAAAHRs1kA5qafNv7KlXle3Vq5v5TLO"
+        ></div>
+        <button 
+          type="submit"
+          className="btn btn-primary"
+        >Заказать</button>
       </form>
     );
   }
@@ -51,9 +61,5 @@ export default class OrderCallbackForm extends React.Component {
     const $scriptjs = require('scriptjs');
 
     $scriptjs('https://www.google.com/recaptcha/api.js', 'orderCallbackRecaptcha');
-
-    $scriptjs.ready('orderCallbackRecaptcha', () => {
-      this.formSubmitBtn.current.insertAdjacentHTML('beforebegin', '<div class="g-recaptcha" data-sitekey="6LdqK1cUAAAAAHRs1kA5qafNv7KlXle3Vq5v5TLO"></div>')
-    })
   }
 }
