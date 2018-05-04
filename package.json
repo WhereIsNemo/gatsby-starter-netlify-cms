@@ -26,6 +26,7 @@
     "@fortawesome/fontawesome-free-regular": "^5.0.11",
     "@fortawesome/fontawesome-free-solid": "^5.0.11",
     "@fortawesome/react-fontawesome": "^0.0.19",
+    "@glidejs/glide": "^3.0.3",
     "bootstrap": "^4.1.0",
     "gatsby-image": "^1.0.48",
     "gatsby-remark-copy-linked-files": "^1.5.32",
@@ -35,7 +36,6 @@
     "react-helmet": "^5.2.0",
     "react-tippy": "^1.2.2",
     "scriptjs": "^2.5.8",
-    "swiper": "^4.2.6",
     "transliteration": "^1.6.2"
   },
   "devDependencies": {
