@@ -19,16 +19,9 @@ export default class OrderCallbackForm extends React.Component {
       }
     });
 
-    console.log(formDataObject);
-
     axiosAWS.post('/sendCallbackSMS', {
       phoneNumber: formDataObject.phoneNumber,
       "g-recaptcha-response": formDataObject["g-recaptcha-response"],
-    })
-    .then(function (response) {
-    })
-    .catch(function (error) {
-      console.log(error);
     });
   }
 

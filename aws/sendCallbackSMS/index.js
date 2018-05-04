@@ -2,7 +2,6 @@ const AWS = require('aws-sdk');
 const axios = require('axios');
 
 exports.handler = function (event, context, callback) {
-  console.log(event);
   // processing 
   const body = JSON.parse(event.body);
 
@@ -22,11 +21,9 @@ exports.handler = function (event, context, callback) {
     const response = await axios.post(
       `https://www.google.com/recaptcha/api/siteverify?secret=6LdqK1cUAAAAAMpwXtAtQwPFOZaLIBhBsjHIRX_v&response=${body['g-recaptcha-response']}`,
       {}).catch((err) => {
-        console.log(err);
         return false;
       });
 
-    console.log(response);
     return response.data.success;
   }
 
@@ -34,8 +31,6 @@ exports.handler = function (event, context, callback) {
 
   // server response
   const phoneNumber = body.phoneNumber;
-
-  console.log(phoneNumber, passRecaptcha);
 
   if (phoneNumber && passRecaptcha) {
     const sns = new AWS.SNS();
