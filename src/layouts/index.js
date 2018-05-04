@@ -14,10 +14,6 @@ export default class TemplateWrapper extends React.Component {
       <React.Fragment>
         <Helmet>
           <title>220 Plus</title>
-          <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700&amp;subset=cyrillic"
-            rel="stylesheet"
-          />
         </Helmet>
         <Header />
         <div>{children()}</div>
@@ -28,6 +24,10 @@ export default class TemplateWrapper extends React.Component {
   }
 
   componentDidMount() {
+    // Fonts
+    const loadCSS = require('fg-loadcss').loadCSS;
+    loadCSS("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:700&amp;subset=cyrillic");
+
     // Google analytics
     const $scriptjs = require('scriptjs');
   

@@ -28,6 +28,7 @@
     "@fortawesome/react-fontawesome": "^0.0.19",
     "@glidejs/glide": "^3.0.3",
     "bootstrap": "^4.1.0",
+    "fg-loadcss": "^2.0.1",
     "gatsby-image": "^1.0.48",
     "gatsby-remark-copy-linked-files": "^1.5.32",
     "gatsby-remark-relative-images": "^0.0.6",
