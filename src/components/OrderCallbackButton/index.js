@@ -11,6 +11,6 @@ export default () => (
     trigger="click"
     interactive={true}
   >
-    <button className="btn btn-primary">Заказать обратный звонок</button>
+    <button className="btn btn--outline-brand">Заказать обратный звонок</button>
   </Tooltip>
 );

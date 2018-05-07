@@ -4,5 +4,14 @@
 }
 
 .icon {
-  margin-right: 3px;
+  margin-right: 10px;
+  color: #666;
+}
+
+.topText {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

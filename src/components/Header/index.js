@@ -11,8 +11,8 @@ import styles from './styles.module.scss';
 
 const Header = () => (
   <header className="header">
-    <div className="container">
-      <div className={styles.top}>
+    <div className={styles.top}>
+      <div className="container">
         <div className="row align-items-center">
           <div className="col col-12 col-md">
             <Logo />
@@ -34,7 +34,9 @@ const Header = () => (
           </div>
         </div>
       </div>
-      <div className={styles.bottom}>
+    </div>
+    <div className={styles.bottom}>
+      <div className="container">
         <Navbar />
       </div>
     </div>

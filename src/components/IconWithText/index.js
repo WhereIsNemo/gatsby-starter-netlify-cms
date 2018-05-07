@@ -6,8 +6,8 @@ const IconWithText = ({ icon, topText, bottomText }) => (
   <div className={`${styles.iconWithText} icon-with-text`}>
     <FontAwesomeIcon icon={icon} className={styles.icon} />
     <div className="icon-with-text__text">
-      <div className="icon-with-text__top-text">{topText}</div>
-      <div className="icon-with-text__bottom-text">{bottomText}</div>
+      <div className={styles.topText}>{topText}</div>
+      {bottomText && (<div className="icon-with-text__bottom-text">{bottomText}</div>)}
     </div>
   </div>
 );
