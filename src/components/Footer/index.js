@@ -2,6 +2,13 @@ import React from 'react';
 import Link from 'gatsby-link';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faVk from '@fortawesome/fontawesome-free-brands/faVk';
+import faWhatsapp from '@fortawesome/fontawesome-free-brands/faWhatsapp';
+import faViber from '@fortawesome/fontawesome-free-brands/faViber';
+import faLocationArrow from '@fortawesome/fontawesome-free-solid/faLocationArrow';
+import faClock from '@fortawesome/fontawesome-free-solid/faClock';
+import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
+import faPhoneVolume from '@fortawesome/fontawesome-free-solid/faPhoneVolume';
+import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 import styles from './styles.module.scss';
 
 const Footer = () => (
@@ -9,22 +16,22 @@ const Footer = () => (
     <div className="container">
       <div className="row">
         <div className="col col-12 col-md">
-          <div className="footer__col footer-col">
-            <h3 className="footer-col__title">Информация</h3>
-            <div className="footer-col__content">
-              <ul className="menu">
-                <li className="menu-item">
-                  <Link className="nav-link" to="/delivery">
+          <div>
+            <h3 className={styles.colTitle}>Информация</h3>
+            <div>
+              <ul className={styles.menu}>
+                <li className={styles.menuItem}>
+                  <Link className={styles.menuLink} to="/delivery">
                     Доставка и оплата
                   </Link>
                 </li>
-                <li className="menu-item">
-                  <Link className="nav-link" to="/warehouse">
+                <li className={styles.menuItem}>
+                  <Link className={styles.menuLink} to="/warehouse">
                     Cамовывоз
                   </Link>
                 </li>
-                <li className="menu-item">
-                  <Link className="nav-link" to="/testimonials">
+                <li className={styles.menuItem}>
+                  <Link className={styles.menuLink} to="/testimonials">
                     Отзывы
                   </Link>
                 </li>
@@ -33,12 +40,12 @@ const Footer = () => (
           </div>
         </div>
         <div className="col col-12 col-md">
-          <div className="footer__col footer-col">
-            <h3 className="footer-col__title">Присоединяйтесь</h3>
-            <div className="footer-col__content">
-              <ul className="menu">
-                <li className="menu-item">
-                  <Link className="nav-link" to="/">
+          <div>
+            <h3 className={styles.colTitle}>Присоединяйтесь</h3>
+            <div>
+              <ul className={styles.menu}>
+                <li className={styles.menuItem}>
+                  <Link className={styles.menuLink} to="/">
                     <FontAwesomeIcon icon={faVk} />
                     Вконтакте
                   </Link>
@@ -48,22 +55,46 @@ const Footer = () => (
           </div>
         </div>
         <div className="col col-12 col-md">
-          <div className="footer__col footer-col">
-            <h3 className="footer-col__title">Контакты</h3>
-            <div className="footer-col__content">
-              <ul className="menu">
-                <li className="menu-item">г. Омск</li>
-                <li className="menu-item">
+          <div>
+            <h3 className={styles.colTitle}>Контакты</h3>
+            <div>
+              <ul className={styles.menu}>
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faLocationArrow} />
+                  г. Омск
+                </li>
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faClock} />
                   Время работы: понедельник-воскресенье, 9-22
                 </li>
-                <li className="menu-item">
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faPhone} />
+                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
+                    Tелефон
+                  </a>
+                </li>
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faPhoneVolume} />
+                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
+                    Заказать обратный звонок
+                  </a>
+                </li>
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faWhatsapp} />
                   <a href="whatsapp://send?abid=[users name]&text=[message text]">
                     WhatsUp
                   </a>
                 </li>
-                <li className="menu-item">
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faViber} />
                   <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
                     Viber
+                  </a>
+                </li>
+                <li className={styles.menuItem}>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
+                    Email
                   </a>
                 </li>
               </ul>

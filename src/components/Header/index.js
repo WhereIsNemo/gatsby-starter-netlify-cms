@@ -21,16 +21,19 @@ const Header = () => (
             <IconWithText
               className="header__delivery"
               icon={faTruck}
-              topText="Доставка: Омск, Калачинск"
+              text="Доставка: Омск, Калачинск"
             />
           </div>
           <div className="col col-12 col-md-3">
-            <IconWithText
-              className={styles.headerBackCall}
-              icon={faPhone}
-              topText={<a href="tel:+7-000-00-00">+7-000-00-00</a>}
-              bottomText={<OrderCallbackButton />}
-            />
+            <div className={styles.headerBackCall}>
+              <a href="tel:+7-000-00-00">
+                <IconWithText
+                  icon={faPhone}
+                  text="+7-000-00-00"
+                />
+              </a>
+            </div>
+            <OrderCallbackButton />
           </div>
         </div>
       </div>

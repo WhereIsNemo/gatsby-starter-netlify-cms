@@ -1,4 +1,27 @@
+@import '../../layouts/settings';
+
 .footer {
   background: #f7f7f7;
   padding: 60px 0 65px;
+}
+
+.colTitle {
+  text-transform: uppercase;
+}
+
+.menu {
+  @include list-unstyled;
+}
+
+.menuItem {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: none;
+  }
+}
+
+.menuLink {
+  border-bottom: none;
+  color: inherit;
 }
