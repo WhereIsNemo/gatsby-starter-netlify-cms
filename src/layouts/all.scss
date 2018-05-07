@@ -93,3 +93,7 @@ h6 {
     }
   }
 }
+
+.sr-only {
+  @include sr-only;
+}

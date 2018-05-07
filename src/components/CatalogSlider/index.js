@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Glide, { Controls, Autoplay, Breakpoints, Anchors } from '@glidejs/glide/dist/glide.modular.esm';
 import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
 import Img from "gatsby-image";
 import styles from './styles.module.scss';
 

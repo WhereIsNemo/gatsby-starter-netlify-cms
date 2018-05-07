@@ -2,7 +2,9 @@ import React from 'react';
 import Img from "gatsby-image";
 import Glide, { Controls, Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
 import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
+import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
 import styles from './styles.module.scss';
 
 export default class Slider extends React.Component {
@@ -20,21 +22,33 @@ export default class Slider extends React.Component {
       );
 
       bullets.push(
-        <button key={index} className="glide__bullet" data-glide-dir={`=${index}`}></button>
+        <button key={index} className={`glide__bullet ${styles.paginationDot}`} data-glide-dir={`=${index}`}></button>
       );
     });
 
     return (
-      <div className="glide" ref="slider">
+      <div className={`glide`} ref="slider">
         <div data-glide-el="track" className="glide__track">
           <div className="glide__slides">{slides}</div>
         </div>
 
-        <div className="glide__arrows" data-glide-el="controls">
-          <button className={`glide__arrow glide__arrow--prev`} data-glide-dir="<">prev</button>
-          <button className={`glide__arrow glide__arrow--next ${styles.sliderArrowNext}`} data-glide-dir=">">next</button>
+        <div className={`glide__arrows`} data-glide-el="controls">
+          <button 
+            className={`btn glide__arrow glide__arrow--prev ${styles.sliderArrow} ${styles.sliderArrowPrev}`} 
+            data-glide-dir="<"
+          >
+            <span className="sr-only">Предыдущий</span>
+            <FontAwesomeIcon className={styles.sliderArrowIcon} icon={faChevronLeft} />
+          </button>
+          <button 
+            className={`btn glide__arrow glide__arrow--next ${styles.sliderArrow} ${styles.sliderArrowNext}`} 
+            data-glide-dir=">"
+          >
+            <span className="sr-only">Следущий</span>
+            <FontAwesomeIcon className={styles.sliderArrowIcon} icon={faChevronRight} />
+          </button>
         </div>
-        <div className="glide__bullets" data-glide-el="controls[nav]">
+        <div className={`glide__bullets ${styles.sliderPagination}`} data-glide-el="controls[nav]">
           {bullets}
         </div>
       </div>
