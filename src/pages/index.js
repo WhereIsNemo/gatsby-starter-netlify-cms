@@ -15,11 +15,11 @@ export default props => (
     </React.Fragment>
     <React.Fragment key="underMainContent">
       <div className="container">
+        <AboutCompany aboutSection={props.data.aboutSection} />
         <ProductCompanies
           productCompanies={props.data.productCompanies.edges}
         />
         <CatalogSlider sliderCategories={props.data.sliderCategories.edges} />
-        <AboutCompany aboutSection={props.data.aboutSection} />
       </div>
     </React.Fragment>
   </DefaultLayout>

@@ -3,6 +3,9 @@ import Link from 'gatsby-link';
 import Glide, { Controls, Autoplay, Breakpoints, Anchors } from '@glidejs/glide/dist/glide.modular.esm';
 import "@glidejs/glide/dist/css/glide.core.min.css";
 import Img from "gatsby-image";
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
+import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
 import styles from './styles.module.scss';
 
 export default class CatalogSlider extends React.Component {
@@ -15,9 +18,13 @@ export default class CatalogSlider extends React.Component {
 
       slides.push(
         <div key={index} className="glide__slide">
-          <div className="catalog-slide">
-            <Img resolutions={node.childrenImageSharp[0].resolutions} />
-            <h3 className="catalog-slider__title">
+          <div className={styles.preview}>
+            <div className={styles.previewImgWrapper}>
+              <Link to={node.fields.slug}>
+                <Img resolutions={node.childrenImageSharp[0].resolutions} />
+              </Link>
+            </div>
+            <h3 className={styles.previewTitle}>
               <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
             </h3>
           </div>
@@ -35,8 +42,14 @@ export default class CatalogSlider extends React.Component {
             </div>
 
             <div className="glide__arrows" data-glide-el="controls">
-              <button className={`glide__arrow glide__arrow--prev`} data-glide-dir="<">prev</button>
-              <button className={`glide__arrow glide__arrow--next ${styles.sliderArrowNext}`} data-glide-dir=">">next</button>
+              <button className={`btn glide__arrow glide__arrow--prev`} data-glide-dir="<">
+                <span className="sr-only">Предыдущий</span>
+                <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronLeft} />
+              </button>
+              <button className={`btn glide__arrow glide__arrow--next`} data-glide-dir=">">
+                <span className="sr-only">Следущий</span>
+                <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronRight} />
+              </button>
             </div>
           </div>
         </div>
@@ -50,7 +63,7 @@ export default class CatalogSlider extends React.Component {
       perView: 4,
       gap: 30,
       focusAt: "center",
-      autoplay: 4500,
+      autoplay: false,
       animationDuration: 1000,
     }).mount({ Controls, Autoplay, Breakpoints });
   }

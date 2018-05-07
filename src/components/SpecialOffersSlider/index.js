@@ -5,7 +5,6 @@ import "@glidejs/glide/dist/css/glide.core.min.css";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
-import styles from './styles.module.scss';
 
 export default class Slider extends React.Component {
   render() {
@@ -22,7 +21,7 @@ export default class Slider extends React.Component {
       );
 
       bullets.push(
-        <button key={index} className={`glide__bullet ${styles.paginationDot}`} data-glide-dir={`=${index}`}></button>
+        <button key={index} className={`glide__bullet`} data-glide-dir={`=${index}`}></button>
       );
     });
 
@@ -34,21 +33,21 @@ export default class Slider extends React.Component {
 
         <div className={`glide__arrows`} data-glide-el="controls">
           <button 
-            className={`btn glide__arrow glide__arrow--prev ${styles.sliderArrow} ${styles.sliderArrowPrev}`} 
+            className={`btn glide__arrow glide__arrow--prev`} 
             data-glide-dir="<"
           >
             <span className="sr-only">Предыдущий</span>
-            <FontAwesomeIcon className={styles.sliderArrowIcon} icon={faChevronLeft} />
+            <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronLeft} />
           </button>
           <button 
-            className={`btn glide__arrow glide__arrow--next ${styles.sliderArrow} ${styles.sliderArrowNext}`} 
+            className={`btn glide__arrow glide__arrow--next`} 
             data-glide-dir=">"
           >
             <span className="sr-only">Следущий</span>
-            <FontAwesomeIcon className={styles.sliderArrowIcon} icon={faChevronRight} />
+            <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronRight} />
           </button>
         </div>
-        <div className={`glide__bullets ${styles.sliderPagination}`} data-glide-el="controls[nav]">
+        <div className={`glide__bullets`} data-glide-el="controls[nav]">
           {bullets}
         </div>
       </div>
@@ -56,8 +55,8 @@ export default class Slider extends React.Component {
   }
   componentDidMount() {
     new Glide(this.refs.slider, {
-      autoplay: 7000,
-      animationDuration: 1500,
+      autoplay: false,
+      animationDuration: 1000,
       swipeThreshold: false,
       keyboard: false,
     }).mount({ Controls, Autoplay });

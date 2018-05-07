@@ -59,8 +59,18 @@ h6 {
   padding-bottom: 50px;
 
   &__title {
+    font-size: 28px;
     text-align: center;
     margin-bottom: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 60px;
+      height: 1px;
+      background: #ddd;
+    }
   }
 }
 
@@ -114,4 +124,71 @@ h6 {
 
 .sr-only {
   @include sr-only;
+}
+
+$slider-arrows-horizontal-margin: 35px;
+
+.glide__slide {
+  height: auto !important;
+}
+
+.glide__arrow {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.glide__arrow-icon {
+  font-size: 30px;
+  color: $c-white;
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+
+  &:hover {
+    color: #f41224;
+  }
+}
+
+.glide__arrow--prev {
+  left: $slider-arrows-horizontal-margin;
+}
+
+.glide__arrow--next {
+  right: $slider-arrows-horizontal-margin;
+}
+
+.glide__bullets {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glide__bullet {
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 500rem;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+
+  &.glide__bullet--active {
+    background: $c-white;
+  }
+
+  &:hover {
+    @include media-breakpoint-up(lg) {
+      background: #f41224;
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }

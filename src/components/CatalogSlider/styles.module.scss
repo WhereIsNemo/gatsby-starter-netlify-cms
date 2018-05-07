@@ -1,3 +1,29 @@
-.sliderArrowNext {
-  right: 0;
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+:local(.previewImgWrapper) {
+  a,
+  img {
+    display: block;
+  }
+
+  a {
+    border-bottom: none;
+  }
+
+  :global .gatsby-image-wrapper {
+    display: block !important;
+  }
+}
+
+.previewTitle {
+  a {
+    color: inherit;
+    border-bottom: none;
+    text-transform: uppercase;
+  }
 }
