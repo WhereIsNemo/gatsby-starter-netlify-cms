@@ -32,8 +32,8 @@ const Navbar = () => {
     },
   ];
 
-  const menuItemsMarkup = links.map(({ text, to }) =>
-    <li>
+  const menuItemsMarkup = links.map(({ text, to }, index) =>
+    <li key={index}>
       <Link className={styles.menuLink} to={to}>
         {text}
       </Link>

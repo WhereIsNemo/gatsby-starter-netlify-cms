@@ -1,24 +1,25 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
+import styles from './styles.module.scss';
 
 export default ({ categories }) => {
   const links = categories.map(({ node }, index) => (
-    <Link
-      key={index}
-      className="list-group-item list-group-item-action"
-      to={node.fields.slug}
-    >
-      {node.frontmatter.title}
-    </Link>
+    <li key={index} className={styles.menuItem}>
+      <Link
+        className={styles.link}
+        to={node.fields.slug}
+      >
+        {node.frontmatter.title}
+      </Link>
+    </li>
   ));
 
   return (
-    <div className="catalog--aside">
-      <div className="list-group">
-        <div className="list-group-item">Категории</div>
+    <div className={styles.catalogAside}>
+      <h2 className={styles.title}>Категории</h2>
+      <ul className={styles.menu}>
         {links}
-      </div>
+      </ul>
     </div>
   );
 };

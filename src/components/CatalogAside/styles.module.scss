@@ -1,0 +1,38 @@
+@import '../../layouts/settings';
+
+.catalogAside {
+  padding-top: 10px;
+}
+
+.title {
+  margin-bottom: 15px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #ddd;
+  }
+}
+
+.menu {
+  @include list-unstyled;
+
+  margin: 0;
+}
+
+.menuItem {
+  border-bottom: 1px solid #f4f4f4;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.link {
+  display: block;
+  border-bottom: none;
+  color: inherit;
+  padding: 10px 0;
+}
