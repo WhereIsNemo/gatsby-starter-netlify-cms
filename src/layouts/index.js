@@ -14,6 +14,7 @@ export default class TemplateWrapper extends React.Component {
       <React.Fragment>
         <Helmet>
           <title>220 Plus</title>
+          <html lang="ru" />
         </Helmet>
         <Header />
         <div>{children()}</div>

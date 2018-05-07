@@ -6,3 +6,12 @@
 .bottom {
   border-bottom: 1px solid #efefef;
 }
+
+.headerBackCall {
+  font-weight: 600;
+
+  a {
+    color: inherit;
+    border-bottom: none;
+  }
+}

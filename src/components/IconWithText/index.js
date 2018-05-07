@@ -2,12 +2,12 @@ import React from 'react';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import styles from './styles.module.scss';
 
-const IconWithText = ({ icon, topText, bottomText }) => (
-  <div className={`${styles.iconWithText} icon-with-text`}>
+const IconWithText = ({ icon, topText, bottomText, className }) => (
+  <div className={`${styles.iconWithText} ${className}`}>
     <FontAwesomeIcon icon={icon} className={styles.icon} />
-    <div className="icon-with-text__text">
+    <div>
       <div className={styles.topText}>{topText}</div>
-      {bottomText && (<div className="icon-with-text__bottom-text">{bottomText}</div>)}
+      {bottomText && (<div>{bottomText}</div>)}
     </div>
   </div>
 );

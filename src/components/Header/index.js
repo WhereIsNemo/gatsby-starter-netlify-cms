@@ -26,7 +26,7 @@ const Header = () => (
           </div>
           <div className="col col-12 col-md-3">
             <IconWithText
-              className="header__back-call"
+              className={styles.headerBackCall}
               icon={faPhone}
               topText={<a href="tel:+7-000-00-00">+7-000-00-00</a>}
               bottomText={<OrderCallbackButton />}
