@@ -1,7 +1,7 @@
 import React from 'react';
 import faTruck from '@fortawesome/fontawesome-free-solid/faTruck';
 import faThumbsUp from '@fortawesome/fontawesome-free-solid/faThumbsUp';
-import faComments from '@fortawesome/fontawesome-free-solid/faComments';
+import faClock from '@fortawesome/fontawesome-free-solid/faClock';
 import InfoBlock from '../InfoBlock';
 import styles from './styles.module.scss';
 
@@ -28,7 +28,7 @@ const Services = () => (
         <div className="col col-12 col-md-4">
           <InfoBlock
             className={styles.services__service}
-            icon={faComments}
+            icon={faClock}
             title="Режим работы"
             description="Ежедневно с 9:00 до 22:00"
           />
