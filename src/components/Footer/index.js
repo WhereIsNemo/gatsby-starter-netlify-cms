@@ -46,12 +46,12 @@ const Footer = () => (
             <div>
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <Link className={styles.menuLink} to="/">
+                  <a className={styles.menuLink} href="https://vk.com/club147409633" target="_blank">
                     <IconWithText
                       icon={faVk}
                       text="Вконтакте"
                     />
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -63,41 +63,53 @@ const Footer = () => (
             <div>
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faLocationArrow} />
-                  г. Омск
+                  <IconWithText
+                    icon={faLocationArrow}
+                    text="г. Омск"
+                  />
                 </li>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faClock} />
-                  Время работы: понедельник-воскресенье, 9-22
+                  <IconWithText
+                    icon={faClock}
+                    text="Время работы: ежедневно, 9:00-22:00"
+                  />
                 </li>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faPhone} />
-                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
-                    Tелефон
+                  <a href="tel:+7-913-631-91-61">
+                    <IconWithText
+                      icon={faPhone}
+                      text="+7-913-631-91-61"
+                    />
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faPhoneVolume} />
-                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
-                    Заказать обратный звонок
+                  <IconWithText
+                    icon={faPhoneVolume}
+                    text={<button className="btn">Заказать обратный звонок</button>}
+                  />
+                </li>
+                <li className={styles.menuItem}>
+                  <a href="whatsapp://send?abid=+79136319161">
+                    <IconWithText
+                      icon={faWhatsapp}
+                      text="WhatsUp - +79136319161"
+                    />
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faWhatsapp} />
-                  <a href="whatsapp://send?abid=[users name]&text=[message text]">
-                    WhatsUp
+                  <a href="viber://pa?chatURI=+79136319161">
+                    <IconWithText
+                      icon={faViber}
+                      text="Viber - +79136319161"
+                    />
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faViber} />
-                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
-                    Viber
-                  </a>
-                </li>
-                <li className={styles.menuItem}>
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  <a href="viber://pa?chatURI=[public account URI]&text=[message text]">
-                    Email
+                  <a href="email:220pluse@gmail.com">
+                    <IconWithText
+                      icon={faEnvelope}
+                      text="Email - 220pluse@gmail.com"
+                    />
                   </a>
                 </li>
               </ul>

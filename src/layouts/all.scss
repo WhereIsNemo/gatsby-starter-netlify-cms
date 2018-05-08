@@ -44,36 +44,6 @@ button {
   cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font;
-  font-weight: 600;
-}
-
-.section {
-  padding-top: 40px;
-  padding-bottom: 50px;
-
-  &__title {
-    font-size: 28px;
-    text-align: center;
-    margin-bottom: 30px;
-
-    &::after {
-      content: '';
-      display: block;
-      margin: 0 auto;
-      width: 60px;
-      height: 1px;
-      background: #ddd;
-    }
-  }
-}
-
 .btn {
   position: relative;
   display: inline-block;
@@ -83,12 +53,17 @@ h6 {
   border: none;
   border-radius: 0.25em;
   text-decoration: none;
-  color: #0070d2;
   white-space: normal;
   user-select: none;
+  color: #008ace;
+
+  &:hover {
+    color: #f41224;
+  }
 
   &--filled,
   &--outline {
+    color: #0070d2;
     padding: 0.25em 0.75em;
     text-align: center;
     vertical-align: middle;
@@ -122,6 +97,36 @@ h6 {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font;
+  font-weight: 600;
+}
+
+.section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  &__title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      width: 60px;
+      height: 1px;
+      background: #ddd;
+    }
+  }
+}
+
 .sr-only {
   @include sr-only;
 }
@@ -142,7 +147,7 @@ $slider-arrows-horizontal-margin: 35px;
 .glide__arrow-icon {
   font-size: 30px;
   color: $c-white;
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1));
 
   &:hover {
     color: #f41224;
@@ -176,7 +181,7 @@ $slider-arrows-horizontal-margin: 35px;
   border-radius: 500rem;
   margin-right: 10px;
   background: rgba(255, 255, 255, 0.6);
-  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1));
 
   &.glide__bullet--active {
     background: $c-white;
