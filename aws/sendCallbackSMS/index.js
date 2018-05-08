@@ -25,6 +25,7 @@ exports.handler = function (event, context, callback) {
       Subject: "Обратный звонок",
       TopicArn: "arn:aws:sns:us-east-1:605133187339:220PlusCallbackSMS",
     };
+
     sns.publish(params, context.done);
 
     response["statusCode"] = 200;
