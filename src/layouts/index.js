@@ -31,9 +31,7 @@ export default class TemplateWrapper extends React.Component {
 
     // Google analytics
     const $scriptjs = require('scriptjs');
-  
     $scriptjs('https://www.googletagmanager.com/gtag/js?id=UA-118409157-1', 'googleAnalytics');
-
     $scriptjs.ready('googleAnalytics', () => {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -67,12 +65,5 @@ export default class TemplateWrapper extends React.Component {
         d.addEventListener("DOMContentLoaded", f, false);
       } else { f(); }
     })(document, window, "yandex_metrika_callbacks");
-
-    // Jivosite integration
-    (function () {
-      var widget_id = 'E7x4zDRxnb'; var d = document; var w = window; function l() {
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/' + widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);
-      } if (d.readyState == 'complete') { l(); } else { if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }
-    })();
   }
 }

@@ -6,13 +6,12 @@ exports.handler = function (event, context, callback) {
   const body = JSON.parse(event.body);
 
   // Default response parameters
-  const responseBody = {};
   const response = {
     "headers": {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/plain; charset=UTF-8",
     },
-    "body": JSON.stringify(responseBody),
+    "body": "null",
     "isBase64Encoded": false,
   };
 
@@ -31,7 +30,7 @@ exports.handler = function (event, context, callback) {
     response["statusCode"] = 200;
   } else {
     response["statusCode"] = 400;
-    responseBody["message"] = "phoneNumber is invalid";
+    response["body"] = "phoneNumber is invalid";
   }
 
   callback(null, response);
