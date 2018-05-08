@@ -63,7 +63,7 @@ export default class CatalogSlider extends React.Component {
       perView: 4,
       gap: 30,
       focusAt: "center",
-      autoplay: false,
+      autoplay: 4500,
       animationDuration: 1000,
     }).mount({ Controls, Autoplay, Breakpoints });
   }

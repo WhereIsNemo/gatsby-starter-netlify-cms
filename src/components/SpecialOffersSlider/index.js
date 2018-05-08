@@ -55,7 +55,7 @@ export default class Slider extends React.Component {
   }
   componentDidMount() {
     new Glide(this.refs.slider, {
-      autoplay: false,
+      autoplay: 7000,
       animationDuration: 1000,
       swipeThreshold: false,
       keyboard: false,

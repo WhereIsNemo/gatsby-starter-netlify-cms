@@ -16,23 +16,10 @@ exports.handler = function (event, context, callback) {
     "isBase64Encoded": false,
   };
 
-  // reCaptcha check
-  async function checkRecaptcha() {
-    const response = await axios.post(
-      `https://www.google.com/recaptcha/api/siteverify?secret=6LdqK1cUAAAAAMpwXtAtQwPFOZaLIBhBsjHIRX_v&response=${body['g-recaptcha-response']}`,
-      {}).catch((err) => {
-        return false;
-      });
-
-    return response.data.success;
-  }
-
-  const passRecaptcha = checkRecaptcha();
-
   // server response
   const phoneNumber = body.phoneNumber;
 
-  if (phoneNumber && passRecaptcha) {
+  if (phoneNumber) {
     const sns = new AWS.SNS();
     const params = {
       Message: `Телефонный номер ${phoneNumber} заказал обратный звонок`,

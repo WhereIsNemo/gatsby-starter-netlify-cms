@@ -9,6 +9,7 @@ import faClock from '@fortawesome/fontawesome-free-solid/faClock';
 import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import faPhoneVolume from '@fortawesome/fontawesome-free-solid/faPhoneVolume';
 import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
+import IconWithText from '../IconWithText';
 import styles from './styles.module.scss';
 
 const Footer = () => (
@@ -46,8 +47,10 @@ const Footer = () => (
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
                   <Link className={styles.menuLink} to="/">
-                    <FontAwesomeIcon icon={faVk} />
-                    Вконтакте
+                    <IconWithText
+                      icon={faVk}
+                      text="Вконтакте"
+                    />
                   </Link>
                 </li>
               </ul>

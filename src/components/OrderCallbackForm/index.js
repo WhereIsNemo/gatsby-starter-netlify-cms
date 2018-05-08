@@ -21,7 +21,6 @@ export default class OrderCallbackForm extends React.Component {
 
     axiosAWS.post('/sendCallbackSMS', {
       phoneNumber: formDataObject.phoneNumber,
-      "g-recaptcha-response": formDataObject["g-recaptcha-response"],
     });
   }
 
@@ -38,21 +37,11 @@ export default class OrderCallbackForm extends React.Component {
             required 
           />
         </div>
-        <div 
-          className="g-recaptcha"
-          data-sitekey="6LdqK1cUAAAAAHRs1kA5qafNv7KlXle3Vq5v5TLO"
-        ></div>
         <button 
           type="submit"
           className="btn btn-primary"
         >Заказать</button>
       </form>
     );
-  }
-
-  componentDidMount() {
-    const $scriptjs = require('scriptjs');
-
-    $scriptjs('https://www.google.com/recaptcha/api.js', 'orderCallbackRecaptcha');
   }
 }
