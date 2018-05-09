@@ -75,7 +75,7 @@ const Footer = () => (
                   />
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="tel:+7-929-364-46-00">
+                  <a className={styles.menuLink} href="tel:+7-929-364-46-00">
                     <IconWithText
                       icon={faPhone}
                       text="+7-929-364-46-00"
@@ -83,7 +83,7 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <button className="btn">
+                  <button className={`${styles.menuLink} btn`}>
                     <IconWithText
                       icon={faPhoneVolume}
                       text="Заказать обратный звонок"
@@ -91,7 +91,7 @@ const Footer = () => (
                   </button>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="mailto:220pluse@gmail.com">
+                  <a className={styles.menuLink} href="mailto:220pluse@gmail.com">
                     <IconWithText
                       icon={faEnvelope}
                       text="220pluse@gmail.com"
@@ -99,7 +99,7 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="https://api.whatsapp.com/send?phone=79293644600">
+                  <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600">
                     <IconWithText
                       icon={faWhatsapp}
                       text="WhatsUp - +7-929-364-46-00"
@@ -107,7 +107,7 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="viber://chat?number=79293644600">
+                  <a className={styles.menuLink} href="viber://chat?number=79293644600">
                     <IconWithText
                       icon={faViber}
                       text="Viber - +7-929-364-46-00"
