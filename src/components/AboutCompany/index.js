@@ -4,7 +4,7 @@ import { HTMLContent } from '../Content';
 
 const AboutCompany = ({ aboutSection }) => (
   <div className="section about-company">
-    <h2 className="section__title">{aboutSection.frontmatter.title}</h2>
+    <h1 className="section__title">{aboutSection.frontmatter.title}</h1>
     <HTMLContent className="section__text" content={aboutSection.html} />
   </div>
 );
