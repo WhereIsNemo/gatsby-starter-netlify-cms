@@ -20,12 +20,12 @@ export const ProductPageTemplate = ({
           <Img resolutions={childrenImageSharp[0].resolutions} />
           </div>
           <div className="col col-12 col-md-6">
+            <h2>{category}</h2>
             <h1>{title}</h1>
             <div>{price}</div>
-            <div>{category}</div>
-            <HTMLContent content={body} />
           </div>
         </div>
+        <HTMLContent content={body} />
       </React.Fragment>
     </DefaultLayout>
   );

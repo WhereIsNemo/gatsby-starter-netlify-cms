@@ -63,18 +63,6 @@ const Footer = () => (
             <div>
               <ul className={styles.menu}>
                 <li className={styles.menuItem}>
-                  <IconWithText
-                    icon={faLocationArrow}
-                    text="г. Омск"
-                  />
-                </li>
-                <li className={styles.menuItem}>
-                  <IconWithText
-                    icon={faClock}
-                    text="Время работы: ежедневно, 9:00-22:00"
-                  />
-                </li>
-                <li className={styles.menuItem}>
                   <a className={styles.menuLink} href="tel:+7-929-364-46-00">
                     <IconWithText
                       icon={faPhone}
