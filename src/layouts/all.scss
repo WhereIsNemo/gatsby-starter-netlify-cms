@@ -63,7 +63,6 @@ button {
 
   &--filled,
   &--outline {
-    color: #0070d2;
     padding: 0.25em 0.75em;
     text-align: center;
     vertical-align: middle;
@@ -78,15 +77,18 @@ button {
     font-weight: 600;
 
     &:hover {
+      color: $c-white;
       background: #005fb2;
       border-color: #005fb2;
     }
   }
 
   &--outline {
+    color: #0070d2;
     background-color: white;
 
     &:hover {
+      color: #0070d2;
       background: #f4f6f9;
     }
   }
@@ -94,6 +96,10 @@ button {
   &--outline-attention {
     color: #f41224;
     border-color: #f41224;
+
+    &:hover {
+      color: #f41224;
+    }
   }
 }
 

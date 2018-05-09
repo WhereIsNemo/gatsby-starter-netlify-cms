@@ -89,6 +89,14 @@ const Footer = () => (
                   />
                 </li>
                 <li className={styles.menuItem}>
+                  <a href="email:220pluse@gmail.com">
+                    <IconWithText
+                      icon={faEnvelope}
+                      text="220pluse@gmail.com"
+                    />
+                  </a>
+                </li>
+                <li className={styles.menuItem}>
                   <a href="whatsapp://send?abid=+79136319161">
                     <IconWithText
                       icon={faWhatsapp}
@@ -101,14 +109,6 @@ const Footer = () => (
                     <IconWithText
                       icon={faViber}
                       text="Viber - +79136319161"
-                    />
-                  </a>
-                </li>
-                <li className={styles.menuItem}>
-                  <a href="email:220pluse@gmail.com">
-                    <IconWithText
-                      icon={faEnvelope}
-                      text="Email - 220pluse@gmail.com"
                     />
                   </a>
                 </li>
