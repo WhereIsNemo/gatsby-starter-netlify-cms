@@ -2,6 +2,7 @@ const path = require(`path`);
 const slugify = require('transliteration').slugify;
 
 module.exports = ({
+  slug,
   createPage,
   nodes,
   contentType,
@@ -23,12 +24,8 @@ module.exports = ({
 
   // Create new indexed route for each array
   if (groupedPages.length === 0) {
-    const route = slugify(`${contentType}/${contentName}`, {
-      ignore: ['/'],
-    });
-
     return createPage({
-      path: route,
+      path: slug,
       component: template,
       context: {
         id: pageId,
@@ -37,19 +34,16 @@ module.exports = ({
   } else {
     groupedPages.forEach((group, index, groups) => {
       const pageIndex = index === 0 ? `` : index + 1;
-      const route = slugify(`${contentType}/${contentName}`, {
-        ignore: ['/'],
-      });
 
       return createPage({
-        path: `${route}/${pageIndex}`,
+        path: `${slug}/${pageIndex}`,
         component: template,
         context: {
           id: pageId,
           group,
           pagesCount: groups.length,
           index: index + 1,
-          route,
+          slug,
         },
       });
     });

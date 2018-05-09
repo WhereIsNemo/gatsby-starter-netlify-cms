@@ -88,6 +88,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         edges {
           node {
             id
+            fields {
+              slug
+            }
             frontmatter {
               title
             }
@@ -164,12 +167,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         );
 
         createPaginatedPages({
+          slug: category.node.fields.slug,
           createPage,
           nodes: categoryContent,
           contentType: 'categories',
           templateName: 'category-page',
           pageId: categoryId,
-          contentName: categoryName,
         });
       });
     });
