@@ -3,6 +3,7 @@ import CatalogAside from '../components/CatalogAside';
 import ProductsGrid from '../components/ProductsGrid';
 import Pagination from '../components/Pagination';
 import DefaultLayout from '../components/Layout';
+import styles from './category-page.module.scss';
 
 const CategoryPage = props => {
   const { markdownRemark: post } = props.data;
@@ -18,14 +19,16 @@ const CategoryPage = props => {
   return (
     <DefaultLayout data={props.data}>
       <React.Fragment key="mainContent">
-        <h1>{post.frontmatter.title}</h1>
-        <div>{post.frontmatter.description}</div>
-        {productsGridEl}
-        <Pagination
-          route={props.pathContext.route}
-          currentPage={props.pathContext.index}
-          pagesCount={props.pathContext.pagesCount}
-        />
+        <div className={styles.categorySection}>
+          <h1>{post.frontmatter.title}</h1>
+          <div className={styles.description}>{post.frontmatter.description}</div>
+          {productsGridEl}
+          <Pagination
+            route={props.pathContext.route}
+            currentPage={props.pathContext.index}
+            pagesCount={props.pathContext.pagesCount}
+          />
+        </div>
       </React.Fragment>
     </DefaultLayout>
   );
