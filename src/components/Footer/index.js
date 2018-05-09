@@ -83,10 +83,12 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <IconWithText
-                    icon={faPhoneVolume}
-                    text={<button className="btn">Заказать обратный звонок</button>}
-                  />
+                  <button className="btn">
+                    <IconWithText
+                      icon={faPhoneVolume}
+                      text="Заказать обратный звонок"
+                    />
+                  </button>
                 </li>
                 <li className={styles.menuItem}>
                   <a href="mailto:220pluse@gmail.com">
