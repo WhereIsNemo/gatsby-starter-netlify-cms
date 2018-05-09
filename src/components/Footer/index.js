@@ -97,15 +97,15 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="whatsapp://send?abid=+79293644600">
+                  <a href="whatsapp://send?abid=79293644600">
                     <IconWithText
                       icon={faWhatsapp}
-                      text="WhatsUp - +79293644600"
+                      text="WhatsUp - 79293644600"
                     />
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="viber://pa?chatURI=+79293644600">
+                  <a href="viber://pa?chatURI=%2B79293644600">
                     <IconWithText
                       icon={faViber}
                       text="Viber - +79293644600"
