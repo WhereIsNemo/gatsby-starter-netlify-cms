@@ -6,6 +6,10 @@
 }
 
 :local(.previewImgWrapper) {
+  display: flex;
+  max-height: 255px;
+  margin-bottom: 10px;
+
   a,
   img {
     display: block;
@@ -13,6 +17,7 @@
 
   a {
     border-bottom: none;
+    display: flex;
   }
 
   :global .gatsby-image-wrapper {
@@ -21,6 +26,7 @@
 }
 
 .previewTitle {
+  text-align: center;
   a {
     color: inherit;
     border-bottom: none;
