@@ -89,7 +89,7 @@ const Footer = () => (
                   />
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="email:220pluse@gmail.com">
+                  <a href="mailto:220pluse@gmail.com">
                     <IconWithText
                       icon={faEnvelope}
                       text="220pluse@gmail.com"
