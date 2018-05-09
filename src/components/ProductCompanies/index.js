@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './styles.module.scss';
 import Img from "gatsby-image";
+import styles from './styles.module.scss';
 
 const ProductCompanies = ({ productCompanies }) => {
   const previews = productCompanies.map(({ node }, index) => (
     <div
       key={index}
-      className={`${
-        styles.productsCompanies__col
-      } col col-12 col-sm-6 col-md-3`}
+      className={`${styles.productsCompanies__col} col col-12 col-sm-6 col-md-3`}
     >
-      <div className="product-company">
-        <Img resolutions={node.childrenImageSharp[0].resolutions} />
+      <div className={styles.productsCompany}>
+        <div className={styles.productsCompanyImgWrapper}>
+          <Img resolutions={node.childrenImageSharp[0].resolutions} />
+        </div>
       </div>
     </div>
   ));
@@ -19,9 +19,7 @@ const ProductCompanies = ({ productCompanies }) => {
   return (
     <div className="section">
       <h2 className="section__title">Компании, продукцию которых мы сбываем</h2>
-      <div className="overflow-container">
-        <div className={`${styles.productsCompanies__row} row`}>{previews}</div>
-      </div>
+      <div className={`${styles.productsCompanies__row} row`}>{previews}</div>
     </div>
   );
 };
@@ -37,7 +35,7 @@ export const productCompaniesQuery = graphql`
         node {
           childrenImageSharp {
             resolutions(width: 255, quality: 85) {
-              ...GatsbyImageSharpResolutions_withWebp
+              ...GatsbyImageSharpResolutions_withWebp_noBase64
             }
           }
         }

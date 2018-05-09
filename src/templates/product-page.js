@@ -54,7 +54,7 @@ export const productPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       childrenImageSharp {
         resolutions(width: 400, quality: 85) {
-          ...GatsbyImageSharpResolutions_withWebp
+          ...GatsbyImageSharpResolutions_withWebp_noBase64
         }
       }
       html

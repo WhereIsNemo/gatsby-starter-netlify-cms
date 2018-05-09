@@ -78,7 +78,7 @@ export const CatalogSliderQuery = graphql`
         node {
           childrenImageSharp {
             resolutions(width: 255, quality: 85) {
-              ...GatsbyImageSharpResolutions_withWebp
+              ...GatsbyImageSharpResolutions_withWebp_noBase64
             }
           }
           fields {

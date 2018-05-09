@@ -72,7 +72,7 @@ export const specialOffersSliderQuery = graphql`
         node {
           childrenImageSharp {
             sizes(maxWidth: 880, maxHeight: 500, quality: 85) {
-              ...GatsbyImageSharpSizes_withWebp
+              ...GatsbyImageSharpSizes_withWebp_noBase64
             }
           }
         }

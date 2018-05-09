@@ -203,3 +203,21 @@ $slider-arrows-horizontal-margin: 35px;
     margin-right: 0;
   }
 }
+
+.gatsby-image-outer-wrapper,
+.gatsby-image-wrapper {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.gatsby-image-wrapper {
+  img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    max-height: 100%;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+  }
+}
