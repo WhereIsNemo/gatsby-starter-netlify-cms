@@ -105,7 +105,7 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="viber://chat?=79293644600">
+                  <a href="viber://chat?number=79293644600">
                     <IconWithText
                       icon={faViber}
                       text="Viber - +7-929-364-46-00"
