@@ -6,7 +6,7 @@ import Img from "gatsby-image";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
-import styles from './styles.module.scss';
+import CategoryPreview from '../CategoryPreview';
 
 export default class CatalogSlider extends React.Component {
   render() {
@@ -18,16 +18,7 @@ export default class CatalogSlider extends React.Component {
 
       slides.push(
         <div key={index} className="glide__slide">
-          <div className={styles.preview}>
-            <div className={styles.previewImgWrapper}>
-              <Link to={node.fields.slug}>
-                <Img resolutions={node.childrenImageSharp[0].resolutions} />
-              </Link>
-            </div>
-            <h3 className={styles.previewTitle}>
-              <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-            </h3>
-          </div>
+          <CategoryPreview node={node} />
         </div>
       );
     });

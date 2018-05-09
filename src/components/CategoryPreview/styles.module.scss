@@ -1,0 +1,36 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+:local(.imgWrapper) {
+  display: flex;
+  max-height: 255px;
+  margin-bottom: 10px;
+
+  a,
+  img {
+    display: block;
+  }
+
+  a {
+    border-bottom: none;
+    display: flex;
+  }
+
+  :global .gatsby-image-wrapper {
+    display: block !important;
+  }
+}
+
+.title {
+  text-align: center;
+  
+  a {
+    color: inherit;
+    border-bottom: none;
+    text-transform: uppercase;
+  }
+}

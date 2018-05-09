@@ -6,12 +6,16 @@ import styles from './styles.module.scss';
 export default class CatalogGrid extends React.Component {
   render() {
     const categories = this.props.categories.map(({ node }, index) => (
-      <div key={index} className="col col-12 col-md-4">
+      <div key={index} className={`col col-12 col-md-4 ${styles.col}`}>
         <CategoryPreview node={node} />
       </div>
     ));
 
-    return <div className="row">{categories}</div>;
+    return (
+      <div className="overflow-container">
+        <div className={`row ${styles.row}`}>{categories}</div>
+      </div>
+    );
   }
 }
 
