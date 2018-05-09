@@ -2,6 +2,7 @@ import React from 'react';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
 import Img from "gatsby-image";
+import styles from './product-page.module.scss';
 
 export const ProductPageTemplate = ({
   title,
@@ -15,17 +16,21 @@ export const ProductPageTemplate = ({
   return (
     <DefaultLayout data={data}>
       <React.Fragment key="mainContent">
-        <div className="row">
-          <div className="col col-12 col-md-6">
-          <Img resolutions={childrenImageSharp[0].resolutions} />
+        <div className={styles.productPage}>
+          <div className={styles.mainInfo}>
+            <div className="row">
+              <div className="col col-12 col-md-6">
+                <Img resolutions={childrenImageSharp[0].resolutions} />
+              </div>
+              <div className="col col-12 col-md-6">
+                <h2>{category}</h2>
+                <h1>{title}</h1>
+                <div><b>Цена:</b> {price}₽</div>
+              </div>
+            </div>
           </div>
-          <div className="col col-12 col-md-6">
-            <h2>{category}</h2>
-            <h1>{title}</h1>
-            <div>{price}</div>
-          </div>
+          <HTMLContent content={body} />
         </div>
-        <HTMLContent content={body} />
       </React.Fragment>
     </DefaultLayout>
   );
