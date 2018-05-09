@@ -104,7 +104,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           node {
             childrenImageSharp {
               resolutions(width: 255, quality: 85) {
-                base64
                 width
                 height
                 src
