@@ -75,10 +75,10 @@ const Footer = () => (
                   />
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="tel:+7-913-631-91-61">
+                  <a href="tel:+7-929-364-46-00">
                     <IconWithText
                       icon={faPhone}
-                      text="+7-913-631-91-61"
+                      text="+7-929-364-46-00"
                     />
                   </a>
                 </li>
@@ -97,18 +97,18 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="whatsapp://send?abid=+79136319161">
+                  <a href="whatsapp://send?abid=+79293644600">
                     <IconWithText
                       icon={faWhatsapp}
-                      text="WhatsUp - +79136319161"
+                      text="WhatsUp - +79293644600"
                     />
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <a href="viber://pa?chatURI=+79136319161">
+                  <a href="viber://pa?chatURI=+79293644600">
                     <IconWithText
                       icon={faViber}
-                      text="Viber - +79136319161"
+                      text="Viber - +79293644600"
                     />
                   </a>
                 </li>
