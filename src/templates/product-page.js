@@ -29,7 +29,10 @@ export const ProductPageTemplate = ({
               </div>
             </div>
           </div>
-          <HTMLContent content={body} />
+          <div>
+            <h2>Описание</h2>
+            <HTMLContent content={body} />
+          </div>
         </div>
       </React.Fragment>
     </DefaultLayout>
