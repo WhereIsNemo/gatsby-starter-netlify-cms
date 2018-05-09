@@ -108,7 +108,7 @@ const Footer = () => (
                   <a href="viber://pa?chatURI=%2B79293644600">
                     <IconWithText
                       icon={faViber}
-                      text="Viber - +79293644600"
+                      text="Viber - 8 929 364-46-00"
                     />
                   </a>
                 </li>
