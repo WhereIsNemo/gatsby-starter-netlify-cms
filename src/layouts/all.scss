@@ -28,13 +28,13 @@ img {
 }
 
 a {
-  color: #008ace;
+  color: $c-primary;
   border-bottom: 1px solid #b2ccf0;
   transition: border-color .3s ease;
   text-decoration: none;
 
   &:hover {
-    color: #f41224;
+    color: $c-accent;
     border-bottom-color: rgba(244, 18, 36, 0.3);
     text-decoration: none;
   }
@@ -156,7 +156,7 @@ $slider-arrows-horizontal-margin: 35px;
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 1));
 
   &:hover {
-    color: #f41224;
+    color: $c-accent;
   }
 }
 
@@ -195,7 +195,7 @@ $slider-arrows-horizontal-margin: 35px;
 
   &:hover {
     @include media-breakpoint-up(lg) {
-      background: #f41224;
+      background: $c-accent;
     }
   }
 

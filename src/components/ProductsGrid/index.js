@@ -1,5 +1,6 @@
 import React from 'react';
 import ContentGrid from '../ContentGrid';
+import ProductPreview from '../ProductPreview';
 
 export default (props) => {
   const products = props.productsGrid
@@ -7,5 +8,5 @@ export default (props) => {
         return node.frontmatter.categories === props.category;
       });
 
-  return <ContentGrid content={products} />;
+  return <ContentGrid content={products} Preview={ProductPreview} />;
 };

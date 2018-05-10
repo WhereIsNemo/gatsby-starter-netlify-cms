@@ -1,8 +1,9 @@
 import React from 'react';
 import ContentGrid from '../ContentGrid';
+import SimplePreview from '../SimplePreview';
 
 export default ({ categories }) => (
-  <ContentGrid content={categories} />
+  <ContentGrid content={categories} Preview={SimplePreview} />
 );
 
 export const CatalogGridQuery = graphql`

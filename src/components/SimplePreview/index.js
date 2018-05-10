@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import Img from "gatsby-image";
 import styles from './styles.module.scss';
 
-const Preview = ({ node }) => (
+const SimplePreview = ({ node }) => (
   <div className={styles.preview}>
     <div className={styles.imgWrapper}>
       <Link to={node.fields.slug}>
@@ -16,4 +16,4 @@ const Preview = ({ node }) => (
   </div>
 );
 
-export default Preview;
+export default SimplePreview;

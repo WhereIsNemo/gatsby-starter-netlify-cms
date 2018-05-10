@@ -118,6 +118,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               title
               categories
+              price
             }
           }
         }
