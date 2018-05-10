@@ -1,5 +1,19 @@
-.services {
-  &__service {
+@import '../../layouts/settings';
+
+.service,
+.serviceBlock {
+  height: 100%;
+}
+
+.service {
+  a {
+    display: block;
     height: 100%;
+    color: inherit;
+    border-bottom: none;
+
+    &:hover {
+      color: $c-accent;
+    }
   }
 }

@@ -90,7 +90,7 @@ const Footer = () => (
                   <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600">
                     <IconWithText
                       icon={faWhatsapp}
-                      text="WhatsUp - +7-929-364-46-00"
+                      text="WhatsUp: +7-929-364-46-00"
                     />
                   </a>
                 </li>
@@ -98,7 +98,7 @@ const Footer = () => (
                   <a className={styles.menuLink} href="viber://chat?number=79293644600">
                     <IconWithText
                       icon={faViber}
-                      text="Viber - +7-929-364-46-00"
+                      text="Viber: +7-929-364-46-00"
                     />
                   </a>
                 </li>

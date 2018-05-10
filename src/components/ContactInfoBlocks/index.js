@@ -9,20 +9,28 @@ const ContactInfoBlocks = () => (
     <div className="container">
       <div className="row">
         <div className="col col-12 col-md-6">
-          <InfoBlock
-            className={styles.services__service}
-            icon={faPhone}
-            title="Звоните"
-            description="+7 000 00 00"
-          />
+          <div className={styles.service}>
+            <a href="tel:+7-929-364-46-00">
+              <InfoBlock
+                className={styles.serviceBlock}
+                icon={faPhone}
+                title="Звоните"
+                description="+7-929-364-46-00"
+              />
+            </a>
+          </div>
         </div>
         <div className="col col-12 col-md-6">
-          <InfoBlock
-            className={styles.services__service}
-            icon={faEnvelope}
-            title="Пишите"
-            description="info@220plus.ru"
-          />
+          <div className={styles.service}>
+            <a href="mailto:220pluse@gmail.com">
+              <InfoBlock
+                className={styles.serviceBlock}
+                icon={faEnvelope}
+                title="Пишите"
+                description="220pluse@gmail.com"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
