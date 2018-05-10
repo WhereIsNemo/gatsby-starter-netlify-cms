@@ -6,13 +6,13 @@ title: Контакты
 ---
 ## Интернет магазин 220Plus
 
-Viber: +7 9293644600
+Телефон: [+7 9293644600](tel:+7-929-364-46-00)
 
-WhatsApp: +7 9293644600
+Viber: [+7 9293644600](viber://chat?number=79293644600)
 
-Телефон: +7 9293644600
+WhatsApp: [+7 9293644600](https://api.whatsapp.com/send?phone=79293644600)
 
-Почта: info@220plus.su
+Почта: [info@220plus.su](mailto:220pluse@gmail.com)
 
 ## Режим работы
 
