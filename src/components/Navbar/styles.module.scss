@@ -1,24 +1,30 @@
 @import '../../layouts/settings';
 
-.toggler {
-  @include media-breakpoint-up(lg) {
-    display: none;
-  }
-}
-
 .menu {
   @include list-unstyled;
 
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin: 0;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
 }
 
 .menuLink {
   display: block;
-  padding: 20px;
+  padding: 10px;
   border-bottom: none;
   color: inherit;
   font-weight: 600;
   text-transform: uppercase;
+  font-size: 14px;
+
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+    font-size: 16px;
+  }
 }

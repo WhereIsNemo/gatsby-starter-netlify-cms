@@ -42,13 +42,6 @@ const Navbar = () => {
 
   return (
     <nav>
-      <button
-        className={styles.toggler}
-        type="button"
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-
       <ul className={styles.menu}>
         {menuItemsMarkup}
       </ul>
