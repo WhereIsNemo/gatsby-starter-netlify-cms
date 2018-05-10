@@ -19,7 +19,7 @@ export default () => (
               <Logo />
             </div>
           </div>
-          <div className="col col-12 col-md-4 col-xl-3">
+          <div className="col col-12 col-md-3">
             <div className={styles.headerDelivery}>
               <IconWithText
                 icon={faTruck}
