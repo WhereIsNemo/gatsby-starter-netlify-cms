@@ -33,7 +33,7 @@ const Header = () => (
                 />
               </a>
             </div>
-            <OrderCallbackButton />
+            <OrderCallbackButton btnClasses="btn--filled" />
           </div>
         </div>
       </div>

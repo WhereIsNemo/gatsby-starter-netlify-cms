@@ -2,6 +2,7 @@ import React from 'react';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
 import Img from "gatsby-image";
+import OrderCallbackButton from '../components/OrderCallbackButton';
 import styles from './product-page.module.scss';
 
 export const ProductPageTemplate = ({
@@ -23,9 +24,12 @@ export const ProductPageTemplate = ({
                 <Img resolutions={childrenImageSharp[0].resolutions} />
               </div>
               <div className="col col-12 col-md-6">
-                <h2>{category}</h2>
-                <h1>{title}</h1>
-                <div><b>Цена:</b> {price}₽</div>
+                <h1 className={styles.title}>{title}</h1>
+                <div><b>Категория</b>: {category}</div>
+                <div className={styles.priceField}>
+                  <b>Цена:</b> <span className={styles.price}>{price}₽</span>
+                </div>
+                <div><OrderCallbackButton btnClasses="btn--filled" additionalText={title} /></div>
               </div>
             </div>
           </div>

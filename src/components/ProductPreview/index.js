@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from "gatsby-image";
+import OrderCallbackButton from '../OrderCallbackButton';
 import styles from './styles.module.scss';
 
 const Preview = ({ node }) => (
@@ -14,6 +15,9 @@ const Preview = ({ node }) => (
       <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
     </h3>
     <div className={styles.price}>{node.frontmatter.price}₽</div>
+    <div>
+      <OrderCallbackButton additionalText={node.frontmatter.title} />
+    </div>
   </div>
 );
 

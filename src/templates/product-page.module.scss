@@ -1,8 +1,23 @@
+@import '../layouts/settings';
+
 .productPage {
-  padding: 12px 0; 
+  padding: 15px 0; 
 }
 
 .mainInfo {
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.priceField {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.price {
+  color: $c-accent;
 }
