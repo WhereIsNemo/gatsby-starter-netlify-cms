@@ -27,19 +27,17 @@ export default class OrderCallbackForm extends React.Component {
   render() {
     return (
       <form className={styles.form} onSubmit={this.handleFormSubmit}>
-        <div className="form-group">
-          <label htmlFor="callbackSmsPhoneNumber">Ваш телефонный номер:</label>
-          <input 
-            id="callbackSmsPhoneNumber" 
-            className="form-control" 
-            name="phoneNumber" 
-            type="tel" 
-            required 
-          />
-        </div>
+        <label className={styles.label} htmlFor="callbackSmsPhoneNumber">Ваш телефонный номер:</label>
+        <input 
+          id="callbackSmsPhoneNumber" 
+          className={styles.input}
+          name="phoneNumber" 
+          type="tel" 
+          required 
+        />
         <button 
           type="submit"
-          className="btn btn-primary"
+          className={`btn btn--outline ${styles.submitBtn}`}
         >Заказать</button>
       </form>
     );

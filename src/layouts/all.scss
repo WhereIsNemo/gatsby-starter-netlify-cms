@@ -55,10 +55,10 @@ button {
   text-decoration: none;
   white-space: normal;
   user-select: none;
-  color: #008ace;
+  color: $c-primary;
 
   &:hover {
-    color: #f41224;
+    color: $c-accent;
   }
 
   &--filled,
