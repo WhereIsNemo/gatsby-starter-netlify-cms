@@ -24,8 +24,8 @@ export default () => {
     },
   ];
 
-  const servicesMarkup = services.map(({ icon, title, description }) => 
-    <div className={`col col-12 col-md-4 ${styles.col}`}>
+  const servicesMarkup = services.map(({ icon, title, description }, index) => 
+    <div key={index} className={`col col-12 col-md-4 ${styles.col}`}>
       <InfoBlock
         className={styles.service}
         icon={icon}

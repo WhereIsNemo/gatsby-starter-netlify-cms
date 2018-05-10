@@ -1,1 +1,10 @@
 @import '../../layouts/settings';
+
+:local(.slider) {
+  :global .gatsby-image-wrapper {
+    img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}

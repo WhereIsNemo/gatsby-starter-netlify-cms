@@ -5,6 +5,7 @@ import "@glidejs/glide/dist/css/glide.core.min.css";
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
+import styles from './styles.module.scss';
 
 export default class Slider extends React.Component {
   render() {
@@ -26,7 +27,7 @@ export default class Slider extends React.Component {
     });
 
     return (
-      <div className={`glide`} ref="slider">
+      <div className={`glide ${styles.slider}`} ref="slider">
         <div data-glide-el="track" className="glide__track">
           <div className="glide__slides">{slides}</div>
         </div>

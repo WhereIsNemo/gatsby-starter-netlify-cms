@@ -4,10 +4,10 @@ import CatalogAside from '../CatalogAside';
 const MainContent = ({ children, data }) => (
   <div className="container-fluid">
     <div className="row">
-      <div className="col col-12 col-md-3">
+      <div className="col col-12 col-md-4 col-lg-3">
         <CatalogAside categories={data.asideCategories.edges} />
       </div>
-      <div className="col col-12 col-md-9">{children}</div>
+      <div className="col col-12 col-md-8 col-lg-9">{children}</div>
     </div>
   </div>
 );
