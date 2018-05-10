@@ -9,7 +9,7 @@ import IconWithText from '../IconWithText';
 import OrderCallbackButton from '../OrderCallbackButton';
 import styles from './styles.module.scss';
 
-const Header = () => (
+export default () => (
   <header>
     <div className={styles.top}>
       <div className="container-fluid">
@@ -50,5 +50,3 @@ const Header = () => (
     </div>
   </header>
 );
-
-export default Header;

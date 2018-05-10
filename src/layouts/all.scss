@@ -118,9 +118,13 @@ h6 {
   margin-bottom: 50px;
 
   &__title {
-    font-size: 28px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 28px;
+    }
 
     &::after {
       content: '';
@@ -141,7 +145,8 @@ h6 {
   @include sr-only;
 }
 
-$slider-arrows-horizontal-margin: 35px;
+$slider-arrows-horizontal-margin-mobile: 10px;
+$slider-arrows-horizontal-margin-tablet-up: 35px;
 
 .glide {
   .gatsby-image-wrapper {
@@ -154,6 +159,10 @@ $slider-arrows-horizontal-margin: 35px;
 
 .glide__slide {
   height: auto !important;
+
+  a {
+    max-width: 100%;
+  }
 }
 
 .glide__arrow {
@@ -174,21 +183,33 @@ $slider-arrows-horizontal-margin: 35px;
 }
 
 .glide__arrow--prev {
-  left: $slider-arrows-horizontal-margin;
+  left: $slider-arrows-horizontal-margin-mobile;
+
+  @include media-breakpoint-up(md) {
+    left: $slider-arrows-horizontal-margin-tablet-up;
+  }
 }
 
 .glide__arrow--next {
-  right: $slider-arrows-horizontal-margin;
+  right: $slider-arrows-horizontal-margin-mobile;
+
+  @include media-breakpoint-up(md) {
+    right: $slider-arrows-horizontal-margin-tablet-up;
+  }
 }
 
 .glide__bullets {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include media-breakpoint-up(md) {
+    bottom: 20px;
+  }
 }
 
 .glide__bullet {
