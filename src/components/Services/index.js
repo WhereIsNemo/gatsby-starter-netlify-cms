@@ -7,7 +7,7 @@ import styles from './styles.module.scss';
 
 const Services = () => (
   <div className="section services">
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col col-12 col-md-4">
           <InfoBlock

@@ -14,7 +14,7 @@ export default props => (
       />
     </React.Fragment>
     <React.Fragment key="underMainContent">
-      <div className="container">
+      <div className="container-fluid">
         <AboutCompany aboutSection={props.data.aboutSection} />
         <ProductCompanies
           productCompanies={props.data.productCompanies.edges}

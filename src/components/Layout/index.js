@@ -2,7 +2,7 @@ import React from 'react';
 import CatalogAside from '../CatalogAside';
 
 const MainContent = ({ children, data }) => (
-  <div className="container">
+  <div className="container-fluid">
     <div className="row">
       <div className="col col-12 col-md-3">
         <CatalogAside categories={data.asideCategories.edges} />

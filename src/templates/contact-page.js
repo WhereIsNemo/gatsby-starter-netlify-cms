@@ -4,7 +4,7 @@ import ContactInfoBlocks from '../components/ContactInfoBlocks';
 
 export const ContactPageTemplate = ({ title, body }) => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <ContactInfoBlocks />
       <div className="section">
         <h1 className="section__title">{title}</h1>

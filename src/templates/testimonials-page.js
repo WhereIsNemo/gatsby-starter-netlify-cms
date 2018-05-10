@@ -3,7 +3,7 @@ import { HTMLContent } from '../components/Content';
 import VkComments from '../components/VkComments';
 
 export const TestimonialsPageTemplate = ({ title, body }) => (
-  <div className="container">
+  <div className="container-fluid">
     <div className="section">
       <h1 className="section__title">{title}</h1>
       <HTMLContent content={body} />

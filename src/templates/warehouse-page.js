@@ -3,7 +3,7 @@ import { HTMLContent } from '../components/Content';
 
 export const WarehousePageTemplate = ({ title, body }) => {
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="section">
         <h1 className="section__title">{title}</h1>
         <HTMLContent content={body} />

@@ -15,7 +15,7 @@ import styles from './styles.module.scss';
 
 const Footer = () => (
   <footer className={styles.footer}>
-    <div className="container">
+    <div className="container-fluid">
       <div className="row">
         <div className="col col-12 col-md">
           <div>
