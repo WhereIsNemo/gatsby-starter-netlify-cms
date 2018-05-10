@@ -4,13 +4,17 @@ import {
   Tooltip,
 } from 'react-tippy';
 
-export default ({ btnClasses, additionalText}) => (
-  <Tooltip
+export default ({ btnClasses, additionalText, children}) => {
+  const btnContent = children ? children : "Заказать обратный звонок";
+
+  return (
+    <Tooltip
     html={<OrderCallbackForm additionalText={additionalText} />}
     position="bottom"
     trigger="click"
     interactive={true}
   >
-    <button className={`btn ${btnClasses}`}>Заказать обратный звонок</button>
+    <button className={`btn ${btnClasses}`}>{btnContent}</button>
   </Tooltip>
-);
+  );
+};

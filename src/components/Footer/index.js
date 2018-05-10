@@ -10,6 +10,7 @@ import faPhone from '@fortawesome/fontawesome-free-solid/faPhone';
 import faPhoneVolume from '@fortawesome/fontawesome-free-solid/faPhoneVolume';
 import faEnvelope from '@fortawesome/fontawesome-free-solid/faEnvelope';
 import IconWithText from '../IconWithText';
+import OrderCallbackButton from '../OrderCallbackButton';
 import styles from './styles.module.scss';
 
 const Footer = () => (
@@ -71,12 +72,12 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className={styles.menuItem}>
-                  <button className={`${styles.menuLink} btn`}>
+                  <OrderCallbackButton btnClasses={styles.menuLink}>
                     <IconWithText
                       icon={faPhoneVolume}
                       text="Заказать обратный звонок"
                     />
-                  </button>
+                  </OrderCallbackButton>
                 </li>
                 <li className={styles.menuItem}>
                   <a className={styles.menuLink} href="mailto:220pluse@gmail.com">
