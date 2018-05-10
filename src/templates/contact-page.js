@@ -6,8 +6,8 @@ export const ContactPageTemplate = ({ title, body }) => {
   return (
     <div className="container">
       <ContactInfoBlocks />
-      <div className="testimonials-section">
-        <h1>{title}</h1>
+      <div className="section">
+        <h1 className="section__title">{title}</h1>
         <HTMLContent content={body} />
       </div>
     </div>

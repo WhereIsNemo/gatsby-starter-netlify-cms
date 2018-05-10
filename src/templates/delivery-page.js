@@ -4,8 +4,8 @@ import { HTMLContent } from '../components/Content';
 export const DeliveryPageTemplate = ({ title, body }) => {
   return (
     <div className="container">
-      <div className="delivery-section">
-        <h1>{title}</h1>
+      <div className="section">
+        <h1 className="section__title">{title}</h1>
         <HTMLContent content={body} />
       </div>
     </div>

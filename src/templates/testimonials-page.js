@@ -4,8 +4,8 @@ import VkComments from '../components/VkComments';
 
 export const TestimonialsPageTemplate = ({ title, body }) => (
   <div className="container">
-    <div className="testimonials-section">
-      <h1>{title}</h1>
+    <div className="section">
+      <h1 className="section__title">{title}</h1>
       <HTMLContent content={body} />
     </div>
     <div className="comments-section">
