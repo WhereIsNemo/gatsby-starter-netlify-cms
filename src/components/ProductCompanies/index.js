@@ -30,6 +30,7 @@ export const productCompaniesQuery = graphql`
   fragment productCompanies on RootQueryType {
     productCompanies: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "productCompany" } } }
+      sort: {fields: [frontmatter___title], order: ASC},
     ) {
       edges {
         node {
@@ -37,6 +38,9 @@ export const productCompaniesQuery = graphql`
             resolutions(width: 255, quality: 85) {
               ...GatsbyImageSharpResolutions_withWebp_noBase64
             }
+          }
+          frontmatter {
+            title
           }
         }
       }

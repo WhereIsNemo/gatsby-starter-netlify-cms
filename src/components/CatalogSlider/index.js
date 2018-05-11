@@ -71,6 +71,7 @@ export const CatalogSliderQuery = graphql`
   fragment sliderCategories on RootQueryType {
     sliderCategories: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "category" } } }
+      sort: {fields: [frontmatter___title], order: ASC},
     ) {
       edges {
         node {

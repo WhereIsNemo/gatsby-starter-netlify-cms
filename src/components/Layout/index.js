@@ -52,6 +52,7 @@ export const defaultLayoutQuery = graphql`
   fragment defaultLayout on RootQueryType {
     asideCategories: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "category" } } }
+      sort: {fields: [frontmatter___title], order: ASC},
     ) {
       edges {
         node {
