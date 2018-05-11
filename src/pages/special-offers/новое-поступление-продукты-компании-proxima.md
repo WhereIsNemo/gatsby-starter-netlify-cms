@@ -1,6 +1,6 @@
 ---
+title: '3'
+image: /img/slide1-1585x690.jpg
 contentType: specialOffer
-title: 'Новое поступление: продукты компании Proxima'
-image: /img/products-grid3.jpg
 ---
 
