@@ -42,7 +42,7 @@ export default () => (
             <h3 className={styles.colTitle}>Присоединяйтесь</h3>
             <ul className={styles.menu}>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="https://vk.com/club147409633" target="_blank">
+                <a className={styles.menuLink} href="https://vk.com/club147409633" target="_blank" rel="noopener">
                   <IconWithText
                     icon={faVk}
                     text="Вконтакте"
@@ -79,7 +79,7 @@ export default () => (
                 </a>
               </li>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600" target="_blank">
+                <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600" target="_blank" rel="noopener">
                   <IconWithText
                     icon={faWhatsapp}
                     text="WhatsUp: +7-929-364-46-00"
