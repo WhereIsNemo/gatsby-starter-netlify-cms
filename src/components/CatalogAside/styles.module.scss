@@ -1,7 +1,12 @@
 @import '../../layouts/settings';
 
 .catalogAside {
+  display: none;
   padding: 20px 0;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
 }
 
 .title {
