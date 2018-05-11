@@ -1,11 +1,16 @@
 @import '../../layouts/settings';
 
+.header {
+  position: relative;
+}
+
 .top {
   padding: 10px 0 15px;
   border-bottom: 1px solid $c-border-light;
 }
 
 .bottom {
+  margin-top: -1px;
   border-bottom: 1px solid $c-border-light;
 }
 
