@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
 import Img from "gatsby-image";
@@ -17,6 +18,11 @@ export const ProductPageTemplate = ({
   return (
     <DefaultLayout data={data}>
       <React.Fragment key="mainContent">
+        <Helmet>
+          <title>220 Plus - {title}</title>
+          <meta name="description" content={`${category} - ${title}.`} />
+          <meta name="keywords" content={`${title}, ${category}`} />
+        </Helmet>
         <div className={styles.productPage}>
           <div className={styles.mainInfo}>
             <div className="row flex-column flex-lg-row align-items-center align-items-md-start">

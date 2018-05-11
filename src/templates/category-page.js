@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import CatalogAside from '../components/CatalogAside';
 import ProductsGrid from '../components/ProductsGrid';
 import Pagination from '../components/Pagination';
@@ -17,20 +18,27 @@ const CategoryPage = props => {
   );
 
   return (
-    <DefaultLayout data={props.data}>
-      <React.Fragment key="mainContent">
-        <div className={styles.categorySection}>
-          <h1>{post.frontmatter.title}</h1>
-          <div className={styles.description}>{post.frontmatter.description}</div>
-          {productsGridEl}
-          <Pagination
-            route={props.pathContext.route}
-            currentPage={props.pathContext.index}
-            pagesCount={props.pathContext.pagesCount}
-          />
-        </div>
-      </React.Fragment>
-    </DefaultLayout>
+    <React.Fragment>
+      <Helmet>
+        <title>220 Plus - {post.frontmatter.title}</title>
+        <meta name="description" content={`${post.frontmatter.description}.`} />
+        <meta name="keywords" content={`${post.frontmatter.title}`} />
+      </Helmet>
+      <DefaultLayout data={props.data}>
+        <React.Fragment key="mainContent">
+          <div className={styles.categorySection}>
+            <h1>{post.frontmatter.title}</h1>
+            <div className={styles.description}>{post.frontmatter.description}</div>
+            {productsGridEl}
+            <Pagination
+              route={props.pathContext.route}
+              currentPage={props.pathContext.index}
+              pagesCount={props.pathContext.pagesCount}
+            />
+          </div>
+        </React.Fragment>
+      </DefaultLayout>
+    </React.Fragment>
   );
 };
 
