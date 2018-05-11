@@ -10,6 +10,7 @@ export const ProductPageTemplate = ({
   title,
   childrenImageSharp,
   category,
+  productCompany,
   body,
   asideCategories,
   price,
@@ -20,8 +21,8 @@ export const ProductPageTemplate = ({
       <React.Fragment key="mainContent">
         <Helmet>
           <title>220 Plus - {title}</title>
-          <meta name="description" content={`${category} - ${title}.`} />
-          <meta name="keywords" content={`${title}, ${category}`} />
+          <meta name="description" content={`${category} (${productCompany}) - ${title}.`} />
+          <meta name="keywords" content={`${title}, ${category}, ${productCompany}`} />
         </Helmet>
         <div className={styles.productPage}>
           <div className={styles.mainInfo}>
@@ -32,6 +33,7 @@ export const ProductPageTemplate = ({
               <div className="col col-auto col-lg-6">
                 <h1 className={styles.title}>{title}</h1>
                 <div><b>Категория</b>: {category}</div>
+                {productCompany && <div><b>Производитель</b>: {productCompany}</div>}
                 <div className={styles.priceField}>
                   <b>Цена:</b> <span className={styles.price}>{price}₽</span>
                 </div>
@@ -57,6 +59,7 @@ const ProductPage = ({ data }) => {
       title={post.frontmatter.title}
       childrenImageSharp={post.childrenImageSharp}
       category={post.frontmatter.categories}
+      productCompany={post.frontmatter.productCompany}
       body={post.html}
       price={post.frontmatter.price}
       asideCategories={data.asideCategories.edges}
@@ -81,6 +84,7 @@ export const productPageQuery = graphql`
         categories
         image
         price
+        productCompany
       }
     }
     ...defaultLayout

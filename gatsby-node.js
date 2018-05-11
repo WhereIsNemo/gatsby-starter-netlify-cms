@@ -84,6 +84,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
       categories: allMarkdownRemark(
         filter: { frontmatter: { contentType: { eq: "category" } } }
+        sort: {fields: [frontmatter___title], order: ASC},
       ) {
         edges {
           node {
@@ -99,6 +100,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
       productsPreviews: allMarkdownRemark(
         filter: { frontmatter: { templateKey: { eq: "product-page" } } }
+        sort: {fields: [frontmatter___title], order: ASC},
       ) {
         edges {
           node {
