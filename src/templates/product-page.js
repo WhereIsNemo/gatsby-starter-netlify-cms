@@ -19,11 +19,11 @@ export const ProductPageTemplate = ({
       <React.Fragment key="mainContent">
         <div className={styles.productPage}>
           <div className={styles.mainInfo}>
-            <div className="row">
-              <div className="col col-12 col-md-6">
+            <div className="row flex-column flex-lg-row align-items-center align-items-md-start">
+              <div className="col col-auto col-lg-6">
                 <Img resolutions={childrenImageSharp[0].resolutions} />
               </div>
-              <div className="col col-12 col-md-6">
+              <div className="col col-auto col-lg-6">
                 <h1 className={styles.title}>{title}</h1>
                 <div><b>Категория</b>: {category}</div>
                 <div className={styles.priceField}>

@@ -247,10 +247,22 @@ $slider-arrows-horizontal-margin-tablet-up: 35px;
   }
 }
 
+.flex-column {
+  .col-auto {
+    max-width: 100%;
+  }
+}
+
 .container-fluid {
   max-width: 1140px;
 }
 
 .overflow-container {
   overflow: hidden;
+}
+
+.tippy-popper {
+  &[aria-hidden="true"] {
+    display: none;
+  }
 }
