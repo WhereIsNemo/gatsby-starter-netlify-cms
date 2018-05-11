@@ -1,6 +1,6 @@
 ---
-contentType: productCompany
 title: Huter
-image: /img/products-grid1.jpg
+image: /img/oio3sc4fejg.jpg
+contentType: productCompany
 ---
 
