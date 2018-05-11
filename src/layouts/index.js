@@ -1,5 +1,4 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -12,12 +11,6 @@ export default class TemplateWrapper extends React.Component {
 
     return (
       <React.Fragment>
-        <Helmet>
-          <html lang="ru" />
-          <title>220 Plus</title>
-          <meta name="description" content="220Plus - электроинструменты в Омске и Омской области: перфораторы, сварочное оборудование, лобзики, рубанки, ударные дрели, аккумуляторные шуруповёрты, бетономешалки, вибрационные насосы, болгарки (угловые шлифовальные машины), мотопомпы, триммеры, дисковые пилы." />
-          <meta name="keywords" content="Омск, Омская область, электроинструменты, перфораторы, сварочное оборудование, лобзики, рубанки, ударные дрели, аккумуляторные шуруповёрты, бетономешалки, вибрационные насосы, болгарки, угловые шлифовальные машины, мотопомпы, триммеры, дисковые пилы, доставка" />
-        </Helmet>
         <Header />
         <div>{children()}</div>
         <Services />

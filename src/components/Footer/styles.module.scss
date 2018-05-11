@@ -45,6 +45,7 @@ $grid-vertical-gutter: 30px;
 
 button.menuLink,
 .menuLink {
+  display: inline-block;
   border-bottom: none;
   color: inherit;
 }

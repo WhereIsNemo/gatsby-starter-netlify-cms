@@ -79,7 +79,7 @@ export default () => (
                 </a>
               </li>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600">
+                <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600" target="_blank">
                   <IconWithText
                     icon={faWhatsapp}
                     text="WhatsUp: +7-929-364-46-00"
