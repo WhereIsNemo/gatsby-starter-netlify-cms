@@ -1,6 +1,8 @@
 @import '../../layouts/settings';
 
 :local(.slider) {
+  margin: 25px 0;
+
   :global .gatsby-image-wrapper {
     img {
       width: 100% !important;

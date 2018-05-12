@@ -37,13 +37,13 @@ export default props => {
         <SpecialOffersSlider
           specialOffers={props.data.specialOffersSlider.edges}
         />
+        <AboutCompany aboutSection={props.data.aboutSection} />
+        <ProductCompanies
+          productCompanies={props.data.productCompanies.edges}
+        />
       </React.Fragment>
       <React.Fragment key="underMainContent">
         <div className="container-fluid">
-          <AboutCompany aboutSection={props.data.aboutSection} />
-          <ProductCompanies
-            productCompanies={props.data.productCompanies.edges}
-          />
           <CatalogSlider sliderCategories={props.data.sliderCategories.edges} />
         </div>
       </React.Fragment>

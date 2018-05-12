@@ -70,7 +70,6 @@ export default class CatalogSlider extends React.Component {
       keyboard: false,
       perView: 4,
       gap: 30,
-      focusAt: 'center',
       animationDuration: 1000,
       breakpoints: {
         991: {
