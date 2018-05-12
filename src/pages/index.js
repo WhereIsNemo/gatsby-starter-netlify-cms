@@ -8,14 +8,16 @@ import AboutCompany from '../components/AboutCompany';
 import DefaultLayout from '../components/Layout';
 
 export default props => {
-  const categoriesString = props.data.sliderCategories.edges.reduce((accumulator, currentValue, currentIndex, array) => {
-    if(currentIndex === 0) {
-      return `${currentValue.node.frontmatter.title}`;
-    } else {
-      return `${accumulator}, ${currentValue.node.frontmatter.title}`;
-    }
-    
-  }, "");
+  const categoriesString = props.data.sliderCategories.edges.reduce(
+    (accumulator, currentValue, currentIndex, array) => {
+      if (currentIndex === 0) {
+        return `${currentValue.node.frontmatter.title}`;
+      } else {
+        return `${accumulator}, ${currentValue.node.frontmatter.title}`;
+      }
+    },
+    ''
+  );
 
   return (
     <DefaultLayout data={props.data}>
@@ -23,8 +25,14 @@ export default props => {
         <Helmet>
           <html lang="ru" />
           <title>220 Plus</title>
-          <meta name="description" content={`220Plus - электроинструменты в Омске и Омской области: ${categoriesString}.`} />
-          <meta name="keywords" content={`Омск, Омская область, электроинструменты, ${categoriesString}, доставка`} />
+          <meta
+            name="description"
+            content={`220Plus - электроинструменты в Омске и Омской области: ${categoriesString}.`}
+          />
+          <meta
+            name="keywords"
+            content={`Омск, Омская область, электроинструменты, ${categoriesString}, доставка`}
+          />
         </Helmet>
         <SpecialOffersSlider
           specialOffers={props.data.specialOffersSlider.edges}
@@ -41,7 +49,7 @@ export default props => {
       </React.Fragment>
     </DefaultLayout>
   );
-}
+};
 
 export const IndexPageQuery = graphql`
   query IndexPageQuery {
@@ -52,7 +60,7 @@ export const IndexPageQuery = graphql`
     ...aboutSection
     metaCategories: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "category" } } }
-      sort: {fields: [frontmatter___title], order: ASC},
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {
         node {

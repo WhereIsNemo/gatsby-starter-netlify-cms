@@ -21,20 +21,14 @@ export default () => (
           </div>
           <div className="col col-12 col-md-3">
             <div className={styles.headerDelivery}>
-              <IconWithText
-                icon={faTruck}
-                text="Доставка: Омск, Калачинск"
-              />
+              <IconWithText icon={faTruck} text="Доставка: Омск, Калачинск" />
             </div>
           </div>
           <div className="col col-12 col-md-5 col-lg-4 col-xl-3">
             <div className={styles.headerCallInfo}>
               <div className={styles.headerBackCall}>
                 <a href="tel:+7-929-364-46-00">
-                  <IconWithText
-                    icon={faPhone}
-                    text="+7-929-364-46-00"
-                  />
+                  <IconWithText icon={faPhone} text="+7-929-364-46-00" />
                 </a>
               </div>
               <OrderCallbackButton btnClasses="btn--filled" />

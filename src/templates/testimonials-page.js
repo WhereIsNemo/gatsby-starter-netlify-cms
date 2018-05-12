@@ -7,7 +7,10 @@ export const TestimonialsPageTemplate = ({ title, body }) => (
   <div className="container-fluid">
     <Helmet>
       <title>220 Plus - Отзывы</title>
-      <meta name="description" content={`220Plus - электроинструменты в Омске и Омской области. Отзывы.`} />
+      <meta
+        name="description"
+        content={`220Plus - электроинструменты в Омске и Омской области. Отзывы.`}
+      />
       <meta name="keywords" content={`отзывы`} />
     </Helmet>
     <div className="section">

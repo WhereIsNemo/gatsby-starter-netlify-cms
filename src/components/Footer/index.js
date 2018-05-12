@@ -42,11 +42,13 @@ export default () => (
             <h3 className={styles.colTitle}>Присоединяйтесь</h3>
             <ul className={styles.menu}>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="https://vk.com/club147409633" target="_blank" rel="noopener">
-                  <IconWithText
-                    icon={faVk}
-                    text="Вконтакте"
-                  />
+                <a
+                  className={styles.menuLink}
+                  href="https://vk.com/club147409633"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <IconWithText icon={faVk} text="Вконтакте" />
                 </a>
               </li>
             </ul>
@@ -56,10 +58,7 @@ export default () => (
             <ul className={styles.menu}>
               <li className={styles.menuItem}>
                 <a className={styles.menuLink} href="tel:+7-929-364-46-00">
-                  <IconWithText
-                    icon={faPhone}
-                    text="+7-929-364-46-00"
-                  />
+                  <IconWithText icon={faPhone} text="+7-929-364-46-00" />
                 </a>
               </li>
               <li className={styles.menuItem}>
@@ -72,14 +71,16 @@ export default () => (
               </li>
               <li className={styles.menuItem}>
                 <a className={styles.menuLink} href="mailto:220pluse@gmail.com">
-                  <IconWithText
-                    icon={faEnvelope}
-                    text="220pluse@gmail.com"
-                  />
+                  <IconWithText icon={faEnvelope} text="220pluse@gmail.com" />
                 </a>
               </li>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="https://api.whatsapp.com/send?phone=79293644600" target="_blank" rel="noopener">
+                <a
+                  className={styles.menuLink}
+                  href="https://api.whatsapp.com/send?phone=79293644600"
+                  target="_blank"
+                  rel="noopener"
+                >
                   <IconWithText
                     icon={faWhatsapp}
                     text="WhatsUp: +7-929-364-46-00"
@@ -87,11 +88,11 @@ export default () => (
                 </a>
               </li>
               <li className={styles.menuItem}>
-                <a className={styles.menuLink} href="viber://chat?number=79293644600">
-                  <IconWithText
-                    icon={faViber}
-                    text="Viber: +7-929-364-46-00"
-                  />
+                <a
+                  className={styles.menuLink}
+                  href="viber://chat?number=79293644600"
+                >
+                  <IconWithText icon={faViber} text="Viber: +7-929-364-46-00" />
                 </a>
               </li>
             </ul>

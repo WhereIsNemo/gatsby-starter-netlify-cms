@@ -5,10 +5,7 @@ import styles from './styles.module.scss';
 export default ({ categories }) => {
   const links = categories.map(({ node }, index) => (
     <li key={index} className={styles.menuItem}>
-      <Link
-        className={styles.link}
-        to={node.fields.slug}
-      >
+      <Link className={styles.link} to={node.fields.slug}>
         {node.frontmatter.title}
       </Link>
     </li>
@@ -17,9 +14,7 @@ export default ({ categories }) => {
   return (
     <div className={styles.catalogAside}>
       <h2 className={styles.title}>Категории</h2>
-      <ul className={styles.menu}>
-        {links}
-      </ul>
+      <ul className={styles.menu}>{links}</ul>
     </div>
   );
 };

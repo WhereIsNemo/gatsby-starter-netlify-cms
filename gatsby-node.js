@@ -4,19 +4,19 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const createPaginatedPages = require(`./gatsby/createPaginatedPages`);
 const slugify = require('transliteration').slugify;
 
-const generateBabelConfig = require("gatsby/dist/utils/babel-config");
+const generateBabelConfig = require('gatsby/dist/utils/babel-config');
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   const program = {
     directory: __dirname,
-    browserslist: ["> 0.5%", "last 2 versions", "IE >= 11"],
+    browserslist: ['> 0.5%', 'last 2 versions', 'IE >= 11'],
   };
 
   return generateBabelConfig(program, stage).then(babelConfig => {
-    config.removeLoader("js").loader("js", {
+    config.removeLoader('js').loader('js', {
       test: /\.jsx?$/,
       exclude: /node_modules\/(?!@glidejs)/,
-      loader: "babel",
+      loader: 'babel',
       query: babelConfig,
     });
   });
@@ -50,7 +50,9 @@ exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
 
       if (fileNode) {
         // Find ImageSharp node corresponding to the File node
-        const imageSharpNodeId = fileNode.children.find(n => n.endsWith('>> ImageSharp'));
+        const imageSharpNodeId = fileNode.children.find(n =>
+          n.endsWith('>> ImageSharp')
+        );
         const imageSharpNode = getNodes().find(n => n.id === imageSharpNodeId);
 
         // Add ImageSharp node as child
@@ -84,7 +86,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
       categories: allMarkdownRemark(
         filter: { frontmatter: { contentType: { eq: "category" } } }
-        sort: {fields: [frontmatter___title], order: ASC},
+        sort: { fields: [frontmatter___title], order: ASC }
       ) {
         edges {
           node {
@@ -100,7 +102,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
       productsPreviews: allMarkdownRemark(
         filter: { frontmatter: { templateKey: { eq: "product-page" } } }
-        sort: {fields: [frontmatter___title], order: ASC},
+        sort: { fields: [frontmatter___title], order: ASC }
       ) {
         edges {
           node {
@@ -127,55 +129,52 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       }
     }
   `).then(result => {
-      // Output errors if they are
-      if (result.errors) {
-        result.errors.forEach(e => console.error(e.toString()));
-        return Promise.reject(result.errors);
-      }
+    // Output errors if they are
+    if (result.errors) {
+      result.errors.forEach(e => console.error(e.toString()));
+      return Promise.reject(result.errors);
+    }
 
-      // Create content pages
-      const content = result.data.allMarkdownRemark.edges;
+    // Create content pages
+    const content = result.data.allMarkdownRemark.edges;
 
-      content.forEach(edge => {
-        const id = edge.node.id;
+    content.forEach(edge => {
+      const id = edge.node.id;
 
-        if (edge.node.frontmatter.templateKey) {
-          createPage({
-            path: slugify(edge.node.fields.slug, {
-              ignore: ['/'],
-            }),
-            component: path.resolve(
-              `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-            ),
-            // additional data can be passed via context
-            context: {
-              id,
-            },
-          });
-        }
-      });
-
-      // Create category pages with pagination
-      const {
-        categories,
-        productsPreviews,
-      } = result.data;
-
-      categories.edges.forEach(category => {
-        const categoryId = category.node.id;
-        const categoryName = category.node.frontmatter.title;
-        const categoryContent = productsPreviews.edges.filter(edge =>
-          edge.node.frontmatter.categories === categoryName
-        );
-
-        createPaginatedPages({
-          slug: category.node.fields.slug,
-          createPage,
-          nodes: categoryContent,
-          contentType: 'categories',
-          templateName: 'category-page',
-          pageId: categoryId,
+      if (edge.node.frontmatter.templateKey) {
+        createPage({
+          path: slugify(edge.node.fields.slug, {
+            ignore: ['/'],
+          }),
+          component: path.resolve(
+            `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          ),
+          // additional data can be passed via context
+          context: {
+            id,
+          },
         });
+      }
+    });
+
+    // Create category pages with pagination
+    const { categories, productsPreviews } = result.data;
+
+    categories.edges.forEach(category => {
+      const categoryId = category.node.id;
+      const categoryName = category.node.frontmatter.title;
+      const categoryContent = productsPreviews.edges.filter(
+        edge => edge.node.frontmatter.categories === categoryName
+      );
+
+      createPaginatedPages({
+        slug: category.node.fields.slug,
+        createPage,
+        nodes: categoryContent,
+        contentType: 'categories',
+        templateName: 'category-page',
+        pageId: categoryId,
       });
     });
+  });
 };

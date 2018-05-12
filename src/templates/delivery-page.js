@@ -7,7 +7,10 @@ export const DeliveryPageTemplate = ({ title, body }) => {
     <div className="container-fluid">
       <Helmet>
         <title>220 Plus - Доставка и оплата</title>
-        <meta name="description" content={`220Plus - электроинструменты в Омске и Омской области. Доставка и оплата.`} />
+        <meta
+          name="description"
+          content={`220Plus - электроинструменты в Омске и Омской области. Доставка и оплата.`}
+        />
         <meta name="keywords" content={`доставка, оплата`} />
       </Helmet>
       <div className="section">

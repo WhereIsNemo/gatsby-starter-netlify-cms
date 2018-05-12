@@ -9,22 +9,22 @@ export default () => {
   const services = [
     {
       icon: faTruck,
-      title: "Доставка в течении суток",
-      description: "Омск, Калачинск",
+      title: 'Доставка в течении суток',
+      description: 'Омск, Калачинск',
     },
     {
       icon: faThumbsUp,
-      title: "Гарантия на всё",
-      description: "1-3 года",
+      title: 'Гарантия на всё',
+      description: '1-3 года',
     },
     {
       icon: faClock,
-      title: "Режим работы",
-      description: "Ежедневно с 9:00 до 22:00",
+      title: 'Режим работы',
+      description: 'Ежедневно с 9:00 до 22:00',
     },
   ];
 
-  const servicesMarkup = services.map(({ icon, title, description }, index) => 
+  const servicesMarkup = services.map(({ icon, title, description }, index) => (
     <div key={index} className={`col col-12 col-md-4 ${styles.col}`}>
       <InfoBlock
         className={styles.service}
@@ -33,15 +33,13 @@ export default () => {
         description={description}
       />
     </div>
-  );
+  ));
 
   return (
     <div className="section">
       <div className="container-fluid">
         <div className="overflow-container">
-          <div className={`row ${styles.row}`}>
-            {servicesMarkup}
-          </div>
+          <div className={`row ${styles.row}`}>{servicesMarkup}</div>
         </div>
       </div>
     </div>

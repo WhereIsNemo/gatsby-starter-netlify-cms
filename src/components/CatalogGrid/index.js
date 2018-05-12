@@ -10,7 +10,7 @@ export const CatalogGridQuery = graphql`
   fragment catalogGridCategories on RootQueryType {
     catalogGridCategories: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "category" } } }
-      sort: {fields: [frontmatter___title], order: ASC},
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {
         node {

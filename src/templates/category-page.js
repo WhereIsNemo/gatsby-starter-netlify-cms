@@ -28,7 +28,9 @@ const CategoryPage = props => {
         <React.Fragment key="mainContent">
           <div className={styles.categorySection}>
             <h1>{post.frontmatter.title}</h1>
-            <div className={styles.description}>{post.frontmatter.description}</div>
+            <div className={styles.description}>
+              {post.frontmatter.description}
+            </div>
             {productsGridEl}
             <Pagination
               route={props.pathContext.route}

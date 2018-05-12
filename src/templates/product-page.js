@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { HTMLContent } from '../components/Content';
 import DefaultLayout from '../components/Layout';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 import OrderCallbackButton from '../components/OrderCallbackButton';
 import styles from './product-page.module.scss';
 
@@ -21,8 +21,14 @@ export const ProductPageTemplate = ({
       <React.Fragment key="mainContent">
         <Helmet>
           <title>220 Plus - {title}</title>
-          <meta name="description" content={`${category} (${productCompany}) - ${title}.`} />
-          <meta name="keywords" content={`${title}, ${category}, ${productCompany}`} />
+          <meta
+            name="description"
+            content={`${category} (${productCompany}) - ${title}.`}
+          />
+          <meta
+            name="keywords"
+            content={`${title}, ${category}, ${productCompany}`}
+          />
         </Helmet>
         <div className={styles.productPage}>
           <div className={styles.mainInfo}>
@@ -32,12 +38,23 @@ export const ProductPageTemplate = ({
               </div>
               <div className="col col-auto col-lg-6">
                 <h1 className={styles.title}>{title}</h1>
-                <div><b>Категория</b>: {category}</div>
-                {productCompany && <div><b>Производитель</b>: {productCompany}</div>}
+                <div>
+                  <b>Категория</b>: {category}
+                </div>
+                {productCompany && (
+                  <div>
+                    <b>Производитель</b>: {productCompany}
+                  </div>
+                )}
                 <div className={styles.priceField}>
                   <b>Цена:</b> <span className={styles.price}>{price}₽</span>
                 </div>
-                <div><OrderCallbackButton btnClasses="btn--filled" additionalText={title} /></div>
+                <div>
+                  <OrderCallbackButton
+                    btnClasses="btn--filled"
+                    additionalText={title}
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -17,52 +17,56 @@ export default class Navbar extends React.Component {
   handleMenuToggle = () => {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen,
-    })
-  }
+    });
+  };
 
   handleLinkClick = () => {
     this.setState({
       isMenuOpen: false,
-    })
-  }
+    });
+  };
 
   render() {
     const { isMenuOpen } = this.state;
 
     const links = [
       {
-        text: "Главная",
-        to: "/",
+        text: 'Главная',
+        to: '/',
       },
       {
-        text: "Каталог",
-        to: "/catalog",
+        text: 'Каталог',
+        to: '/catalog',
       },
       {
-        text: "Доставка и оплата",
-        to: "/delivery",
+        text: 'Доставка и оплата',
+        to: '/delivery',
       },
       {
-        text: "Склад самовывоза",
-        to: "/warehouse",
+        text: 'Склад самовывоза',
+        to: '/warehouse',
       },
       {
-        text: "Отзывы",
-        to: "/testimonials",
+        text: 'Отзывы',
+        to: '/testimonials',
       },
       {
-        text: "Контакты",
-        to: "/contact",
+        text: 'Контакты',
+        to: '/contact',
       },
     ];
 
-    const menuItemsMarkup = links.map(({ text, to }, index) =>
+    const menuItemsMarkup = links.map(({ text, to }, index) => (
       <li key={index}>
-        <Link className={styles.menuLink} to={to} onClick={this.handleLinkClick}>
+        <Link
+          className={styles.menuLink}
+          to={to}
+          onClick={this.handleLinkClick}
+        >
           {text}
         </Link>
       </li>
-    );
+    ));
 
     return (
       <nav>
@@ -75,7 +79,7 @@ export default class Navbar extends React.Component {
           {!isMenuOpen && <FontAwesomeIcon icon={faBars} />}
         </button>
 
-        <ul className={`${ isMenuOpen && 'isVisible'} ${styles.menu}`}>
+        <ul className={`${isMenuOpen && 'isVisible'} ${styles.menu}`}>
           {menuItemsMarkup}
         </ul>
       </nav>

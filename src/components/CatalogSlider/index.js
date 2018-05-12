@@ -1,8 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Glide, { Controls, Autoplay, Breakpoints, Anchors } from '@glidejs/glide/dist/glide.modular.esm';
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import Img from "gatsby-image";
+import Glide, {
+  Controls,
+  Autoplay,
+  Breakpoints,
+  Anchors,
+} from '@glidejs/glide/dist/glide.modular.esm';
+import '@glidejs/glide/dist/css/glide.core.min.css';
+import Img from 'gatsby-image';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
@@ -33,13 +38,25 @@ export default class CatalogSlider extends React.Component {
             </div>
 
             <div className="glide__arrows" data-glide-el="controls">
-              <button className={`btn glide__arrow glide__arrow--prev`} data-glide-dir="<">
+              <button
+                className={`btn glide__arrow glide__arrow--prev`}
+                data-glide-dir="<"
+              >
                 <span className="sr-only">Предыдущий</span>
-                <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronLeft} />
+                <FontAwesomeIcon
+                  className={`glide__arrow-icon`}
+                  icon={faChevronLeft}
+                />
               </button>
-              <button className={`btn glide__arrow glide__arrow--next`} data-glide-dir=">">
+              <button
+                className={`btn glide__arrow glide__arrow--next`}
+                data-glide-dir=">"
+              >
                 <span className="sr-only">Следущий</span>
-                <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronRight} />
+                <FontAwesomeIcon
+                  className={`glide__arrow-icon`}
+                  icon={faChevronRight}
+                />
               </button>
             </div>
           </div>
@@ -53,7 +70,7 @@ export default class CatalogSlider extends React.Component {
       keyboard: false,
       perView: 4,
       gap: 30,
-      focusAt: "center",
+      focusAt: 'center',
       animationDuration: 1000,
       breakpoints: {
         991: {
@@ -71,7 +88,7 @@ export const CatalogSliderQuery = graphql`
   fragment sliderCategories on RootQueryType {
     sliderCategories: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "category" } } }
-      sort: {fields: [frontmatter___title], order: ASC},
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {
         node {

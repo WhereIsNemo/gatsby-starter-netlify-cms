@@ -9,8 +9,14 @@ export default ({ data }) => (
   <React.Fragment>
     <Helmet>
       <title>220 Plus - Каталог</title>
-      <meta name="description" content="220Plus - электроинструменты в Омске и Омской области. Каталог." />
-      <meta name="keywords" content="электроинструменты, каталог, ассортимент" />
+      <meta
+        name="description"
+        content="220Plus - электроинструменты в Омске и Омской области. Каталог."
+      />
+      <meta
+        name="keywords"
+        content="электроинструменты, каталог, ассортимент"
+      />
     </Helmet>
     <DefaultLayout data={data}>
       <React.Fragment key="mainContent">

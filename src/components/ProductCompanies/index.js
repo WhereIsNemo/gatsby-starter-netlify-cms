@@ -1,12 +1,14 @@
 import React from 'react';
-import Img from "gatsby-image";
+import Img from 'gatsby-image';
 import styles from './styles.module.scss';
 
 const ProductCompanies = ({ productCompanies }) => {
   const previews = productCompanies.map(({ node }, index) => (
     <div
       key={index}
-      className={`${styles.productsCompanies__col} col col-12 col-sm-6 col-md-3`}
+      className={`${
+        styles.productsCompanies__col
+      } col col-12 col-sm-6 col-md-3`}
     >
       <div className={styles.productsCompany}>
         <div className={styles.productsCompanyImgWrapper}>
@@ -30,7 +32,7 @@ export const productCompaniesQuery = graphql`
   fragment productCompanies on RootQueryType {
     productCompanies: allMarkdownRemark(
       filter: { frontmatter: { contentType: { eq: "productCompany" } } }
-      sort: {fields: [frontmatter___title], order: ASC},
+      sort: { fields: [frontmatter___title], order: ASC }
     ) {
       edges {
         node {

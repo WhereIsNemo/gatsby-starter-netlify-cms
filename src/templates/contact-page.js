@@ -8,7 +8,10 @@ export const ContactPageTemplate = ({ title, body }) => {
     <div className="container-fluid">
       <Helmet>
         <title>220 Plus - Контакты</title>
-        <meta name="description" content={`220Plus - электроинструменты в Омске и Омской области. Контакты.`} />
+        <meta
+          name="description"
+          content={`220Plus - электроинструменты в Омске и Омской области. Контакты.`}
+        />
         <meta name="keywords" content={`контакты`} />
       </Helmet>
       <ContactInfoBlocks />

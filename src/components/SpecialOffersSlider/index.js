@@ -1,7 +1,10 @@
 import React from 'react';
-import Img from "gatsby-image";
-import Glide, { Controls, Autoplay } from '@glidejs/glide/dist/glide.modular.esm';
-import "@glidejs/glide/dist/css/glide.core.min.css";
+import Img from 'gatsby-image';
+import Glide, {
+  Controls,
+  Autoplay,
+} from '@glidejs/glide/dist/glide.modular.esm';
+import '@glidejs/glide/dist/css/glide.core.min.css';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
@@ -22,7 +25,11 @@ export default class Slider extends React.Component {
       );
 
       bullets.push(
-        <button key={index} className={`glide__bullet`} data-glide-dir={`=${index}`}></button>
+        <button
+          key={index}
+          className={`glide__bullet`}
+          data-glide-dir={`=${index}`}
+        />
       );
     });
 
@@ -33,19 +40,25 @@ export default class Slider extends React.Component {
         </div>
 
         <div className={`glide__arrows`} data-glide-el="controls">
-          <button 
-            className={`btn glide__arrow glide__arrow--prev`} 
+          <button
+            className={`btn glide__arrow glide__arrow--prev`}
             data-glide-dir="<"
           >
             <span className="sr-only">Предыдущий</span>
-            <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronLeft} />
+            <FontAwesomeIcon
+              className={`glide__arrow-icon`}
+              icon={faChevronLeft}
+            />
           </button>
-          <button 
-            className={`btn glide__arrow glide__arrow--next`} 
+          <button
+            className={`btn glide__arrow glide__arrow--next`}
             data-glide-dir=">"
           >
             <span className="sr-only">Следущий</span>
-            <FontAwesomeIcon className={`glide__arrow-icon`} icon={faChevronRight} />
+            <FontAwesomeIcon
+              className={`glide__arrow-icon`}
+              icon={faChevronRight}
+            />
           </button>
         </div>
         <div className={`glide__bullets`} data-glide-el="controls[nav]">

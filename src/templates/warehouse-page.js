@@ -7,7 +7,10 @@ export const WarehousePageTemplate = ({ title, body }) => {
     <div className="container-fluid">
       <Helmet>
         <title>220 Plus - Склад самовывоза</title>
-        <meta name="description" content={`220Plus - электроинструменты в Омске и Омской области. Склад самовывоза.`} />
+        <meta
+          name="description"
+          content={`220Plus - электроинструменты в Омске и Омской области. Склад самовывоза.`}
+        />
         <meta name="keywords" content={`склад, самовывоз, склад самовывоза`} />
       </Helmet>
       <div className="section">
