@@ -1,3 +1,5 @@
+@import '../../layouts/settings';
+
 .preview {
   display: flex;
   flex-direction: column;
@@ -35,5 +37,9 @@
     color: inherit;
     border-bottom: none;
     text-transform: uppercase;
+
+    &:hover {
+      color: $c-accent;
+    }
   }
 }
