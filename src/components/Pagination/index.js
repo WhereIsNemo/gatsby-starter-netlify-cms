@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styles from './styles.module.scss';
 
 export default ({ route, currentPage, pagesCount }) => {
   const firstPage = 1;
@@ -7,21 +8,21 @@ export default ({ route, currentPage, pagesCount }) => {
   const nextPage = currentPage + 1;
   const lastPage = pagesCount;
   const firstPageEl = currentPage > 1 && (
-    <li className="page-item">
-      <Link className="page-link" to={`${route}`}>
+    <li className={styles.pageItem}>
+      <Link className={styles.pageLink} to={`${route}`}>
         1
       </Link>
     </li>
   );
   const previousDotsEl = previousPage - firstPage > 1 && (
-    <li className="page-item">
-      <button className="page-link">…</button>
+    <li className={styles.pageItem}>
+      <button className={styles.pageLink} tabIndex="-1">…</button>
     </li>
   );
   const previousPageEl = previousPage > 1 && (
-    <li className="page-item">
+    <li className={styles.pageItem}>
       <Link
-        className="page-link"
+        className={styles.pageLink}
         to={`${route}${previousPage === 1 ? `` : previousPage}`}
       >
         {previousPage}
@@ -29,9 +30,9 @@ export default ({ route, currentPage, pagesCount }) => {
     </li>
   );
   const nextPageEl = nextPage < lastPage && (
-    <li className="page-item">
+    <li className={styles.pageItem}>
       <Link
-        className="page-link"
+        className={styles.pageLink}
         to={`${route}${nextPage === 1 ? `` : nextPage}`}
       >
         {nextPage}
@@ -39,25 +40,25 @@ export default ({ route, currentPage, pagesCount }) => {
     </li>
   );
   const nextDotsEl = lastPage - nextPage > 1 && (
-    <li className="page-item">
-      <button className="page-link">…</button>
+    <li className={styles.pageItem}>
+      <button className={styles.pageLink} tabIndex="-1">…</button>
     </li>
   );
   const lastPageEl = currentPage < lastPage && (
-    <li className="page-item">
-      <Link className="page-link" to={`${route}${lastPage}`}>
+    <li className={styles.pageItem}>
+      <Link className={styles.pageLink} to={`${route}${lastPage}`}>
         {lastPage}
       </Link>
     </li>
   );
 
   const paginationEl = pagesCount > 1 && (
-    <ul className="pagination">
+    <ul className={styles.pagination}>
       {firstPageEl}
       {previousDotsEl}
       {previousPageEl}
-      <li className="page-item active">
-        <button className="page-link active">{currentPage}</button>
+      <li className={styles.pageItem}>
+        <button className={`${styles.pageLink} ${styles.pageLinkActive}`} tabIndex="-1">{currentPage}</button>
       </li>
       {nextPageEl}
       {nextDotsEl}
