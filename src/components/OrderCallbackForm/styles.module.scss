@@ -1,4 +1,6 @@
-.form {
+@import '../../layouts/settings';
+
+.formWrapper {
   width: 280px;
   padding: 15px;
   background: #fff;
@@ -19,4 +21,17 @@
 
 .label {
   font-weight: 600;
+}
+
+.message {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.messageSuccess {
+  
+}
+
+.messageError {
+  color: $c-accent;
 }
