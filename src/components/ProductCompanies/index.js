@@ -37,7 +37,7 @@ export const productCompaniesQuery = graphql`
       edges {
         node {
           childrenImageSharp {
-            resolutions(width: 255, quality: 85) {
+            resolutions(width: 255, quality: 85, toFormat: JPG) {
               ...GatsbyImageSharpResolutions_withWebp_noBase64
             }
           }
