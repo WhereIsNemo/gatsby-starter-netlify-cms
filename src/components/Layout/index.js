@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import CatalogAside from '../CatalogAside';
 
 const MainContent = ({ children, data }) => (
@@ -45,7 +46,14 @@ export default props => {
     defineLayout(children);
   }
 
-  return <React.Fragment>{content}</React.Fragment>;
+  return (
+    <React.Fragment>
+      <Helmet>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,IntersectionObserver,IntersectionObserverEntry,NodeList.prototype.@@iterator,Element.prototype.closest&flags=gated"></script>
+      </Helmet>
+      {content}
+    </React.Fragment>
+  );
 };
 
 export const defaultLayoutQuery = graphql`
