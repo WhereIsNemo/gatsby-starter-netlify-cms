@@ -57,12 +57,29 @@
   }
 }
 
-.price {
+.priceField {
   font-size: 18px;
-  color: $c-accent;
   text-align: center;
   margin-bottom: 12px;
+
+  .priceWithoutDiscrount {
+    margin: 0 5px;
+  }
+
+  .priceWithoutDiscrount,
+  .priceWithDiscrount {
+    color: $c-accent;
+  }
+
+  &.priceWithDiscount {
+    .priceWithoutDiscrount {
+      color: inherit;
+      text-decoration: line-through;
+    }
+  }
 }
+
+
 
 .orderCallbackField {
   text-align: center;

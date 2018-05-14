@@ -16,8 +16,22 @@
 .priceField {
   font-size: 22px;
   margin-bottom: 15px;
+
+  .priceWithoutDiscrount {
+    margin: 0 5px;
+  }
+
+  .priceWithoutDiscrount,
+  .priceWithDiscrount {
+    color: $c-accent;
+  }
+
+  &.priceWithDiscount {
+    .priceWithoutDiscrount {
+      color: inherit;
+      text-decoration: line-through;
+    }
+  }
 }
 
-.price {
-  color: $c-accent;
-}
+

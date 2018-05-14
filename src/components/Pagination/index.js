@@ -16,7 +16,9 @@ export default ({ route, currentPage, pagesCount }) => {
   );
   const previousDotsEl = previousPage - firstPage > 1 && (
     <li className={styles.pageItem}>
-      <button className={styles.pageLink} tabIndex="-1">…</button>
+      <button className={styles.pageLink} tabIndex="-1">
+        …
+      </button>
     </li>
   );
   const previousPageEl = previousPage > 1 && (
@@ -41,7 +43,9 @@ export default ({ route, currentPage, pagesCount }) => {
   );
   const nextDotsEl = lastPage - nextPage > 1 && (
     <li className={styles.pageItem}>
-      <button className={styles.pageLink} tabIndex="-1">…</button>
+      <button className={styles.pageLink} tabIndex="-1">
+        …
+      </button>
     </li>
   );
   const lastPageEl = currentPage < lastPage && (
@@ -58,7 +62,12 @@ export default ({ route, currentPage, pagesCount }) => {
       {previousDotsEl}
       {previousPageEl}
       <li className={styles.pageItem}>
-        <button className={`${styles.pageLink} ${styles.pageLinkActive}`} tabIndex="-1">{currentPage}</button>
+        <button
+          className={`${styles.pageLink} ${styles.pageLinkActive}`}
+          tabIndex="-1"
+        >
+          {currentPage}
+        </button>
       </li>
       {nextPageEl}
       {nextDotsEl}

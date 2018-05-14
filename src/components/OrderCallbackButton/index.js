@@ -11,7 +11,7 @@ export default class OrderCallbackButton extends React.Component {
 
   closeTippy = () => {
     this.tooltip.current.hideTooltip();
-  }
+  };
 
   render() {
     const { btnClasses, additionalText, children } = this.props;
@@ -19,7 +19,12 @@ export default class OrderCallbackButton extends React.Component {
 
     return (
       <Tooltip
-        html={<OrderCallbackForm additionalText={additionalText} closeTippy={this.closeTippy} />}
+        html={
+          <OrderCallbackForm
+            additionalText={additionalText}
+            closeTippy={this.closeTippy}
+          />
+        }
         position="bottom"
         trigger="click"
         interactive={true}

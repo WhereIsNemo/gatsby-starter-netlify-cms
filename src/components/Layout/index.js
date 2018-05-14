@@ -49,7 +49,7 @@ export default props => {
   return (
     <React.Fragment>
       <Helmet>
-        <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,IntersectionObserver,IntersectionObserverEntry,NodeList.prototype.@@iterator,Element.prototype.closest&flags=gated"></script>
+        <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,IntersectionObserver,IntersectionObserverEntry,NodeList.prototype.@@iterator,Element.prototype.closest&flags=gated" />
       </Helmet>
       {content}
     </React.Fragment>

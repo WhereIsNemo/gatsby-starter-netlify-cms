@@ -29,21 +29,22 @@ export default class OrderCallbackForm extends React.Component {
       },
     });
 
-    component.setState({ submitResult: 'pending' })
+    component.setState({ submitResult: 'pending' });
 
-    axiosAWS.post('/sendCallbackSMS', {
-      phoneNumber: formDataObject.phoneNumber,
-    })
-      .then(function (response) {
-        component.setState({ submitResult: 'success' })
+    axiosAWS
+      .post('/sendCallbackSMS', {
+        phoneNumber: formDataObject.phoneNumber,
+      })
+      .then(function(response) {
+        component.setState({ submitResult: 'success' });
 
         setTimeout(() => {
           component.props.closeTippy();
-          component.setState({ submitResult: null })
-        }, 5000)
+          component.setState({ submitResult: null });
+        }, 5000);
       })
-      .catch(function (error) {
-        component.setState({ submitResult: 'error' })
+      .catch(function(error) {
+        component.setState({ submitResult: 'error' });
       });
   };
 
@@ -52,7 +53,7 @@ export default class OrderCallbackForm extends React.Component {
 
     return (
       <div className={styles.formWrapper}>
-        {submitResult !== 'success' &&
+        {submitResult !== 'success' && (
           <form
             className={styles.form}
             onSubmit={this.handleFormSubmit}
@@ -60,7 +61,7 @@ export default class OrderCallbackForm extends React.Component {
           >
             <label className={styles.label} htmlFor="callbackSmsPhoneNumber">
               Ваш телефонный номер:
-          </label>
+            </label>
             <input
               id="callbackSmsPhoneNumber"
               className={styles.input}
@@ -68,19 +69,27 @@ export default class OrderCallbackForm extends React.Component {
               type="tel"
               required
             />
-            {submitResult === 'error' && <div className={`${styles.message} ${styles.messageError}`}>
-              При отправке произошла ошибка. Пожалуйста, попробуйте через некоторое время повторить попытку или свяжитесь с нами другим способом: по телефону, WhatsUp, Viber или Telegram - +7-929-364-46-00, или почте - 220pluse@gmail.com.
-          </div>}
+            {submitResult === 'error' && (
+              <div className={`${styles.message} ${styles.messageError}`}>
+                При отправке произошла ошибка. Пожалуйста, попробуйте через
+                некоторое время повторить попытку или свяжитесь с нами другим
+                способом: по телефону, WhatsUp, Viber или Telegram -
+                +7-929-364-46-00, или почте - 220pluse@gmail.com.
+              </div>
+            )}
             <button
               type="submit"
               className={`btn btn--outline ${styles.submitBtn}`}
             >
               Заказать
-          </button>
-          </form>}
-        {submitResult === 'success' && <div className={`${styles.message} ${styles.messageSuccess}`}>
-          Заказ произошёл успешно. Мы вам перезвоним в ближайшее время.
-        </div>}
+            </button>
+          </form>
+        )}
+        {submitResult === 'success' && (
+          <div className={`${styles.message} ${styles.messageSuccess}`}>
+            Заказ произошёл успешно. Мы вам перезвоним в ближайшее время.
+          </div>
+        )}
       </div>
     );
   }

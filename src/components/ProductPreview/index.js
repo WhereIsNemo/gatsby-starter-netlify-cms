@@ -12,7 +12,25 @@ const Preview = ({ node }) => (
     <h3 className={styles.title}>
       <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
     </h3>
-    <div className={styles.price}>{node.frontmatter.price}<span className="ruble-sign">₽</span></div>
+    <div
+      className={`${styles.priceField} ${node.frontmatter.discountPrice &&
+        styles.priceWithDiscount}`}
+    >
+      {node.frontmatter.discountPrice && (
+        <div className={styles.priceWithDiscrount}>
+          <span className={styles.discountPrice}>
+            {node.frontmatter.discountPrice}
+          </span>
+          <span className="ruble-sign">₽</span>
+        </div>
+      )}
+      <div className={styles.priceWithoutDiscrount}>
+        <span className={styles.price}>
+          {node.frontmatter.price}
+        </span>
+        <span className="ruble-sign">₽</span>
+      </div>
+    </div>
     <div className={styles.orderCallbackField}>
       <OrderCallbackButton additionalText={node.frontmatter.title} />
     </div>

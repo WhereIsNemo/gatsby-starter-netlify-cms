@@ -14,6 +14,7 @@ export const ProductPageTemplate = ({
   body,
   asideCategories,
   price,
+  discountPrice,
   data,
 }) => {
   return (
@@ -46,8 +47,25 @@ export const ProductPageTemplate = ({
                     <b>Производитель</b>: {productCompany}
                   </div>
                 )}
-                <div className={styles.priceField}>
-                  <b>Цена:</b> <span className={styles.price}>{price}<span className="ruble-sign">₽</span></span>
+                <div
+                  className={`${styles.priceField} ${discountPrice &&
+                    styles.priceWithDiscount}`}
+                >
+                  <b>Цена:</b>
+                  <span className={styles.priceWithoutDiscrount}>
+                    <span className={styles.price}>
+                      {price}
+                    </span>
+                    <span className="ruble-sign">₽</span>
+                  </span>
+                  {discountPrice && (
+                    <span className={styles.priceWithDiscrount}>
+                      <span className={styles.discountPrice}>
+                        {discountPrice}
+                      </span>
+                      <span className="ruble-sign">₽</span>
+                    </span>
+                  )}
                 </div>
                 <div>
                   <OrderCallbackButton
@@ -79,6 +97,7 @@ const ProductPage = ({ data }) => {
       productCompany={post.frontmatter.productCompany}
       body={post.html}
       price={post.frontmatter.price}
+      discountPrice={post.frontmatter.discountPrice}
       asideCategories={data.asideCategories.edges}
       data={data}
     />
@@ -101,6 +120,7 @@ export const productPageQuery = graphql`
         categories
         image
         price
+        discountPrice
         productCompany
       }
     }

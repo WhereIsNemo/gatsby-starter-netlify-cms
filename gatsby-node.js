@@ -123,6 +123,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               title
               categories
               price
+              discountPrice
             }
           }
         }
