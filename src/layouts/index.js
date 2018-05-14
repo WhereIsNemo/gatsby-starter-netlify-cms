@@ -25,6 +25,9 @@ export default class TemplateWrapper extends React.Component {
     loadCSS(
       'https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic'
     );
+    loadCSS(
+      'https://fonts.googleapis.com/css?family=Roboto&amp;text=₽'
+    );
 
     // Google analytics
     const $scriptjs = require('scriptjs');

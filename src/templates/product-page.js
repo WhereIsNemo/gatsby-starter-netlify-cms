@@ -47,7 +47,7 @@ export const ProductPageTemplate = ({
                   </div>
                 )}
                 <div className={styles.priceField}>
-                  <b>Цена:</b> <span className={styles.price}>{price}₽</span>
+                  <b>Цена:</b> <span className={styles.price}>{price}<span className="ruble-sign">₽</span></span>
                 </div>
                 <div>
                   <OrderCallbackButton
