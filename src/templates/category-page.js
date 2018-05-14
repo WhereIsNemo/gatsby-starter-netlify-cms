@@ -33,7 +33,7 @@ const CategoryPage = props => {
             </div>
             {productsGridEl}
             <Pagination
-              route={props.pathContext.route}
+              route={props.pathContext.slug}
               currentPage={props.pathContext.index}
               pagesCount={props.pathContext.pagesCount}
             />

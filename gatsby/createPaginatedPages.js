@@ -36,7 +36,7 @@ module.exports = ({
       const pageIndex = index === 0 ? `` : index + 1;
 
       return createPage({
-        path: `${slug}/${pageIndex}`,
+        path: `${slug}${pageIndex}`,
         component: template,
         context: {
           id: pageId,
