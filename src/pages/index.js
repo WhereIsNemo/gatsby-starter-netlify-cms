@@ -24,7 +24,7 @@ export default props => {
       <React.Fragment key="mainContent">
         <Helmet>
           <html lang="ru" />
-          <title>220 Plus</title>
+          <title>220 Plus - электроинструменты в Омске</title>
           <meta
             name="description"
             content={`220Plus - электроинструменты в Омске и Омской области: ${categoriesString}.`}
