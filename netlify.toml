@@ -7,3 +7,5 @@
 [[redirects]]
   from = "https://vigorous-banach-75b1b6.netlify.com/*"
   to = "https://220plus.su/:splat"
+  status = 301
+  force = true
