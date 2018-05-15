@@ -5,5 +5,5 @@
   YARN_VERSION = "1.6.0"
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
-  from = "/*"
-  to = "https://www.220plus.su/:splat"
+  from = "https://vigorous-banach-75b1b6.netlify.com/*"
+  to = "https://220plus.su/:splat"
