@@ -33,6 +33,8 @@ export default props => {
             name="keywords"
             content={`Омск, Омская область, электроинструменты, ${categoriesString}, доставка`}
           />
+          <meta name="yandex-verification" content="6971b08fa322db26" />
+          <meta name="google-site-verification" content="BTAmYRr7qpZfKfoep_wgF7hLoRk8-lAxq-kjfwtjcnc" />
         </Helmet>
         <SpecialOffersSlider
           specialOffers={props.data.specialOffersSlider.edges}
