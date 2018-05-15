@@ -2,11 +2,13 @@
 templateKey: product-page
 contentType: product
 title: GMC-5.5 / GMC-6.5
-categories: Мотокультиваторы
+categories: Мотокультиваторы и мотоблоки
 productCompany: Huter
 image: /img/1ои.png
 price: '21100'
 ---
+Мотокультиваторы
+
 Двигатель - 4-х тактный одноцилиндровый
 
 Мощность - 5.5 / 6.5* л.с.
