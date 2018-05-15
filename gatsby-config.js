@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: '220Plus',
+    siteUrl: 'https://220plus.su',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-sass`,
