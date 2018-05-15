@@ -2,7 +2,7 @@
 templateKey: product-page
 contentType: product
 title: DY6500LXW
-categories: Бензиновые генераторы
+categories: Бензиновые и газовые генераторы
 productCompany: Huter
 image: /img/1118900.jpg
 price: '54000'

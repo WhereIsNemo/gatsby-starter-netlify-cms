@@ -2,7 +2,7 @@
 templateKey: product-page
 contentType: product
 title: DY8000L (LX) / DY8000LX-3
-categories: Бензиновые генераторы
+categories: Бензиновые и газовые генераторы
 productCompany: Huter
 image: /img/989242.jpg
 price: '29000'
