@@ -2,7 +2,7 @@
 templateKey: product-page
 contentType: product
 title: GMC-1.8
-categories: Мотокультиваторы
+categories: Мотокультиваторы и мотоблоки
 productCompany: Huter
 image: /img/1лорпавы.jpg
 price: '12400'
