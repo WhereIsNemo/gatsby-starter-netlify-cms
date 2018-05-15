@@ -5,7 +5,7 @@ title: DY6500LXW
 categories: Бензиновые генераторы
 productCompany: Huter
 image: /img/1118900.jpg
-price: '55900'
+price: '54000'
 ---
 **С функцией сварки**
 
