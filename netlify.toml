@@ -9,3 +9,9 @@
   to = "https://220plus.su/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/:splat"
+  status = 503
+  force = true
