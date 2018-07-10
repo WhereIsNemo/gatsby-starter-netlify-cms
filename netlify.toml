@@ -6,12 +6,11 @@
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
   from = "https://vigorous-banach-75b1b6.netlify.com/*"
-  to = "https://220plus.su/:splat"
+  to = "/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "/*"
-  to = "/:splat"
   status = 503
   force = true
