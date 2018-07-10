@@ -9,6 +9,8 @@ export default class TemplateWrapper extends React.Component {
   render() {
     const { children } = this.props;
 
+    return (<div></div>);
+
     return (
       <React.Fragment>
         <Header />

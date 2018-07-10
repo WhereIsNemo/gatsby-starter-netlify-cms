@@ -9,8 +9,3 @@
   to = "/:splat"
   status = 301
   force = true
-
-[[redirects]]
-  from = "/*"
-  status = 503
-  force = true
