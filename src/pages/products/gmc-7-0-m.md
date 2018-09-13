@@ -5,7 +5,7 @@ title: GMC-7.0 (M)
 categories: Мотокультиваторы и мотоблоки
 productCompany: Huter
 image: /img/мотокультиватор_gmc-7.0.png
-price: '26400'
+price: '30550'
 ---
 Мотоблок
 

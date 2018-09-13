@@ -5,7 +5,7 @@ title: GMC-5.0
 categories: Мотокультиваторы и мотоблоки
 productCompany: Huter
 image: /img/лорпавы.webp
-price: '17400'
+price: '20170'
 ---
 Мотокультиватор
 

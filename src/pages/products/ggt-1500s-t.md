@@ -5,7 +5,7 @@ title: GGT-1500S (T)
 categories: Бензиновые и электро триммеры
 productCompany: Huter
 image: /img/9hqьщщь.webp
-price: '6200'
+price: '7300'
 ---
 Бензиновый триммер
 

@@ -5,7 +5,7 @@ title: GGT-1900S (T)
 categories: Бензиновые и электро триммеры
 productCompany: Huter
 image: /img/9hqьщщь.webp
-price: '6400'
+price: '7570'
 discountPrice: ''
 ---
 Бензиновый триммер

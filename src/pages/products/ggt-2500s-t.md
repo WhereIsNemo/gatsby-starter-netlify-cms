@@ -5,7 +5,7 @@ title: GGT-2500S (T)
 categories: Бензиновые и электро триммеры
 productCompany: Huter
 image: /img/9hqьщщь.webp
-price: '6600'
+price: '7840'
 ---
 Бензиновый триммер
 

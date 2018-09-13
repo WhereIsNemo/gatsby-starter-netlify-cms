@@ -5,7 +5,7 @@ title: GGT-1000S (T)
 categories: Бензиновые и электро триммеры
 productCompany: Huter
 image: /img/9hqьщщь.webp
-price: '5500'
+price: '6480'
 ---
 Бензиновый триммер
 
