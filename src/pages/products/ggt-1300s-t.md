@@ -5,7 +5,7 @@ title: GGT-1300S (T)
 categories: Бензиновые и электро триммеры
 productCompany: Huter
 image: /img/9hq-1-лорпампн.webp
-price: '5900'
+price: '6930'
 ---
 Бензиновый триммер
 
