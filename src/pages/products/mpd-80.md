@@ -5,7 +5,7 @@ title: MPD-80
 categories: Мотопомпы
 productCompany: Huter
 image: /img/hutermpd80-700x700.jpg
-price: '16600'
+price: '19210'
 ---
 Тип двигателя - 4-х тактный
 
